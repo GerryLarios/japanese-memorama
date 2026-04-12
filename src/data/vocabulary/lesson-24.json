@@ -1,0 +1,142 @@
+[
+  {
+    "id": "L24-001",
+    "japanese": "〜てあります",
+    "hiragana": "〜てあります",
+    "romaji": "~te arimasu",
+    "spanish": "Estar〜 (resultado de acción previa)",
+    "english": "~ has been done (resultant state)",
+    "type": "expression",
+    "lesson": 24
+  },
+  {
+    "id": "L24-002",
+    "japanese": "〜ています",
+    "hiragana": "〜ています",
+    "romaji": "~te imasu",
+    "spanish": "Estar haciendo〜 / Estar en estado de〜",
+    "english": "is doing ~ / is in state of ~",
+    "type": "expression",
+    "lesson": 24
+  },
+  {
+    "id": "L24-003",
+    "japanese": "飾ります",
+    "hiragana": "かざります",
+    "romaji": "kazarimasu",
+    "spanish": "Decorar, adornar",
+    "english": "to decorate, to display",
+    "type": "verb",
+    "lesson": 24
+  },
+  {
+    "id": "L24-004",
+    "japanese": "並べます",
+    "hiragana": "ならべます",
+    "romaji": "narabemasu",
+    "spanish": "Ordenar en fila, poner en orden",
+    "english": "to line up, to arrange",
+    "type": "verb",
+    "lesson": 24
+  },
+  {
+    "id": "L24-005",
+    "japanese": "書きます",
+    "hiragana": "かきます",
+    "romaji": "kakimasu",
+    "spanish": "Escribir",
+    "english": "to write",
+    "type": "verb",
+    "lesson": 24
+  },
+  {
+    "id": "L24-006",
+    "japanese": "貼ります",
+    "hiragana": "はります",
+    "romaji": "harimasu",
+    "spanish": "Pegar, colgar (cartel)",
+    "english": "to paste, to put up (poster)",
+    "type": "verb",
+    "lesson": 24
+  },
+  {
+    "id": "L24-007",
+    "japanese": "ポスター",
+    "hiragana": "ポスター",
+    "romaji": "posutaa",
+    "spanish": "Cartel, póster",
+    "english": "poster",
+    "type": "noun",
+    "lesson": 24
+  },
+  {
+    "id": "L24-008",
+    "japanese": "壁",
+    "hiragana": "かべ",
+    "romaji": "kabe",
+    "spanish": "Pared",
+    "english": "wall",
+    "type": "noun",
+    "lesson": 24
+  },
+  {
+    "id": "L24-009",
+    "japanese": "棚",
+    "hiragana": "たな",
+    "romaji": "tana",
+    "spanish": "Estante, repisa",
+    "english": "shelf",
+    "type": "noun",
+    "lesson": 24
+  },
+  {
+    "id": "L24-010",
+    "japanese": "押入れ",
+    "hiragana": "おしいれ",
+    "romaji": "oshiire",
+    "spanish": "Armario empotrado japonés",
+    "english": "Japanese closet, built-in storage",
+    "type": "noun",
+    "lesson": 24
+  },
+  {
+    "id": "L24-011",
+    "japanese": "引き出し",
+    "hiragana": "ひきだし",
+    "romaji": "hikidashi",
+    "spanish": "Cajón",
+    "english": "drawer",
+    "type": "noun",
+    "lesson": 24
+  },
+  {
+    "id": "L24-012",
+    "japanese": "片付けます",
+    "hiragana": "かたづけます",
+    "romaji": "katazukemasu",
+    "spanish": "Ordenar, arreglar (el cuarto)",
+    "english": "to tidy up, to put in order",
+    "type": "verb",
+    "lesson": 24
+  },
+  {
+    "id": "L24-013",
+    "japanese": "入れます",
+    "hiragana": "いれます",
+    "romaji": "iremasu",
+    "spanish": "Poner dentro, introducir",
+    "english": "to put in, to insert",
+    "type": "verb",
+    "lesson": 24
+  },
+  {
+    "id": "L24-014",
+    "japanese": "出します",
+    "hiragana": "だします",
+    "romaji": "dashimasu",
+    "spanish": "Sacar, extraer",
+    "english": "to take out, to submit",
+    "type": "verb",
+    "lesson": 24
+  }
+]

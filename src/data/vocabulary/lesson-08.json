@@ -1,0 +1,382 @@
+[
+  {
+    "id": "L08-001",
+    "japanese": "大きい",
+    "hiragana": "おおきい",
+    "romaji": "ookii",
+    "spanish": "Grande",
+    "english": "big, large",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-002",
+    "japanese": "小さい",
+    "hiragana": "ちいさい",
+    "romaji": "chiisai",
+    "spanish": "Pequeño/a",
+    "english": "small, little",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-003",
+    "japanese": "新しい",
+    "hiragana": "あたらしい",
+    "romaji": "atarashii",
+    "spanish": "Nuevo/a",
+    "english": "new",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-004",
+    "japanese": "古い",
+    "hiragana": "ふるい",
+    "romaji": "furui",
+    "spanish": "Viejo/a, antiguo/a (cosas)",
+    "english": "old (things)",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-005",
+    "japanese": "いい",
+    "hiragana": "いい",
+    "romaji": "ii",
+    "spanish": "Bueno/a",
+    "english": "good, fine",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-006",
+    "japanese": "悪い",
+    "hiragana": "わるい",
+    "romaji": "warui",
+    "spanish": "Malo/a",
+    "english": "bad",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-007",
+    "japanese": "高い",
+    "hiragana": "たかい",
+    "romaji": "takai",
+    "spanish": "Caro/a; alto/a",
+    "english": "expensive; tall, high",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-008",
+    "japanese": "安い",
+    "hiragana": "やすい",
+    "romaji": "yasui",
+    "spanish": "Barato/a",
+    "english": "cheap, inexpensive",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-009",
+    "japanese": "低い",
+    "hiragana": "ひくい",
+    "romaji": "hikui",
+    "spanish": "Bajo/a",
+    "english": "low, short (height)",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-010",
+    "japanese": "暑い",
+    "hiragana": "あつい",
+    "romaji": "atsui",
+    "spanish": "Caluroso/a (clima)",
+    "english": "hot (weather)",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-011",
+    "japanese": "寒い",
+    "hiragana": "さむい",
+    "romaji": "samui",
+    "spanish": "Frío/a (clima)",
+    "english": "cold (weather)",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-012",
+    "japanese": "暖かい",
+    "hiragana": "あたたかい",
+    "romaji": "atatakai",
+    "spanish": "Cálido/a, tibio/a",
+    "english": "warm",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-013",
+    "japanese": "涼しい",
+    "hiragana": "すずしい",
+    "romaji": "suzushii",
+    "spanish": "Fresco/a",
+    "english": "cool (weather)",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-014",
+    "japanese": "難しい",
+    "hiragana": "むずかしい",
+    "romaji": "muzukashii",
+    "spanish": "Difícil",
+    "english": "difficult",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-015",
+    "japanese": "易しい",
+    "hiragana": "やさしい",
+    "romaji": "yasashii",
+    "spanish": "Fácil; amable",
+    "english": "easy; kind",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-016",
+    "japanese": "面白い",
+    "hiragana": "おもしろい",
+    "romaji": "omoshiroi",
+    "spanish": "Interesante, divertido/a",
+    "english": "interesting, fun",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-017",
+    "japanese": "つまらない",
+    "hiragana": "つまらない",
+    "romaji": "tsumaranai",
+    "spanish": "Aburrido/a",
+    "english": "boring, uninteresting",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-018",
+    "japanese": "忙しい",
+    "hiragana": "いそがしい",
+    "romaji": "isogashii",
+    "spanish": "Ocupado/a",
+    "english": "busy",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-019",
+    "japanese": "楽しい",
+    "hiragana": "たのしい",
+    "romaji": "tanoshii",
+    "spanish": "Divertido/a, agradable",
+    "english": "fun, enjoyable",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-020",
+    "japanese": "美しい",
+    "hiragana": "うつくしい",
+    "romaji": "utsukushii",
+    "spanish": "Hermoso/a, bello/a",
+    "english": "beautiful",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-021",
+    "japanese": "かわいい",
+    "hiragana": "かわいい",
+    "romaji": "kawaii",
+    "spanish": "Lindo/a, adorable",
+    "english": "cute, adorable",
+    "type": "i-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-022",
+    "japanese": "きれい",
+    "hiragana": "きれい",
+    "romaji": "kirei",
+    "spanish": "Bonito/a, limpio/a",
+    "english": "pretty, clean",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-023",
+    "japanese": "にぎやか",
+    "hiragana": "にぎやか",
+    "romaji": "nigiyaka",
+    "spanish": "Animado/a, bullicioso/a",
+    "english": "lively, bustling",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-024",
+    "japanese": "静か",
+    "hiragana": "しずか",
+    "romaji": "shizuka",
+    "spanish": "Tranquilo/a, silencioso/a",
+    "english": "quiet, calm",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-025",
+    "japanese": "親切",
+    "hiragana": "しんせつ",
+    "romaji": "shinsetsu",
+    "spanish": "Amable, bondadoso/a",
+    "english": "kind, helpful",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-026",
+    "japanese": "有名",
+    "hiragana": "ゆうめい",
+    "romaji": "yuumei",
+    "spanish": "Famoso/a",
+    "english": "famous",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-027",
+    "japanese": "元気",
+    "hiragana": "げんき",
+    "romaji": "genki",
+    "spanish": "Sano/a, enérgico/a",
+    "english": "healthy, energetic",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-028",
+    "japanese": "便利",
+    "hiragana": "べんり",
+    "romaji": "benri",
+    "spanish": "Conveniente, práctico/a",
+    "english": "convenient, handy",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-029",
+    "japanese": "不便",
+    "hiragana": "ふべん",
+    "romaji": "fuben",
+    "spanish": "Inconveniente",
+    "english": "inconvenient",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-030",
+    "japanese": "大切",
+    "hiragana": "たいせつ",
+    "romaji": "taisetsu",
+    "spanish": "Importante, valioso/a",
+    "english": "important, precious",
+    "type": "na-adjective",
+    "lesson": 8
+  },
+  {
+    "id": "L08-031",
+    "japanese": "町",
+    "hiragana": "まち",
+    "romaji": "machi",
+    "spanish": "Ciudad, pueblo",
+    "english": "town, city",
+    "type": "noun",
+    "lesson": 8
+  },
+  {
+    "id": "L08-032",
+    "japanese": "天気",
+    "hiragana": "てんき",
+    "romaji": "tenki",
+    "spanish": "Clima, tiempo",
+    "english": "weather",
+    "type": "noun",
+    "lesson": 8
+  },
+  {
+    "id": "L08-033",
+    "japanese": "食べ物",
+    "hiragana": "たべもの",
+    "romaji": "tabemono",
+    "spanish": "Comida",
+    "english": "food",
+    "type": "noun",
+    "lesson": 8
+  },
+  {
+    "id": "L08-034",
+    "japanese": "飲み物",
+    "hiragana": "のみもの",
+    "romaji": "nomimono",
+    "spanish": "Bebida",
+    "english": "drink, beverage",
+    "type": "noun",
+    "lesson": 8
+  },
+  {
+    "id": "L08-035",
+    "japanese": "どんな",
+    "hiragana": "どんな",
+    "romaji": "donna",
+    "spanish": "¿Qué tipo de?, ¿Cómo es?",
+    "english": "what kind of",
+    "type": "adverb",
+    "lesson": 8
+  },
+  {
+    "id": "L08-036",
+    "japanese": "どう",
+    "hiragana": "どう",
+    "romaji": "dou",
+    "spanish": "¿Cómo?",
+    "english": "how (is it)?",
+    "type": "adverb",
+    "lesson": 8
+  },
+  {
+    "id": "L08-037",
+    "japanese": "そうですね",
+    "hiragana": "そうですね",
+    "romaji": "sou desu ne",
+    "spanish": "Es verdad, tienes razón",
+    "english": "that's right, I agree",
+    "type": "expression",
+    "lesson": 8
+  },
+  {
+    "id": "L08-038",
+    "japanese": "〜ですね",
+    "hiragana": "〜ですね",
+    "romaji": "~desu ne",
+    "spanish": "¿Verdad?, ¿No es así?",
+    "english": "isn't it, right",
+    "type": "expression",
+    "lesson": 8
+  }
+]

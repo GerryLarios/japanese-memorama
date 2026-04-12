@@ -1,0 +1,262 @@
+[
+  {
+    "id": "L09-001",
+    "japanese": "好き",
+    "hiragana": "すき",
+    "romaji": "suki",
+    "spanish": "Gustar, que gusta",
+    "english": "like, fond of",
+    "type": "na-adjective",
+    "lesson": 9
+  },
+  {
+    "id": "L09-002",
+    "japanese": "嫌い",
+    "hiragana": "きらい",
+    "romaji": "kirai",
+    "spanish": "Disgustar, que disgusta",
+    "english": "dislike",
+    "type": "na-adjective",
+    "lesson": 9
+  },
+  {
+    "id": "L09-003",
+    "japanese": "上手",
+    "hiragana": "じょうず",
+    "romaji": "jouzu",
+    "spanish": "Hábil, bueno en algo",
+    "english": "skilled, good at",
+    "type": "na-adjective",
+    "lesson": 9
+  },
+  {
+    "id": "L09-004",
+    "japanese": "下手",
+    "hiragana": "へた",
+    "romaji": "heta",
+    "spanish": "Torpe, malo en algo",
+    "english": "unskilled, bad at",
+    "type": "na-adjective",
+    "lesson": 9
+  },
+  {
+    "id": "L09-005",
+    "japanese": "音楽",
+    "hiragana": "おんがく",
+    "romaji": "ongaku",
+    "spanish": "Música",
+    "english": "music",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-006",
+    "japanese": "料理",
+    "hiragana": "りょうり",
+    "romaji": "ryouri",
+    "spanish": "Cocina, cocinar",
+    "english": "cooking, cuisine",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-007",
+    "japanese": "スポーツ",
+    "hiragana": "スポーツ",
+    "romaji": "supootsu",
+    "spanish": "Deporte",
+    "english": "sports",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-008",
+    "japanese": "歌",
+    "hiragana": "うた",
+    "romaji": "uta",
+    "spanish": "Canción",
+    "english": "song",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-009",
+    "japanese": "歌います",
+    "hiragana": "うたいます",
+    "romaji": "utaimasu",
+    "spanish": "Cantar",
+    "english": "to sing",
+    "type": "verb",
+    "lesson": 9
+  },
+  {
+    "id": "L09-010",
+    "japanese": "弾きます",
+    "hiragana": "ひきます",
+    "romaji": "hikimasu",
+    "spanish": "Tocar (instrumento)",
+    "english": "to play (instrument)",
+    "type": "verb",
+    "lesson": 9
+  },
+  {
+    "id": "L09-011",
+    "japanese": "踊ります",
+    "hiragana": "おどります",
+    "romaji": "odorimasu",
+    "spanish": "Bailar",
+    "english": "to dance",
+    "type": "verb",
+    "lesson": 9
+  },
+  {
+    "id": "L09-012",
+    "japanese": "泳ぎます",
+    "hiragana": "およぎます",
+    "romaji": "oyogimasu",
+    "spanish": "Nadar",
+    "english": "to swim",
+    "type": "verb",
+    "lesson": 9
+  },
+  {
+    "id": "L09-013",
+    "japanese": "ピアノ",
+    "hiragana": "ピアノ",
+    "romaji": "piano",
+    "spanish": "Piano",
+    "english": "piano",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-014",
+    "japanese": "ギター",
+    "hiragana": "ギター",
+    "romaji": "gitaa",
+    "spanish": "Guitarra",
+    "english": "guitar",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-015",
+    "japanese": "日本語",
+    "hiragana": "にほんご",
+    "romaji": "nihongo",
+    "spanish": "Japonés (idioma)",
+    "english": "Japanese (language)",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-016",
+    "japanese": "フランス語",
+    "hiragana": "フランスご",
+    "romaji": "furansugo",
+    "spanish": "Francés (idioma)",
+    "english": "French (language)",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-017",
+    "japanese": "漢字",
+    "hiragana": "かんじ",
+    "romaji": "kanji",
+    "spanish": "Kanji, caracteres chinos",
+    "english": "kanji, Chinese characters",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-018",
+    "japanese": "ひらがな",
+    "hiragana": "ひらがな",
+    "romaji": "hiragana",
+    "spanish": "Hiragana",
+    "english": "hiragana",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-019",
+    "japanese": "カタカナ",
+    "hiragana": "カタカナ",
+    "romaji": "katakana",
+    "spanish": "Katakana",
+    "english": "katakana",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-020",
+    "japanese": "趣味",
+    "hiragana": "しゅみ",
+    "romaji": "shumi",
+    "spanish": "Pasatiempo, hobby",
+    "english": "hobby, interest",
+    "type": "noun",
+    "lesson": 9
+  },
+  {
+    "id": "L09-021",
+    "japanese": "得意",
+    "hiragana": "とくい",
+    "romaji": "tokui",
+    "spanish": "Bueno en algo, especialidad",
+    "english": "good at, one's strong point",
+    "type": "na-adjective",
+    "lesson": 9
+  },
+  {
+    "id": "L09-022",
+    "japanese": "苦手",
+    "hiragana": "にがて",
+    "romaji": "nigate",
+    "spanish": "Malo en algo, punto débil",
+    "english": "not good at, one's weak point",
+    "type": "na-adjective",
+    "lesson": 9
+  },
+  {
+    "id": "L09-023",
+    "japanese": "特に",
+    "hiragana": "とくに",
+    "romaji": "toku ni",
+    "spanish": "Especialmente, en particular",
+    "english": "especially, in particular",
+    "type": "adverb",
+    "lesson": 9
+  },
+  {
+    "id": "L09-024",
+    "japanese": "どうして",
+    "hiragana": "どうして",
+    "romaji": "doushite",
+    "spanish": "¿Por qué?",
+    "english": "why, for what reason",
+    "type": "adverb",
+    "lesson": 9
+  },
+  {
+    "id": "L09-025",
+    "japanese": "なぜ",
+    "hiragana": "なぜ",
+    "romaji": "naze",
+    "spanish": "¿Por qué? (formal)",
+    "english": "why (formal)",
+    "type": "adverb",
+    "lesson": 9
+  },
+  {
+    "id": "L09-026",
+    "japanese": "〜から",
+    "hiragana": "〜から",
+    "romaji": "~kara",
+    "spanish": "Porque〜, desde〜",
+    "english": "because ~, from ~",
+    "type": "expression",
+    "lesson": 9
+  }
+]

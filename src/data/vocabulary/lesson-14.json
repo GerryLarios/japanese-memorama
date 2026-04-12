@@ -1,0 +1,242 @@
+[
+  {
+    "id": "L14-001",
+    "japanese": "あげます",
+    "hiragana": "あげます",
+    "romaji": "agemasu",
+    "spanish": "Dar (algo a alguien)",
+    "english": "to give (to someone else)",
+    "type": "verb",
+    "lesson": 14
+  },
+  {
+    "id": "L14-002",
+    "japanese": "もらいます",
+    "hiragana": "もらいます",
+    "romaji": "moraimasu",
+    "spanish": "Recibir (algo de alguien)",
+    "english": "to receive (from someone)",
+    "type": "verb",
+    "lesson": 14
+  },
+  {
+    "id": "L14-003",
+    "japanese": "くれます",
+    "hiragana": "くれます",
+    "romaji": "kuremasu",
+    "spanish": "Dar (algo al que habla)",
+    "english": "to give (to me/us)",
+    "type": "verb",
+    "lesson": 14
+  },
+  {
+    "id": "L14-004",
+    "japanese": "送ります",
+    "hiragana": "おくります",
+    "romaji": "okurimasu",
+    "spanish": "Enviar, mandar",
+    "english": "to send",
+    "type": "verb",
+    "lesson": 14
+  },
+  {
+    "id": "L14-005",
+    "japanese": "貸します",
+    "hiragana": "かします",
+    "romaji": "kashimasu",
+    "spanish": "Prestar",
+    "english": "to lend",
+    "type": "verb",
+    "lesson": 14
+  },
+  {
+    "id": "L14-006",
+    "japanese": "借ります",
+    "hiragana": "かります",
+    "romaji": "karimasu",
+    "spanish": "Pedir prestado",
+    "english": "to borrow",
+    "type": "verb",
+    "lesson": 14
+  },
+  {
+    "id": "L14-007",
+    "japanese": "プレゼント",
+    "hiragana": "プレゼント",
+    "romaji": "purezento",
+    "spanish": "Regalo",
+    "english": "present, gift",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-008",
+    "japanese": "カード",
+    "hiragana": "カード",
+    "romaji": "kaado",
+    "spanish": "Tarjeta",
+    "english": "card",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-009",
+    "japanese": "花",
+    "hiragana": "はな",
+    "romaji": "hana",
+    "spanish": "Flor",
+    "english": "flower",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-010",
+    "japanese": "ケーキ",
+    "hiragana": "ケーキ",
+    "romaji": "keeki",
+    "spanish": "Pastel, tarta",
+    "english": "cake",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-011",
+    "japanese": "お土産",
+    "hiragana": "おみやげ",
+    "romaji": "omiyage",
+    "spanish": "Souvenir, regalo de viaje",
+    "english": "souvenir, gift from travel",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-012",
+    "japanese": "誕生日",
+    "hiragana": "たんじょうび",
+    "romaji": "tanjoubi",
+    "spanish": "Cumpleaños",
+    "english": "birthday",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-013",
+    "japanese": "クリスマス",
+    "hiragana": "クリスマス",
+    "romaji": "kurisumasu",
+    "spanish": "Navidad",
+    "english": "Christmas",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-014",
+    "japanese": "〜に〜をあげます",
+    "hiragana": "〜に〜をあげます",
+    "romaji": "~ni ~wo agemasu",
+    "spanish": "Dar〜 a〜",
+    "english": "give ~ to ~",
+    "type": "expression",
+    "lesson": 14
+  },
+  {
+    "id": "L14-015",
+    "japanese": "〜に〜をもらいます",
+    "hiragana": "〜に〜をもらいます",
+    "romaji": "~ni ~wo moraimasu",
+    "spanish": "Recibir〜 de〜",
+    "english": "receive ~ from ~",
+    "type": "expression",
+    "lesson": 14
+  },
+  {
+    "id": "L14-016",
+    "japanese": "〜てあげます",
+    "hiragana": "〜てあげます",
+    "romaji": "~te agemasu",
+    "spanish": "Hacer〜 por alguien (favor)",
+    "english": "do ~ for someone (favor out)",
+    "type": "expression",
+    "lesson": 14
+  },
+  {
+    "id": "L14-017",
+    "japanese": "〜てもらいます",
+    "hiragana": "〜てもらいます",
+    "romaji": "~te moraimasu",
+    "spanish": "Que alguien haga〜 para uno",
+    "english": "have someone do ~ (favor in)",
+    "type": "expression",
+    "lesson": 14
+  },
+  {
+    "id": "L14-018",
+    "japanese": "〜てくれます",
+    "hiragana": "〜てくれます",
+    "romaji": "~te kuremasu",
+    "spanish": "Que alguien haga〜 para mí",
+    "english": "do ~ for me (favor given)",
+    "type": "expression",
+    "lesson": 14
+  },
+  {
+    "id": "L14-019",
+    "japanese": "お父さん",
+    "hiragana": "おとうさん",
+    "romaji": "otousan",
+    "spanish": "Padre (de otra persona)",
+    "english": "father (someone else's)",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-020",
+    "japanese": "お母さん",
+    "hiragana": "おかあさん",
+    "romaji": "okaasan",
+    "spanish": "Madre (de otra persona)",
+    "english": "mother (someone else's)",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-021",
+    "japanese": "兄",
+    "hiragana": "あに",
+    "romaji": "ani",
+    "spanish": "Hermano mayor (propio)",
+    "english": "older brother (one's own)",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-022",
+    "japanese": "姉",
+    "hiragana": "あね",
+    "romaji": "ane",
+    "spanish": "Hermana mayor (propia)",
+    "english": "older sister (one's own)",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-023",
+    "japanese": "弟",
+    "hiragana": "おとうと",
+    "romaji": "otouto",
+    "spanish": "Hermano menor (propio)",
+    "english": "younger brother (one's own)",
+    "type": "noun",
+    "lesson": 14
+  },
+  {
+    "id": "L14-024",
+    "japanese": "妹",
+    "hiragana": "いもうと",
+    "romaji": "imouto",
+    "spanish": "Hermana menor (propia)",
+    "english": "younger sister (one's own)",
+    "type": "noun",
+    "lesson": 14
+  }
+]

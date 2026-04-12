@@ -1,0 +1,192 @@
+[
+  {
+    "id": "L18-001",
+    "japanese": "〜でしょう",
+    "hiragana": "〜でしょう",
+    "romaji": "~deshou",
+    "spanish": "Probablemente〜, supongo que〜",
+    "english": "probably ~, I suppose ~",
+    "type": "expression",
+    "lesson": 18
+  },
+  {
+    "id": "L18-002",
+    "japanese": "〜かもしれません",
+    "hiragana": "〜かもしれません",
+    "romaji": "~kamo shiremasen",
+    "spanish": "Quizás〜, puede que〜",
+    "english": "might ~, perhaps ~",
+    "type": "expression",
+    "lesson": 18
+  },
+  {
+    "id": "L18-003",
+    "japanese": "〜と思います",
+    "hiragana": "〜とおもいます",
+    "romaji": "~to omoimasu",
+    "spanish": "Creo que〜, pienso que〜",
+    "english": "I think that ~",
+    "type": "expression",
+    "lesson": 18
+  },
+  {
+    "id": "L18-004",
+    "japanese": "思います",
+    "hiragana": "おもいます",
+    "romaji": "omoimasu",
+    "spanish": "Pensar, creer",
+    "english": "to think, to believe",
+    "type": "verb",
+    "lesson": 18
+  },
+  {
+    "id": "L18-005",
+    "japanese": "知ります",
+    "hiragana": "しります",
+    "romaji": "shirimasu",
+    "spanish": "Saber, conocer",
+    "english": "to know, to find out",
+    "type": "verb",
+    "lesson": 18
+  },
+  {
+    "id": "L18-006",
+    "japanese": "知っています",
+    "hiragana": "しっています",
+    "romaji": "shitte imasu",
+    "spanish": "Saber (estado), conocer",
+    "english": "to know (state)",
+    "type": "expression",
+    "lesson": 18
+  },
+  {
+    "id": "L18-007",
+    "japanese": "知りません",
+    "hiragana": "しりません",
+    "romaji": "shirimasen",
+    "spanish": "No saber",
+    "english": "I don't know",
+    "type": "expression",
+    "lesson": 18
+  },
+  {
+    "id": "L18-008",
+    "japanese": "わかります",
+    "hiragana": "わかります",
+    "romaji": "wakarimasu",
+    "spanish": "Entender, comprender",
+    "english": "to understand",
+    "type": "verb",
+    "lesson": 18
+  },
+  {
+    "id": "L18-009",
+    "japanese": "天気予報",
+    "hiragana": "てんきよほう",
+    "romaji": "tenki yohou",
+    "spanish": "Pronóstico del tiempo",
+    "english": "weather forecast",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-010",
+    "japanese": "雨",
+    "hiragana": "あめ",
+    "romaji": "ame",
+    "spanish": "Lluvia",
+    "english": "rain",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-011",
+    "japanese": "雪",
+    "hiragana": "ゆき",
+    "romaji": "yuki",
+    "spanish": "Nieve",
+    "english": "snow",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-012",
+    "japanese": "曇り",
+    "hiragana": "くもり",
+    "romaji": "kumori",
+    "spanish": "Nublado",
+    "english": "cloudy",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-013",
+    "japanese": "晴れ",
+    "hiragana": "はれ",
+    "romaji": "hare",
+    "spanish": "Soleado, despejado",
+    "english": "sunny, clear",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-014",
+    "japanese": "台風",
+    "hiragana": "たいふう",
+    "romaji": "taifuu",
+    "spanish": "Tifón",
+    "english": "typhoon",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-015",
+    "japanese": "地震",
+    "hiragana": "じしん",
+    "romaji": "jishin",
+    "spanish": "Terremoto",
+    "english": "earthquake",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-016",
+    "japanese": "ニュース",
+    "hiragana": "ニュース",
+    "romaji": "nyuusu",
+    "spanish": "Noticias",
+    "english": "news",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-017",
+    "japanese": "試合",
+    "hiragana": "しあい",
+    "romaji": "shiai",
+    "spanish": "Partido, competencia",
+    "english": "match, game, competition",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-018",
+    "japanese": "政治",
+    "hiragana": "せいじ",
+    "romaji": "seiji",
+    "spanish": "Política",
+    "english": "politics",
+    "type": "noun",
+    "lesson": 18
+  },
+  {
+    "id": "L18-019",
+    "japanese": "経済",
+    "hiragana": "けいざい",
+    "romaji": "keizai",
+    "spanish": "Economía",
+    "english": "economy",
+    "type": "noun",
+    "lesson": 18
+  }
+]

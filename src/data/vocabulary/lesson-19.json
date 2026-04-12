@@ -1,0 +1,152 @@
+[
+  {
+    "id": "L19-001",
+    "japanese": "〜たことがあります",
+    "hiragana": "〜たことがあります",
+    "romaji": "~ta koto ga arimasu",
+    "spanish": "He hecho〜 (experiencia)",
+    "english": "have done ~ (experience)",
+    "type": "expression",
+    "lesson": 19
+  },
+  {
+    "id": "L19-002",
+    "japanese": "〜たことがありません",
+    "hiragana": "〜たことがありません",
+    "romaji": "~ta koto ga arimasen",
+    "spanish": "Nunca he hecho〜",
+    "english": "have never done ~",
+    "type": "expression",
+    "lesson": 19
+  },
+  {
+    "id": "L19-003",
+    "japanese": "〜たり〜たりします",
+    "hiragana": "〜たり〜たりします",
+    "romaji": "~tari ~tari shimasu",
+    "spanish": "Hacer cosas como〜 y〜",
+    "english": "do things like ~ and ~",
+    "type": "expression",
+    "lesson": 19
+  },
+  {
+    "id": "L19-004",
+    "japanese": "経験",
+    "hiragana": "けいけん",
+    "romaji": "keiken",
+    "spanish": "Experiencia",
+    "english": "experience",
+    "type": "noun",
+    "lesson": 19
+  },
+  {
+    "id": "L19-005",
+    "japanese": "一度",
+    "hiragana": "いちど",
+    "romaji": "ichido",
+    "spanish": "Una vez",
+    "english": "once, one time",
+    "type": "adverb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-006",
+    "japanese": "何度も",
+    "hiragana": "なんどもdo",
+    "romaji": "nando mo",
+    "spanish": "Muchas veces",
+    "english": "many times",
+    "type": "adverb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-007",
+    "japanese": "以前",
+    "hiragana": "いぜん",
+    "romaji": "izen",
+    "spanish": "Antes, anteriormente",
+    "english": "before, previously",
+    "type": "noun",
+    "lesson": 19
+  },
+  {
+    "id": "L19-008",
+    "japanese": "登ります",
+    "hiragana": "のぼります",
+    "romaji": "noborimasu",
+    "spanish": "Subir, escalar",
+    "english": "to climb",
+    "type": "verb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-009",
+    "japanese": "結婚します",
+    "hiragana": "けっこんします",
+    "romaji": "kekkon shimasu",
+    "spanish": "Casarse",
+    "english": "to get married",
+    "type": "verb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-010",
+    "japanese": "離婚します",
+    "hiragana": "りこんします",
+    "romaji": "rikon shimasu",
+    "spanish": "Divorciarse",
+    "english": "to get divorced",
+    "type": "verb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-011",
+    "japanese": "驚きます",
+    "hiragana": "おどろきます",
+    "romaji": "odorokimasu",
+    "spanish": "Sorprenderse",
+    "english": "to be surprised",
+    "type": "verb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-012",
+    "japanese": "笑います",
+    "hiragana": "わらいます",
+    "romaji": "waraimasu",
+    "spanish": "Reírse",
+    "english": "to laugh, to smile",
+    "type": "verb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-013",
+    "japanese": "泣きます",
+    "hiragana": "なきます",
+    "romaji": "nakimasu",
+    "spanish": "Llorar",
+    "english": "to cry",
+    "type": "verb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-014",
+    "japanese": "怒ります",
+    "hiragana": "おこります",
+    "romaji": "okorimasu",
+    "spanish": "Enojarse",
+    "english": "to get angry",
+    "type": "verb",
+    "lesson": 19
+  },
+  {
+    "id": "L19-015",
+    "japanese": "心配します",
+    "hiragana": "しんぱいします",
+    "romaji": "shinpai shimasu",
+    "spanish": "Preocuparse",
+    "english": "to worry",
+    "type": "verb",
+    "lesson": 19
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "L22-001",
+    "japanese": "〜のに",
+    "hiragana": "〜のに",
+    "romaji": "~no ni",
+    "spanish": "Para〜, aunque〜",
+    "english": "even though ~, for the purpose of ~",
+    "type": "expression",
+    "lesson": 22
+  },
+  {
+    "id": "L22-002",
+    "japanese": "〜のは〜です",
+    "hiragana": "〜のは〜です",
+    "romaji": "~no wa ~desu",
+    "spanish": "Lo que es〜 es〜",
+    "english": "what ~ is ~ (nominalization)",
+    "type": "expression",
+    "lesson": 22
+  },
+  {
+    "id": "L22-003",
+    "japanese": "〜ことは〜です",
+    "hiragana": "〜ことは〜です",
+    "romaji": "~koto wa ~desu",
+    "spanish": "El hecho de〜 es〜",
+    "english": "the fact that ~ is ~",
+    "type": "expression",
+    "lesson": 22
+  },
+  {
+    "id": "L22-004",
+    "japanese": "〜ようにします",
+    "hiragana": "〜ようにします",
+    "romaji": "~you ni shimasu",
+    "spanish": "Hacer lo posible por〜, tratar de〜",
+    "english": "try to ~, make an effort to ~",
+    "type": "expression",
+    "lesson": 22
+  },
+  {
+    "id": "L22-005",
+    "japanese": "〜ようになります",
+    "hiragana": "〜ようになります",
+    "romaji": "~you ni narimasu",
+    "spanish": "Llegar a poder〜, volverse〜",
+    "english": "come to be able to ~",
+    "type": "expression",
+    "lesson": 22
+  },
+  {
+    "id": "L22-006",
+    "japanese": "変わります",
+    "hiragana": "かわります",
+    "romaji": "kawarimasu",
+    "spanish": "Cambiar (intransitivo)",
+    "english": "to change (intransitive)",
+    "type": "verb",
+    "lesson": 22
+  },
+  {
+    "id": "L22-007",
+    "japanese": "変えます",
+    "hiragana": "かえます",
+    "romaji": "kaemasu",
+    "spanish": "Cambiar (transitivo)",
+    "english": "to change (transitive)",
+    "type": "verb",
+    "lesson": 22
+  },
+  {
+    "id": "L22-008",
+    "japanese": "増えます",
+    "hiragana": "ふえます",
+    "romaji": "fuemasu",
+    "spanish": "Aumentar (intransitivo)",
+    "english": "to increase (intransitive)",
+    "type": "verb",
+    "lesson": 22
+  },
+  {
+    "id": "L22-009",
+    "japanese": "減ります",
+    "hiragana": "へります",
+    "romaji": "herimasu",
+    "spanish": "Disminuir (intransitivo)",
+    "english": "to decrease (intransitive)",
+    "type": "verb",
+    "lesson": 22
+  },
+  {
+    "id": "L22-010",
+    "japanese": "続きます",
+    "hiragana": "つづきます",
+    "romaji": "tsudukimasu",
+    "spanish": "Continuar (intransitivo)",
+    "english": "to continue (intransitive)",
+    "type": "verb",
+    "lesson": 22
+  },
+  {
+    "id": "L22-011",
+    "japanese": "続けます",
+    "hiragana": "つづけます",
+    "romaji": "tsudukemasu",
+    "spanish": "Continuar (transitivo)",
+    "english": "to continue (transitive)",
+    "type": "verb",
+    "lesson": 22
+  },
+  {
+    "id": "L22-012",
+    "japanese": "社会",
+    "hiragana": "しゃかい",
+    "romaji": "shakai",
+    "spanish": "Sociedad",
+    "english": "society",
+    "type": "noun",
+    "lesson": 22
+  },
+  {
+    "id": "L22-013",
+    "japanese": "文化",
+    "hiragana": "ぶんか",
+    "romaji": "bunka",
+    "spanish": "Cultura",
+    "english": "culture",
+    "type": "noun",
+    "lesson": 22
+  },
+  {
+    "id": "L22-014",
+    "japanese": "生活",
+    "hiragana": "せいかつ",
+    "romaji": "seikatsu",
+    "spanish": "Vida cotidiana, modo de vida",
+    "english": "daily life, lifestyle",
+    "type": "noun",
+    "lesson": 22
+  },
+  {
+    "id": "L22-015",
+    "japanese": "習慣",
+    "hiragana": "しゅうかん",
+    "romaji": "shuukan",
+    "spanish": "Costumbre, hábito",
+    "english": "custom, habit",
+    "type": "noun",
+    "lesson": 22
+  }
+]

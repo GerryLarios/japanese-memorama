@@ -1,0 +1,212 @@
+[
+  {
+    "id": "L10-001",
+    "japanese": "季節",
+    "hiragana": "きせつ",
+    "romaji": "kisetsu",
+    "spanish": "Estación del año",
+    "english": "season",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-002",
+    "japanese": "春",
+    "hiragana": "はる",
+    "romaji": "haru",
+    "spanish": "Primavera",
+    "english": "spring",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-003",
+    "japanese": "夏",
+    "hiragana": "なつ",
+    "romaji": "natsu",
+    "spanish": "Verano",
+    "english": "summer",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-004",
+    "japanese": "秋",
+    "hiragana": "あき",
+    "romaji": "aki",
+    "spanish": "Otoño",
+    "english": "autumn, fall",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-005",
+    "japanese": "冬",
+    "hiragana": "ふゆ",
+    "romaji": "fuyu",
+    "spanish": "Invierno",
+    "english": "winter",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-006",
+    "japanese": "一番",
+    "hiragana": "いちばん",
+    "romaji": "ichiban",
+    "spanish": "El más, el primero",
+    "english": "the most, number one",
+    "type": "adverb",
+    "lesson": 10
+  },
+  {
+    "id": "L10-007",
+    "japanese": "〜より",
+    "hiragana": "〜より",
+    "romaji": "~yori",
+    "spanish": "Más que〜",
+    "english": "more than ~",
+    "type": "expression",
+    "lesson": 10
+  },
+  {
+    "id": "L10-008",
+    "japanese": "〜の方が",
+    "hiragana": "〜のほうが",
+    "romaji": "~no hou ga",
+    "spanish": "Más bien〜, prefiero〜",
+    "english": "~ is better, prefer ~",
+    "type": "expression",
+    "lesson": 10
+  },
+  {
+    "id": "L10-009",
+    "japanese": "同じ",
+    "hiragana": "おなじ",
+    "romaji": "onaji",
+    "spanish": "Igual, el mismo",
+    "english": "same, identical",
+    "type": "na-adjective",
+    "lesson": 10
+  },
+  {
+    "id": "L10-010",
+    "japanese": "違います",
+    "hiragana": "ちがいます",
+    "romaji": "chigaimasu",
+    "spanish": "Ser diferente, estar equivocado",
+    "english": "to differ, to be wrong",
+    "type": "verb",
+    "lesson": 10
+  },
+  {
+    "id": "L10-011",
+    "japanese": "果物",
+    "hiragana": "くだもの",
+    "romaji": "kudamono",
+    "spanish": "Fruta",
+    "english": "fruit",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-012",
+    "japanese": "スポーツ",
+    "hiragana": "スポーツ",
+    "romaji": "supootsu",
+    "spanish": "Deporte",
+    "english": "sport",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-013",
+    "japanese": "色",
+    "hiragana": "いろ",
+    "romaji": "iro",
+    "spanish": "Color",
+    "english": "color",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-014",
+    "japanese": "赤",
+    "hiragana": "あか",
+    "romaji": "aka",
+    "spanish": "Rojo",
+    "english": "red",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-015",
+    "japanese": "青",
+    "hiragana": "あお",
+    "romaji": "ao",
+    "spanish": "Azul",
+    "english": "blue",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-016",
+    "japanese": "白",
+    "hiragana": "しろ",
+    "romaji": "shiro",
+    "spanish": "Blanco",
+    "english": "white",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-017",
+    "japanese": "黒",
+    "hiragana": "くろ",
+    "romaji": "kuro",
+    "spanish": "Negro",
+    "english": "black",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-018",
+    "japanese": "どちら",
+    "hiragana": "どちら",
+    "romaji": "dochira",
+    "spanish": "¿Cuál de los dos?",
+    "english": "which one (of two)",
+    "type": "adverb",
+    "lesson": 10
+  },
+  {
+    "id": "L10-019",
+    "japanese": "どれ",
+    "hiragana": "どれ",
+    "romaji": "dore",
+    "spanish": "¿Cuál? (de varios)",
+    "english": "which one (of many)",
+    "type": "adverb",
+    "lesson": 10
+  },
+  {
+    "id": "L10-020",
+    "japanese": "もっと",
+    "hiragana": "もっと",
+    "romaji": "motto",
+    "spanish": "Más (cantidad/grado)",
+    "english": "more",
+    "type": "adverb",
+    "lesson": 10
+  },
+  {
+    "id": "L10-021",
+    "japanese": "一番好きです",
+    "hiragana": "いちばんすきです",
+    "romaji": "ichiban suki desu",
+    "spanish": "Es lo que más me gusta",
+    "english": "like the most",
+    "type": "expression",
+    "lesson": 10
+  }
+]

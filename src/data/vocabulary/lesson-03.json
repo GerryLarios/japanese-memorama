@@ -1,0 +1,332 @@
+[
+  {
+    "id": "L03-001",
+    "japanese": "教室",
+    "hiragana": "きょうしつ",
+    "romaji": "kyoushitsu",
+    "spanish": "Aula",
+    "english": "classroom",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-002",
+    "japanese": "食堂",
+    "hiragana": "しょくどう",
+    "romaji": "shokudou",
+    "spanish": "Comedor",
+    "english": "cafeteria",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-003",
+    "japanese": "事務所",
+    "hiragana": "じむしょ",
+    "romaji": "jimusho",
+    "spanish": "Oficina",
+    "english": "office",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-004",
+    "japanese": "オフィス",
+    "hiragana": "おふぃす",
+    "romaji": "ofisu",
+    "spanish": "Oficina (katakana)",
+    "english": "office (katakana)",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-005",
+    "japanese": "会議",
+    "hiragana": "かいぎ",
+    "romaji": "kaigi",
+    "spanish": "Reunión",
+    "english": "meeting",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-006",
+    "japanese": "会議室",
+    "hiragana": "かいぎしつ",
+    "romaji": "kaigishitsu",
+    "spanish": "Sala de reuniones",
+    "english": "meeting room",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-007",
+    "japanese": "受付",
+    "hiragana": "うけつけ",
+    "romaji": "uketsuke",
+    "spanish": "Recepción",
+    "english": "reception",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-008",
+    "japanese": "ロビー",
+    "hiragana": "ろびー",
+    "romaji": "robii",
+    "spanish": "Vestíbulo",
+    "english": "lobby",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-009",
+    "japanese": "部屋",
+    "hiragana": "へや",
+    "romaji": "heya",
+    "spanish": "Habitación",
+    "english": "room",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-010",
+    "japanese": "トイレ",
+    "hiragana": "といれ",
+    "romaji": "toire",
+    "spanish": "Baño",
+    "english": "toilet",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-011",
+    "japanese": "お手洗い",
+    "hiragana": "おてあらい",
+    "romaji": "otearai",
+    "spanish": "Baño (formal)",
+    "english": "restroom",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-012",
+    "japanese": "自販機",
+    "hiragana": "じはんき",
+    "romaji": "jihanki",
+    "spanish": "Máquina expendedora　(abreviada)",
+    "english": "vending machine　(abbreviated)",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-013",
+    "japanese": "階段",
+    "hiragana": "かいだん",
+    "romaji": "kaidan",
+    "spanish": "Escalera",
+    "english": "stairs",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-014",
+    "japanese": "エレベーター",
+    "hiragana": "エレベーター",
+    "romaji": "erebētā",
+    "spanish": "Ascensor",
+    "english": "elevator",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-015",
+    "japanese": "エスカレーター",
+    "hiragana": "エスカレーター",
+    "romaji": "esukarētā",
+    "spanish": "Escalera mecánica",
+    "english": "escalator",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-016",
+    "japanese": "自動販売機",
+    "hiragana": "じどうはんばいき",
+    "romaji": "jidouhanbaiki",
+    "spanish": "Máquina expendedora",
+    "english": "vending machine",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-017",
+    "japanese": "国",
+    "hiragana": "くに",
+    "romaji": "kuni",
+    "spanish": "País",
+    "english": "country",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-018",
+    "japanese": "電話",
+    "hiragana": "でんわ",
+    "romaji": "denwa",
+    "spanish": "Teléfono",
+    "english": "telephone",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-019",
+    "japanese": "携帯電話",
+    "hiragana": "けいたいでんわ",
+    "romaji": "keitai denwa",
+    "spanish": "Teléfono móvil",
+    "english": "mobile phone",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-020",
+    "japanese": "携帯",
+    "hiragana": "けいたい",
+    "romaji": "keitai",
+    "spanish": "Móvil (abreviado)",
+    "english": "mobile (abbreviated)",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-021",
+    "japanese": "会社",
+    "hiragana": "かいしゃ",
+    "romaji": "kaisha",
+    "spanish": "Empresa",
+    "english": "company",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-022",
+    "japanese": "うち",
+    "hiragana": "うち",
+    "romaji": "uchi",
+    "spanish": "Casa",
+    "english": "home",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-023",
+    "japanese": "いえ",
+    "hiragana": "いえ",
+    "romaji": "ie",
+    "spanish": "Casa　(forma formal)",
+    "english": "house　(formal)",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-024",
+    "japanese": "靴",
+    "hiragana": "くつ",
+    "romaji": "kutsu",
+    "spanish": "Zapatos",
+    "english": "shoes",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-025",
+    "japanese": "ネクタイ",
+    "hiragana": "ネクタイ",
+    "romaji": "nekutai",
+    "spanish": "Corbata",
+    "english": "tie",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-026",
+    "japanese": "ワイン",
+    "hiragana": "ワイン",
+    "romaji": "wain",
+    "spanish": "Vino",
+    "english": "wine",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-027",
+    "japanese": "〜売り場",
+    "hiragana": "うりば",
+    "romaji": "uriba",
+    "spanish": "Sección/Mostrador",
+    "english": "section/counter",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-028",
+    "japanese": "えん",
+    "hiragana": "えん",
+    "romaji": "en",
+    "spanish": "número",
+    "english": "number",
+    "type": "noun",
+    "lesson": 3
+  },
+  {
+    "id": "L03-029",
+    "japanese": "どうも",
+    "hiragana": "どうも",
+    "romaji": "doumo",
+    "spanish": "Gracias",
+    "english": "Thank you",
+    "type": "expression",
+    "lesson": 3
+  },
+  {
+    "id": "L03-030",
+    "japanese": "いらっしゃいませ",
+    "hiragana": "いらっしゃいませ",
+    "romaji": "irasshaimase",
+    "spanish": "Bienvenido",
+    "english": "Welcome",
+    "type": "expression",
+    "lesson": 3
+  },
+  {
+    "id": "L03-031",
+    "japanese": "〜をください",
+    "hiragana": "〜をください",
+    "romaji": "〜o kudasai",
+    "spanish": "Por favor, dame ~",
+    "english": "Please give me ~",
+    "type": "expression",
+    "lesson": 3
+  },
+  {
+    "id": "L03-032",
+    "japanese": "じゃ",
+    "hiragana": "じゃ",
+    "romaji": "ja",
+    "spanish": "Entonces",
+    "english": "Well then",
+    "type": "expression",
+    "lesson": 3
+  },
+  {
+    "id": "L03-033",
+    "japanese": "もう一度お願いします",
+    "hiragana": "もういちどおねがいします",
+    "romaji": "mou ichido onegaishimasu",
+    "spanish": "Una vez más, por favor.",
+    "english": "One more time, please.",
+    "type": "expression",
+    "lesson": 3
+  }
+]

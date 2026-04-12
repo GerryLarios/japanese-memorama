@@ -1,0 +1,383 @@
+[
+  {
+    "id": "L02-001",
+    "japanese": "本",
+    "hiragana": "ほん",
+    "romaji": "hon",
+    "spanish": "Libro",
+    "english": "book",
+    "type": "noun",
+    "lesson": 2
+  },
+
+  {
+    "id": "L02-002",
+    "japanese": "辞書",
+    "hiragana": "じしょ",
+    "romaji": "jisho",
+    "spanish": "Diccionario",
+    "english": "dictionary",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-003",
+    "japanese": "ノート",
+    "hiragana": "ノート",
+    "romaji": "nooto",
+    "spanish": "Cuaderno",
+    "english": "notebook",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-004",
+    "japanese": "カード",
+    "hiragana": "カード",
+    "romaji": "kaado",
+    "spanish": "Tarjeta",
+    "english": "card",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-005",
+    "japanese": "クレジットカード",
+    "hiragana": "クレジットカード",
+    "romaji": "kurejitto kaado",
+    "spanish": "Tarjeta de crédito",
+    "english": "credit card",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-006",
+    "japanese": "デビットカード",
+    "hiragana": "デビットカード",
+    "romaji": "debitto kaado",
+    "spanish": "Tarjeta de débito",
+    "english": "debit card",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-007",
+    "japanese": "鉛筆",
+    "hiragana": "えんぴつ",
+    "romaji": "enpitsu",
+    "spanish": "Lápiz",
+    "english": "pencil",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-008",
+    "japanese": "ペン",
+    "hiragana": "ペン",
+    "romaji": "pen",
+    "spanish": "Pluma",
+    "english": "pen",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-009",
+    "japanese": "ボールペン",
+    "hiragana": "ボールペン",
+    "romaji": "bōrupen",
+    "spanish": "Bolígrafo",
+    "english": "ballpoint pen",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-010",
+    "japanese": "シャープペンシル",
+    "hiragana": "しゃーぷぺんしる",
+    "romaji": "shāpu penshiru",
+    "spanish": "Lápiz mecánico",
+    "english": "mechanical pencil",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-011",
+    "japanese": "シャーペン",
+    "hiragana": "シャーペン",
+    "romaji": "shāpen",
+    "spanish": "Lápiz mecánico (abreviado)",
+    "english": "mechanical pencil (abbreviated)",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-012",
+    "japanese": "鍵",
+    "hiragana": "かぎ",
+    "romaji": "kagi",
+    "spanish": "Llave",
+    "english": "key",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-013",
+    "japanese": "時計",
+    "hiragana": "とけい",
+    "romaji": "tokei",
+    "spanish": "Reloj",
+    "english": "watch",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-014",
+    "japanese": "腕時計",
+    "hiragana": "うでどけい",
+    "romaji": "udedokei",
+    "spanish": "Reloj de pulsera",
+    "english": "wristwatch",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-015",
+    "japanese": "傘",
+    "hiragana": "かさ",
+    "romaji": "kasa",
+    "spanish": "Paraguas",
+    "english": "umbrella",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-016",
+    "japanese": "鞄",
+    "hiragana": "かばん",
+    "romaji": "kaban",
+    "spanish": "Bolsa",
+    "english": "bag",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-017",
+    "japanese": "バッグ",
+    "hiragana": "ばっぐ",
+    "romaji": "baggu",
+    "spanish": "Bolsa(katakana)",
+    "english": "bag (katakana)",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-018",
+    "japanese": "テレビ",
+    "hiragana": "てれび",
+    "romaji": "terebi",
+    "spanish": "Televisión",
+    "english": "television",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-019",
+    "japanese": "カメラ",
+    "hiragana": "かめら",
+    "romaji": "kamera",
+    "spanish": "Cámara",
+    "english": "camera",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-020",
+    "japanese": "コンピュータ",
+    "hiragana": "コンピュータ",
+    "romaji": "konpyūta",
+    "spanish": "Computadora",
+    "english": "computer",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-021",
+    "japanese": "パソコン",
+    "hiragana": "ぱそこん",
+    "romaji": "pasokon",
+    "spanish": "Computadora personal",
+    "english": "personal computer",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-022",
+    "japanese": "スマートフォン",
+    "hiragana": "すまーとふぉん",
+    "romaji": "sumātofon",
+    "spanish": "Teléfono inteligente",
+    "english": "smartphone",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-023",
+    "japanese": "携帯電話",
+    "hiragana": "けいたいでんわ",
+    "romaji": "keitai denwa",
+    "spanish": "Teléfono móvil",
+    "english": "mobile phone",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-024",
+    "japanese": "電話",
+    "hiragana": "でんわ",
+    "romaji": "denwa",
+    "spanish": "Teléfono fijo",
+    "english": "landline phone",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-025",
+    "japanese": "机",
+    "hiragana": "つくえ",
+    "romaji": "tsukue",
+    "spanish": "Escritorio",
+    "english": "desk",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-026",
+    "japanese": "椅子",
+    "hiragana": "いす",
+    "romaji": "isu",
+    "spanish": "Silla",
+    "english": "chair",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-027",
+    "japanese": "デスク",
+    "hiragana": "デスク",
+    "romaji": "desuku",
+    "spanish": "Escritorio (katakana)",
+    "english": "desk (katakana)",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-028",
+    "japanese": "チョコレート",
+    "hiragana": "チョコレート",
+    "romaji": "chokorēto",
+    "spanish": "Chocolate",
+    "english": "chocolate",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-029",
+    "japanese": "コーヒー",
+    "hiragana": "コーヒー",
+    "romaji": "kōhī",
+    "spanish": "Café",
+    "english": "coffee",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-030",
+    "japanese": "紅茶",
+    "hiragana": "こうちゃ",
+    "romaji": "kōcha",
+    "spanish": "Té negro",
+    "english": "black tea",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-031",
+    "japanese": "緑茶",
+    "hiragana": "りょくちゃ",
+    "romaji": "ryokucha",
+    "spanish": "Té verde",
+    "english": "green tea",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-032",
+    "japanese": "水",
+    "hiragana": "みず",
+    "romaji": "mizu",
+    "spanish": "Agua",
+    "english": "water",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-033",
+    "japanese": "ジュース",
+    "hiragana": "ジュース",
+    "romaji": "jūsu",
+    "spanish": "Jugo",
+    "english": "juice",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-034",
+    "japanese": "お土産",
+    "hiragana": "おみやげ",
+    "romaji": "omiyage",
+    "spanish": "Regalo / Souvenir",
+    "english": "gift / souvenir",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-035",
+    "japanese": "日本語",
+    "hiragana": "にほんご",
+    "romaji": "nihongo",
+    "spanish": "Japonés",
+    "english": "Japanese",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-036",
+    "japanese": "英語",
+    "hiragana": "えいご",
+    "romaji": "eigo",
+    "spanish": "Inglés",
+    "english": "English",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-037",
+    "japanese": "スペイン語",
+    "hiragana": "スペインご",
+    "romaji": "supeingo",
+    "spanish": "Español",
+    "english": "Spanish",
+    "type": "noun",
+    "lesson": 2
+  },
+  {
+    "id": "L02-038",
+    "japanese": "どうぞ",
+    "hiragana": "どうぞ",
+    "romaji": "douzo",
+    "spanish": "Por favor / Adelante",
+    "english": "Please / Go ahead",
+    "type": "expression",
+    "lesson": 2
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "L16-001",
+    "japanese": "着ます",
+    "hiragana": "きます",
+    "romaji": "kimasu",
+    "spanish": "Ponerse (ropa, parte superior)",
+    "english": "to wear (upper body clothing)",
+    "type": "verb",
+    "lesson": 16
+  },
+  {
+    "id": "L16-002",
+    "japanese": "はきます",
+    "hiragana": "はきます",
+    "romaji": "hakimasu",
+    "spanish": "Ponerse (pantalones, zapatos)",
+    "english": "to wear (pants, shoes)",
+    "type": "verb",
+    "lesson": 16
+  },
+  {
+    "id": "L16-003",
+    "japanese": "かぶります",
+    "hiragana": "かぶります",
+    "romaji": "kaburimasu",
+    "spanish": "Ponerse (sombrero, gorra)",
+    "english": "to wear (hat, cap)",
+    "type": "verb",
+    "lesson": 16
+  },
+  {
+    "id": "L16-004",
+    "japanese": "つけます",
+    "hiragana": "つけます",
+    "romaji": "tsukemasu",
+    "spanish": "Ponerse (accesorios)",
+    "english": "to wear (accessories)",
+    "type": "verb",
+    "lesson": 16
+  },
+  {
+    "id": "L16-005",
+    "japanese": "シャツ",
+    "hiragana": "シャツ",
+    "romaji": "shatsu",
+    "spanish": "Camisa",
+    "english": "shirt",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-006",
+    "japanese": "スカート",
+    "hiragana": "スカート",
+    "romaji": "sukaato",
+    "spanish": "Falda",
+    "english": "skirt",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-007",
+    "japanese": "ズボン",
+    "hiragana": "ズボン",
+    "romaji": "zubon",
+    "spanish": "Pantalones",
+    "english": "trousers, pants",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-008",
+    "japanese": "コート",
+    "hiragana": "コート",
+    "romaji": "kooto",
+    "spanish": "Abrigo",
+    "english": "coat, overcoat",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-009",
+    "japanese": "セーター",
+    "hiragana": "セーター",
+    "romaji": "seetaa",
+    "spanish": "Suéter",
+    "english": "sweater",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-010",
+    "japanese": "靴",
+    "hiragana": "くつ",
+    "romaji": "kutsu",
+    "spanish": "Zapatos",
+    "english": "shoes",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-011",
+    "japanese": "帽子",
+    "hiragana": "ぼうし",
+    "romaji": "boushi",
+    "spanish": "Sombrero, gorra",
+    "english": "hat, cap",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-012",
+    "japanese": "眼鏡",
+    "hiragana": "めがね",
+    "romaji": "megane",
+    "spanish": "Gafas, lentes",
+    "english": "glasses, spectacles",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-013",
+    "japanese": "ネクタイ",
+    "hiragana": "ネクタイ",
+    "romaji": "nekutai",
+    "spanish": "Corbata",
+    "english": "necktie",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-014",
+    "japanese": "スーツ",
+    "hiragana": "スーツ",
+    "romaji": "suutsu",
+    "spanish": "Traje",
+    "english": "suit",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-015",
+    "japanese": "ジーンズ",
+    "hiragana": "ジーンズ",
+    "romaji": "jiinzu",
+    "spanish": "Jeans, pantalones vaqueros",
+    "english": "jeans",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-016",
+    "japanese": "ワンピース",
+    "hiragana": "ワンピース",
+    "romaji": "wanpiisu",
+    "spanish": "Vestido",
+    "english": "dress, one-piece",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-017",
+    "japanese": "指輪",
+    "hiragana": "ゆびわ",
+    "romaji": "yubiwa",
+    "spanish": "Anillo",
+    "english": "ring",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-018",
+    "japanese": "ネックレス",
+    "hiragana": "ネックレス",
+    "romaji": "nekkuresu",
+    "spanish": "Collar",
+    "english": "necklace",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-019",
+    "japanese": "洋服",
+    "hiragana": "ようふく",
+    "romaji": "youfuku",
+    "spanish": "Ropa occidental",
+    "english": "Western clothes",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-020",
+    "japanese": "着物",
+    "hiragana": "きもの",
+    "romaji": "kimono",
+    "spanish": "Kimono",
+    "english": "kimono, Japanese clothing",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-021",
+    "japanese": "サイズ",
+    "hiragana": "サイズ",
+    "romaji": "saizu",
+    "spanish": "Talla, tamaño",
+    "english": "size",
+    "type": "noun",
+    "lesson": 16
+  },
+  {
+    "id": "L16-022",
+    "japanese": "似合います",
+    "hiragana": "にあいます",
+    "romaji": "niaimasu",
+    "spanish": "Quedar bien, sentar bien",
+    "english": "to suit, to look good on",
+    "type": "verb",
+    "lesson": 16
+  }
+]

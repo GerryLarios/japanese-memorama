@@ -1,0 +1,252 @@
+[
+  {
+    "id": "L12-001",
+    "japanese": "〜てください",
+    "hiragana": "〜てください",
+    "romaji": "~te kudasai",
+    "spanish": "Por favor haga〜",
+    "english": "please do ~",
+    "type": "expression",
+    "lesson": 12
+  },
+  {
+    "id": "L12-002",
+    "japanese": "〜てもいいです",
+    "hiragana": "〜てもいいです",
+    "romaji": "~te mo ii desu",
+    "spanish": "Está bien hacer〜, puede〜",
+    "english": "it is okay to do ~",
+    "type": "expression",
+    "lesson": 12
+  },
+  {
+    "id": "L12-003",
+    "japanese": "〜てはいけません",
+    "hiragana": "〜てはいけません",
+    "romaji": "~te wa ikemasen",
+    "spanish": "No debe hacer〜, está prohibido〜",
+    "english": "must not do ~",
+    "type": "expression",
+    "lesson": 12
+  },
+  {
+    "id": "L12-004",
+    "japanese": "使います",
+    "hiragana": "つかいます",
+    "romaji": "tsukaimasu",
+    "spanish": "Usar, utilizar",
+    "english": "to use",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-005",
+    "japanese": "開けます",
+    "hiragana": "あけます",
+    "romaji": "akemasu",
+    "spanish": "Abrir",
+    "english": "to open",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-006",
+    "japanese": "閉めます",
+    "hiragana": "しめます",
+    "romaji": "shimemasu",
+    "spanish": "Cerrar",
+    "english": "to close",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-007",
+    "japanese": "消します",
+    "hiragana": "けします",
+    "romaji": "keshimasu",
+    "spanish": "Apagar, borrar",
+    "english": "to turn off, to erase",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-008",
+    "japanese": "つけます",
+    "hiragana": "つけます",
+    "romaji": "tsukemasu",
+    "spanish": "Encender, poner",
+    "english": "to turn on",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-009",
+    "japanese": "入ります",
+    "hiragana": "はいります",
+    "romaji": "hairimasu",
+    "spanish": "Entrar",
+    "english": "to enter",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-010",
+    "japanese": "出ます",
+    "hiragana": "でます",
+    "romaji": "demasu",
+    "spanish": "Salir",
+    "english": "to exit, to leave",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-011",
+    "japanese": "座ります",
+    "hiragana": "すわります",
+    "romaji": "suwarimasu",
+    "spanish": "Sentarse",
+    "english": "to sit down",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-012",
+    "japanese": "立ちます",
+    "hiragana": "たちます",
+    "romaji": "tachimasu",
+    "spanish": "Ponerse de pie",
+    "english": "to stand up",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-013",
+    "japanese": "持ちます",
+    "hiragana": "もちます",
+    "romaji": "mochimasu",
+    "spanish": "Sostener, llevar",
+    "english": "to hold, to carry",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-014",
+    "japanese": "見せます",
+    "hiragana": "みせます",
+    "romaji": "misemasu",
+    "spanish": "Mostrar",
+    "english": "to show",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-015",
+    "japanese": "教えます",
+    "hiragana": "おしえます",
+    "romaji": "oshiemasu",
+    "spanish": "Enseñar, informar",
+    "english": "to teach, to tell",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-016",
+    "japanese": "急ぎます",
+    "hiragana": "いそぎます",
+    "romaji": "isogimasu",
+    "spanish": "Apresurarse, darse prisa",
+    "english": "to hurry",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-017",
+    "japanese": "待ちます",
+    "hiragana": "まちます",
+    "romaji": "machimasu",
+    "spanish": "Esperar",
+    "english": "to wait",
+    "type": "verb",
+    "lesson": 12
+  },
+  {
+    "id": "L12-018",
+    "japanese": "窓",
+    "hiragana": "まど",
+    "romaji": "mado",
+    "spanish": "Ventana",
+    "english": "window",
+    "type": "noun",
+    "lesson": 12
+  },
+  {
+    "id": "L12-019",
+    "japanese": "ドア",
+    "hiragana": "ドア",
+    "romaji": "doa",
+    "spanish": "Puerta",
+    "english": "door",
+    "type": "noun",
+    "lesson": 12
+  },
+  {
+    "id": "L12-020",
+    "japanese": "電気",
+    "hiragana": "でんき",
+    "romaji": "denki",
+    "spanish": "Luz eléctrica",
+    "english": "electricity, light",
+    "type": "noun",
+    "lesson": 12
+  },
+  {
+    "id": "L12-021",
+    "japanese": "エアコン",
+    "hiragana": "エアコン",
+    "romaji": "eakon",
+    "spanish": "Aire acondicionado",
+    "english": "air conditioner",
+    "type": "noun",
+    "lesson": 12
+  },
+  {
+    "id": "L12-022",
+    "japanese": "ここ",
+    "hiragana": "ここ",
+    "romaji": "koko",
+    "spanish": "Aquí, este lugar",
+    "english": "here, this place",
+    "type": "noun",
+    "lesson": 12
+  },
+  {
+    "id": "L12-023",
+    "japanese": "そこ",
+    "hiragana": "そこ",
+    "romaji": "soko",
+    "spanish": "Ahí, ese lugar",
+    "english": "there, that place",
+    "type": "noun",
+    "lesson": 12
+  },
+  {
+    "id": "L12-024",
+    "japanese": "あそこ",
+    "hiragana": "あそこ",
+    "romaji": "asoko",
+    "spanish": "Allá, ese lugar de allá",
+    "english": "over there, that place yonder",
+    "type": "noun",
+    "lesson": 12
+  },
+  {
+    "id": "L12-025",
+    "japanese": "もう少し",
+    "hiragana": "もうすこし",
+    "romaji": "mou sukoshi",
+    "spanish": "Un poco más",
+    "english": "a little more",
+    "type": "expression",
+    "lesson": 12
+  }
+]

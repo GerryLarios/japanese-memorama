@@ -1,0 +1,262 @@
+[
+  {
+    "id": "L07-001",
+    "japanese": "乗ります",
+    "hiragana": "のります",
+    "romaji": "norimasu",
+    "spanish": "Subirse (al transporte)",
+    "english": "to board, to ride",
+    "type": "verb",
+    "lesson": 7
+  },
+  {
+    "id": "L07-002",
+    "japanese": "降ります",
+    "hiragana": "おります",
+    "romaji": "orimasu",
+    "spanish": "Bajarse (del transporte)",
+    "english": "to get off, to disembark",
+    "type": "verb",
+    "lesson": 7
+  },
+  {
+    "id": "L07-003",
+    "japanese": "車",
+    "hiragana": "くるま",
+    "romaji": "kuruma",
+    "spanish": "Coche, auto",
+    "english": "car",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-004",
+    "japanese": "バス停",
+    "hiragana": "バスてい",
+    "romaji": "basutei",
+    "spanish": "Parada de autobús",
+    "english": "bus stop",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-005",
+    "japanese": "公園",
+    "hiragana": "こうえん",
+    "romaji": "kouen",
+    "spanish": "Parque",
+    "english": "park",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-006",
+    "japanese": "海",
+    "hiragana": "うみ",
+    "romaji": "umi",
+    "spanish": "Mar, playa",
+    "english": "sea, beach",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-007",
+    "japanese": "山",
+    "hiragana": "やま",
+    "romaji": "yama",
+    "spanish": "Montaña",
+    "english": "mountain",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-008",
+    "japanese": "外国",
+    "hiragana": "がいこく",
+    "romaji": "gaikoku",
+    "spanish": "País extranjero, extranjero",
+    "english": "foreign country",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-009",
+    "japanese": "ホテル",
+    "hiragana": "ホテル",
+    "romaji": "hoteru",
+    "spanish": "Hotel",
+    "english": "hotel",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-010",
+    "japanese": "レストラン",
+    "hiragana": "レストラン",
+    "romaji": "resutoran",
+    "spanish": "Restaurante",
+    "english": "restaurant",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-011",
+    "japanese": "お寺",
+    "hiragana": "おてら",
+    "romaji": "otera",
+    "spanish": "Templo budista",
+    "english": "Buddhist temple",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-012",
+    "japanese": "神社",
+    "hiragana": "じんじゃ",
+    "romaji": "jinja",
+    "spanish": "Santuario sintoísta",
+    "english": "Shinto shrine",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-013",
+    "japanese": "博物館",
+    "hiragana": "はくぶつかん",
+    "romaji": "hakubutsukan",
+    "spanish": "Museo",
+    "english": "museum",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-014",
+    "japanese": "動物園",
+    "hiragana": "どうぶつえん",
+    "romaji": "doubutsuen",
+    "spanish": "Zoológico",
+    "english": "zoo",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-015",
+    "japanese": "本屋",
+    "hiragana": "ほんや",
+    "romaji": "honya",
+    "spanish": "Librería",
+    "english": "bookstore",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-016",
+    "japanese": "花屋",
+    "hiragana": "はなや",
+    "romaji": "hanaya",
+    "spanish": "Florería, floristería",
+    "english": "flower shop, florist",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-017",
+    "japanese": "薬局",
+    "hiragana": "やっきょく",
+    "romaji": "yakkyoku",
+    "spanish": "Farmacia",
+    "english": "pharmacy",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-018",
+    "japanese": "コンビニ",
+    "hiragana": "コンビニ",
+    "romaji": "konbini",
+    "spanish": "Tienda de conveniencia",
+    "english": "convenience store",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-019",
+    "japanese": "旅館",
+    "hiragana": "りょかん",
+    "romaji": "ryokan",
+    "spanish": "Posada japonesa, ryokan",
+    "english": "Japanese inn",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-020",
+    "japanese": "切符",
+    "hiragana": "きっぷ",
+    "romaji": "kippu",
+    "spanish": "Boleto, billete",
+    "english": "ticket",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-021",
+    "japanese": "週末",
+    "hiragana": "しゅうまつ",
+    "romaji": "shuumatsu",
+    "spanish": "Fin de semana",
+    "english": "weekend",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-022",
+    "japanese": "乗り物",
+    "hiragana": "のりもの",
+    "romaji": "norimono",
+    "spanish": "Vehículo, medio de transporte",
+    "english": "vehicle, means of transport",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-023",
+    "japanese": "ところ",
+    "hiragana": "ところ",
+    "romaji": "tokoro",
+    "spanish": "Lugar, sitio",
+    "english": "place",
+    "type": "noun",
+    "lesson": 7
+  },
+  {
+    "id": "L07-024",
+    "japanese": "〜時間",
+    "hiragana": "〜じかん",
+    "romaji": "~jikan",
+    "spanish": "〜 horas (duración)",
+    "english": "~ hours (duration)",
+    "type": "expression",
+    "lesson": 7
+  },
+  {
+    "id": "L07-025",
+    "japanese": "どのくらい",
+    "hiragana": "どのくらい",
+    "romaji": "dono kurai",
+    "spanish": "¿Cuánto tiempo?, ¿Qué distancia?",
+    "english": "how long, about how much",
+    "type": "adverb",
+    "lesson": 7
+  },
+  {
+    "id": "L07-026",
+    "japanese": "どうやって",
+    "hiragana": "どうやって",
+    "romaji": "douyatte",
+    "spanish": "¿Cómo?, ¿De qué manera?",
+    "english": "how, by what means",
+    "type": "adverb",
+    "lesson": 7
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "L11-001",
+    "japanese": "起きます",
+    "hiragana": "おきます",
+    "romaji": "okimasu",
+    "spanish": "Levantarse, despertarse",
+    "english": "to wake up, to get up",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-002",
+    "japanese": "寝ます",
+    "hiragana": "ねます",
+    "romaji": "nemasu",
+    "spanish": "Dormir, acostarse",
+    "english": "to sleep, to go to bed",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-003",
+    "japanese": "シャワーを浴びます",
+    "hiragana": "シャワーをあびます",
+    "romaji": "shawaa wo abimasu",
+    "spanish": "Ducharse",
+    "english": "to take a shower",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-004",
+    "japanese": "歯を磨きます",
+    "hiragana": "はをみがきます",
+    "romaji": "ha wo migakimasu",
+    "spanish": "Cepillarse los dientes",
+    "english": "to brush teeth",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-005",
+    "japanese": "着ます",
+    "hiragana": "きます",
+    "romaji": "kimasu",
+    "spanish": "Ponerse (ropa)",
+    "english": "to put on, to wear (upper body)",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-006",
+    "japanese": "脱ぎます",
+    "hiragana": "ぬぎます",
+    "romaji": "nugimasu",
+    "spanish": "Quitarse (ropa)",
+    "english": "to take off (clothing)",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-007",
+    "japanese": "朝ご飯",
+    "hiragana": "あさごはん",
+    "romaji": "asagohan",
+    "spanish": "Desayuno",
+    "english": "breakfast",
+    "type": "noun",
+    "lesson": 11
+  },
+  {
+    "id": "L11-008",
+    "japanese": "昼ご飯",
+    "hiragana": "ひるごはん",
+    "romaji": "hirugohan",
+    "spanish": "Almuerzo",
+    "english": "lunch",
+    "type": "noun",
+    "lesson": 11
+  },
+  {
+    "id": "L11-009",
+    "japanese": "晩ご飯",
+    "hiragana": "ばんごはん",
+    "romaji": "bangohan",
+    "spanish": "Cena",
+    "english": "dinner",
+    "type": "noun",
+    "lesson": 11
+  },
+  {
+    "id": "L11-010",
+    "japanese": "〜てから",
+    "hiragana": "〜てから",
+    "romaji": "~te kara",
+    "spanish": "Después de hacer〜",
+    "english": "after doing ~",
+    "type": "expression",
+    "lesson": 11
+  },
+  {
+    "id": "L11-011",
+    "japanese": "〜ている",
+    "hiragana": "〜ている",
+    "romaji": "~te iru",
+    "spanish": "Estar haciendo〜 (progresivo)",
+    "english": "be doing ~ (progressive)",
+    "type": "expression",
+    "lesson": 11
+  },
+  {
+    "id": "L11-012",
+    "japanese": "〜て、〜",
+    "hiragana": "〜て、〜",
+    "romaji": "~te, ~",
+    "spanish": "Hacer〜 y luego〜 (secuencia)",
+    "english": "do ~ and then ~ (sequential)",
+    "type": "expression",
+    "lesson": 11
+  },
+  {
+    "id": "L11-013",
+    "japanese": "毎朝",
+    "hiragana": "まいあさ",
+    "romaji": "maiasa",
+    "spanish": "Todas las mañanas",
+    "english": "every morning",
+    "type": "noun",
+    "lesson": 11
+  },
+  {
+    "id": "L11-014",
+    "japanese": "毎晩",
+    "hiragana": "まいばん",
+    "romaji": "maiban",
+    "spanish": "Todas las noches",
+    "english": "every evening",
+    "type": "noun",
+    "lesson": 11
+  },
+  {
+    "id": "L11-015",
+    "japanese": "洗います",
+    "hiragana": "あらいます",
+    "romaji": "araimasu",
+    "spanish": "Lavar",
+    "english": "to wash",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-016",
+    "japanese": "掃除します",
+    "hiragana": "そうじします",
+    "romaji": "souji shimasu",
+    "spanish": "Limpiar, hacer la limpieza",
+    "english": "to clean, to do cleaning",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-017",
+    "japanese": "洗濯します",
+    "hiragana": "せんたくします",
+    "romaji": "sentaku shimasu",
+    "spanish": "Lavar la ropa",
+    "english": "to do laundry",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-018",
+    "japanese": "散歩します",
+    "hiragana": "さんぽします",
+    "romaji": "sanpo shimasu",
+    "spanish": "Pasear, dar un paseo",
+    "english": "to take a walk",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-019",
+    "japanese": "忘れます",
+    "hiragana": "わすれます",
+    "romaji": "wasuremasu",
+    "spanish": "Olvidar",
+    "english": "to forget",
+    "type": "verb",
+    "lesson": 11
+  },
+  {
+    "id": "L11-020",
+    "japanese": "覚えます",
+    "hiragana": "おぼえます",
+    "romaji": "oboemasu",
+    "spanish": "Recordar, aprender de memoria",
+    "english": "to remember, to memorize",
+    "type": "verb",
+    "lesson": 11
+  }
+]

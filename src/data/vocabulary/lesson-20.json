@@ -1,0 +1,152 @@
+[
+  {
+    "id": "L20-001",
+    "japanese": "〜と",
+    "hiragana": "〜と",
+    "romaji": "~to",
+    "spanish": "Si〜, cuando〜 (condicional natural)",
+    "english": "if ~, when ~ (natural conditional)",
+    "type": "expression",
+    "lesson": 20
+  },
+  {
+    "id": "L20-002",
+    "japanese": "〜ば",
+    "hiragana": "〜ば",
+    "romaji": "~ba",
+    "spanish": "Si〜 (condicional)",
+    "english": "if ~ (conditional)",
+    "type": "expression",
+    "lesson": 20
+  },
+  {
+    "id": "L20-003",
+    "japanese": "〜たら",
+    "hiragana": "〜たら",
+    "romaji": "~tara",
+    "spanish": "Si〜, cuando〜 (condicional)",
+    "english": "if ~, when ~ (conditional)",
+    "type": "expression",
+    "lesson": 20
+  },
+  {
+    "id": "L20-004",
+    "japanese": "道",
+    "hiragana": "みち",
+    "romaji": "michi",
+    "spanish": "Camino, calle",
+    "english": "road, street, way",
+    "type": "noun",
+    "lesson": 20
+  },
+  {
+    "id": "L20-005",
+    "japanese": "曲がります",
+    "hiragana": "まがります",
+    "romaji": "magarimasu",
+    "spanish": "Doblar, girar",
+    "english": "to turn",
+    "type": "verb",
+    "lesson": 20
+  },
+  {
+    "id": "L20-006",
+    "japanese": "渡ります",
+    "hiragana": "わたります",
+    "romaji": "watarimasu",
+    "spanish": "Cruzar",
+    "english": "to cross",
+    "type": "verb",
+    "lesson": 20
+  },
+  {
+    "id": "L20-007",
+    "japanese": "右",
+    "hiragana": "みぎ",
+    "romaji": "migi",
+    "spanish": "Derecha",
+    "english": "right (direction)",
+    "type": "noun",
+    "lesson": 20
+  },
+  {
+    "id": "L20-008",
+    "japanese": "左",
+    "hiragana": "ひだり",
+    "romaji": "hidari",
+    "spanish": "Izquierda",
+    "english": "left (direction)",
+    "type": "noun",
+    "lesson": 20
+  },
+  {
+    "id": "L20-009",
+    "japanese": "真っ直ぐ",
+    "hiragana": "まっすぐ",
+    "romaji": "massugu",
+    "spanish": "Recto, en línea recta",
+    "english": "straight ahead",
+    "type": "adverb",
+    "lesson": 20
+  },
+  {
+    "id": "L20-010",
+    "japanese": "角",
+    "hiragana": "かど",
+    "romaji": "kado",
+    "spanish": "Esquina",
+    "english": "corner",
+    "type": "noun",
+    "lesson": 20
+  },
+  {
+    "id": "L20-011",
+    "japanese": "信号",
+    "hiragana": "しんごう",
+    "romaji": "shingou",
+    "spanish": "Semáforo",
+    "english": "traffic light, signal",
+    "type": "noun",
+    "lesson": 20
+  },
+  {
+    "id": "L20-012",
+    "japanese": "橋",
+    "hiragana": "はし",
+    "romaji": "hashi",
+    "spanish": "Puente",
+    "english": "bridge",
+    "type": "noun",
+    "lesson": 20
+  },
+  {
+    "id": "L20-013",
+    "japanese": "近く",
+    "hiragana": "ちかく",
+    "romaji": "chikaku",
+    "spanish": "Cerca, lugar cercano",
+    "english": "nearby, close by",
+    "type": "noun",
+    "lesson": 20
+  },
+  {
+    "id": "L20-014",
+    "japanese": "遠く",
+    "hiragana": "とおく",
+    "romaji": "tooku",
+    "spanish": "Lejos, lugar lejano",
+    "english": "far away",
+    "type": "noun",
+    "lesson": 20
+  },
+  {
+    "id": "L20-015",
+    "japanese": "迷います",
+    "hiragana": "まよいます",
+    "romaji": "mayoimasu",
+    "spanish": "Perderse, dudar",
+    "english": "to get lost, to hesitate",
+    "type": "verb",
+    "lesson": 20
+  }
+]

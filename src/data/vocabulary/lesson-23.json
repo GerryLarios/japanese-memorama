@@ -1,0 +1,132 @@
+[
+  {
+    "id": "L23-001",
+    "japanese": "〜ながら",
+    "hiragana": "〜ながら",
+    "romaji": "~nagara",
+    "spanish": "Mientras hace〜 (simultáneo)",
+    "english": "while doing ~ (simultaneous)",
+    "type": "expression",
+    "lesson": 23
+  },
+  {
+    "id": "L23-002",
+    "japanese": "〜し、〜し",
+    "hiragana": "〜し、〜し",
+    "romaji": "~shi, ~shi",
+    "spanish": "Además〜, también〜 (enumeración)",
+    "english": "both ~ and ~ (listing reasons)",
+    "type": "expression",
+    "lesson": 23
+  },
+  {
+    "id": "L23-003",
+    "japanese": "〜そうです",
+    "hiragana": "〜そうです",
+    "romaji": "~sou desu",
+    "spanish": "Parece que〜, tiene apariencia de〜",
+    "english": "looks like ~, seems ~",
+    "type": "expression",
+    "lesson": 23
+  },
+  {
+    "id": "L23-004",
+    "japanese": "様子",
+    "hiragana": "ようす",
+    "romaji": "yousu",
+    "spanish": "Estado, apariencia, situación",
+    "english": "state, appearance, situation",
+    "type": "noun",
+    "lesson": 23
+  },
+  {
+    "id": "L23-005",
+    "japanese": "音楽を聞きながら",
+    "hiragana": "おんがくをききながら",
+    "romaji": "ongaku wo kiki nagara",
+    "spanish": "Mientras escucha música",
+    "english": "while listening to music",
+    "type": "expression",
+    "lesson": 23
+  },
+  {
+    "id": "L23-006",
+    "japanese": "運動します",
+    "hiragana": "うんどうします",
+    "romaji": "undou shimasu",
+    "spanish": "Hacer ejercicio",
+    "english": "to exercise",
+    "type": "verb",
+    "lesson": 23
+  },
+  {
+    "id": "L23-007",
+    "japanese": "料理します",
+    "hiragana": "りょうりします",
+    "romaji": "ryouri shimasu",
+    "spanish": "Cocinar",
+    "english": "to cook",
+    "type": "verb",
+    "lesson": 23
+  },
+  {
+    "id": "L23-008",
+    "japanese": "掃除します",
+    "hiragana": "そうじします",
+    "romaji": "souji shimasu",
+    "spanish": "Limpiar",
+    "english": "to clean",
+    "type": "verb",
+    "lesson": 23
+  },
+  {
+    "id": "L23-009",
+    "japanese": "疲れます",
+    "hiragana": "つかれます",
+    "romaji": "tsukaremasu",
+    "spanish": "Cansarse",
+    "english": "to get tired",
+    "type": "verb",
+    "lesson": 23
+  },
+  {
+    "id": "L23-010",
+    "japanese": "太ります",
+    "hiragana": "ふとります",
+    "romaji": "futorimasu",
+    "spanish": "Engordarse",
+    "english": "to gain weight, to get fat",
+    "type": "verb",
+    "lesson": 23
+  },
+  {
+    "id": "L23-011",
+    "japanese": "痩せます",
+    "hiragana": "やせます",
+    "romaji": "yasemasu",
+    "spanish": "Adelgazar",
+    "english": "to lose weight, to get thin",
+    "type": "verb",
+    "lesson": 23
+  },
+  {
+    "id": "L23-012",
+    "japanese": "元気",
+    "hiragana": "げんき",
+    "romaji": "genki",
+    "spanish": "Estar bien, saludable, activo",
+    "english": "healthy, energetic, well",
+    "type": "na-adjective",
+    "lesson": 23
+  },
+  {
+    "id": "L23-013",
+    "japanese": "最近",
+    "hiragana": "さいきん",
+    "romaji": "saikin",
+    "spanish": "Últimamente, recientemente",
+    "english": "recently, lately",
+    "type": "noun",
+    "lesson": 23
+  }
+]

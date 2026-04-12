@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { GAMES } from '../data/types';
+---
+
+<Layout title="Inicio">
+  <div class="max-w-4xl mx-auto px-4 py-10 space-y-10">
+
+    <!-- Hero -->
+    <section class="text-center space-y-3">
+      <h1 class="text-4xl sm:text-5xl font-bold">
+        🗾 <span class="text-violet-400">Japanese</span> Memorama
+      </h1>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">
+        Aprende vocabulario de <strong class="text-slate-200">Minna no Nihongo</strong> con juegos interactivos.
+        ¡Elige un modo y empieza a practicar!
+      </p>
+    </section>
+
+    <!-- Games grid -->
+    <section>
+      <h2 class="text-slate-500 text-xs font-semibold uppercase tracking-widest mb-4">Modos de juego</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {GAMES.map((game) => (
+          <a
+            href={`/games/${game.id}`}
+            class="group card p-6 flex flex-col gap-3 hover:border-violet-500 transition-all
+                   hover:-translate-y-1 active:translate-y-0"
+          >
+            <div class={`${game.color} w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-lg`}>
+              {game.emoji}
+            </div>
+            <div>
+              <h3 class="font-bold text-lg group-hover:text-violet-400 transition-colors">{game.title}</h3>
+              <p class="text-slate-400 text-sm leading-snug">{game.description}</p>
+            </div>
+            <div class="mt-auto flex items-center gap-1 text-violet-500 text-sm font-medium">
+              Jugar <span class="transition-transform group-hover:translate-x-1">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="card p-6 flex flex-col sm:flex-row gap-6 items-start">
+      <div class="text-4xl">📚</div>
+      <div class="space-y-2">
+        <h3 class="font-bold text-lg">Vocabulario de Minna no Nihongo</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          El vocabulario está organizado por lección. Actualmente disponible: <strong class="text-slate-200">Lección 1</strong>.
+          Puedes filtrar por tipo de palabra (sustantivos, verbos, adjetivos…) y elegir la dirección de traducción
+          (japonés → español, español → japonés, etc.).
+        </p>
+      </div>
+    </section>
+
+  </div>
+</Layout>

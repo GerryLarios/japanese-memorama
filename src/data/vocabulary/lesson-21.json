@@ -1,0 +1,132 @@
+[
+  {
+    "id": "L21-001",
+    "japanese": "〜てしまいます",
+    "hiragana": "〜てしまいます",
+    "romaji": "~te shimaimasu",
+    "spanish": "Terminar de hacer〜, hacer〜 lamentablemente",
+    "english": "end up doing ~, do ~ completely",
+    "type": "expression",
+    "lesson": 21
+  },
+  {
+    "id": "L21-002",
+    "japanese": "〜ておきます",
+    "hiragana": "〜ておきます",
+    "romaji": "~te okimasu",
+    "spanish": "Hacer〜 con anticipación, dejar hecho〜",
+    "english": "do ~ in advance, leave done ~",
+    "type": "expression",
+    "lesson": 21
+  },
+  {
+    "id": "L21-003",
+    "japanese": "〜ていきます",
+    "hiragana": "〜ていきます",
+    "romaji": "~te ikimasu",
+    "spanish": "Ir haciendo〜",
+    "english": "go and do ~, do ~ and go",
+    "type": "expression",
+    "lesson": 21
+  },
+  {
+    "id": "L21-004",
+    "japanese": "〜てきます",
+    "hiragana": "〜てきます",
+    "romaji": "~te kimasu",
+    "spanish": "Volver después de hacer〜",
+    "english": "come after doing ~, do ~ and come back",
+    "type": "expression",
+    "lesson": 21
+  },
+  {
+    "id": "L21-005",
+    "japanese": "忘れます",
+    "hiragana": "わすれます",
+    "romaji": "wasuremasu",
+    "spanish": "Olvidar",
+    "english": "to forget",
+    "type": "verb",
+    "lesson": 21
+  },
+  {
+    "id": "L21-006",
+    "japanese": "落とします",
+    "hiragana": "おとします",
+    "romaji": "otoshimasu",
+    "spanish": "Dejar caer, perder",
+    "english": "to drop, to lose",
+    "type": "verb",
+    "lesson": 21
+  },
+  {
+    "id": "L21-007",
+    "japanese": "間違えます",
+    "hiragana": "まちがえます",
+    "romaji": "machigaemasu",
+    "spanish": "Equivocarse",
+    "english": "to make a mistake",
+    "type": "verb",
+    "lesson": 21
+  },
+  {
+    "id": "L21-008",
+    "japanese": "壊します",
+    "hiragana": "こわします",
+    "romaji": "kowashimasu",
+    "spanish": "Romper, destruir",
+    "english": "to break, to destroy",
+    "type": "verb",
+    "lesson": 21
+  },
+  {
+    "id": "L21-009",
+    "japanese": "汚します",
+    "hiragana": "よごします",
+    "romaji": "yogoshimasu",
+    "spanish": "Ensuciar",
+    "english": "to make dirty, to soil",
+    "type": "verb",
+    "lesson": 21
+  },
+  {
+    "id": "L21-010",
+    "japanese": "なくします",
+    "hiragana": "なくします",
+    "romaji": "nakushimasu",
+    "spanish": "Perder (un objeto)",
+    "english": "to lose (an object)",
+    "type": "verb",
+    "lesson": 21
+  },
+  {
+    "id": "L21-011",
+    "japanese": "財布",
+    "hiragana": "さいふ",
+    "romaji": "saifu",
+    "spanish": "Billetera, cartera",
+    "english": "wallet, purse",
+    "type": "noun",
+    "lesson": 21
+  },
+  {
+    "id": "L21-012",
+    "japanese": "鍵",
+    "hiragana": "かぎ",
+    "romaji": "kagi",
+    "spanish": "Llave",
+    "english": "key, lock",
+    "type": "noun",
+    "lesson": 21
+  },
+  {
+    "id": "L21-013",
+    "japanese": "残念",
+    "hiragana": "ざんねん",
+    "romaji": "zannen",
+    "spanish": "Qué lástima, lamentable",
+    "english": "unfortunate, too bad",
+    "type": "na-adjective",
+    "lesson": 21
+  }
+]

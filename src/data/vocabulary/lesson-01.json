@@ -1,0 +1,552 @@
+[
+  {
+    "id": "L01-001",
+    "japanese": "先生",
+    "hiragana": "せんせい",
+    "romaji": "sensei",
+    "spanish": "Profesor/a",
+    "english": "Teacher",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-002",
+    "japanese": "学生",
+    "hiragana": "がくせい",
+    "romaji": "gakusei",
+    "spanish": "Estudiante",
+    "english": "Student",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-003",
+    "japanese": "会社員",
+    "hiragana": "かいしゃいん",
+    "romaji": "kaishain",
+    "spanish": "Empleado/a de empresa",
+    "english": "Company employee",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-004",
+    "japanese": "医者",
+    "hiragana": "いしゃ",
+    "romaji": "isha",
+    "spanish": "Médico/a",
+    "english": "Doctor",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-005",
+    "japanese": "研究者",
+    "hiragana": "けんきゅうしゃ",
+    "romaji": "kenkyuusha",
+    "spanish": "Investigador/a",
+    "english": "Researcher",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-006",
+    "japanese": "エンジニア",
+    "hiragana": "えんじにあ",
+    "romaji": "enjinia",
+    "spanish": "Ingeniero/a",
+    "english": "Engineer",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-007",
+    "japanese": "大学",
+    "hiragana": "だいがく",
+    "romaji": "daigaku",
+    "spanish": "Universidad",
+    "english": "University",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-008",
+    "japanese": "病院",
+    "hiragana": "びょういん",
+    "romaji": "byouin",
+    "spanish": "Hospital",
+    "english": "Hospital",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-009",
+    "japanese": "日本",
+    "hiragana": "にほん",
+    "romaji": "nihon",
+    "spanish": "Japón",
+    "english": "Japan",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-010",
+    "japanese": "名前",
+    "hiragana": "なまえ",
+    "romaji": "namae",
+    "spanish": "Nombre",
+    "english": "Name",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-011",
+    "japanese": "何",
+    "hiragana": "なに",
+    "romaji": "nani",
+    "spanish": "¿Qué?",
+    "english": "What?",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-012",
+    "japanese": "はじめまして",
+    "hiragana": "はじめまして",
+    "romaji": "hajimemashite",
+    "spanish": "Mucho gusto (al conocer a alguien)",
+    "english": "Nice to meet you",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-013",
+    "japanese": "どうぞよろしく",
+    "hiragana": "どうぞよろしく",
+    "romaji": "douzo yoroshiku",
+    "spanish": "Un placer / Encantado",
+    "english": "Please be kind to me",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-014",
+    "japanese": "こちらこそ",
+    "hiragana": "こちらこそ",
+    "romaji": "kochira koso",
+    "spanish": "Igualmente / Yo también",
+    "english": "Likewise",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-015",
+    "japanese": "失礼します",
+    "hiragana": "しつれいします",
+    "romaji": "shitsurei shimasu",
+    "spanish": "Con permiso / Perdón",
+    "english": "Excuse me / I'm sorry to bother you",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-016",
+    "japanese": "方",
+    "hiragana": "かた",
+    "romaji": "kata",
+    "spanish": "Persona (formal)",
+    "english": "Person (polite)",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-017",
+    "japanese": "人",
+    "hiragana": "ひと",
+    "romaji": "hito",
+    "spanish": "Persona",
+    "english": "Person",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-018",
+    "japanese": "お国",
+    "hiragana": "おくに",
+    "romaji": "okuni",
+    "spanish": "País de origen (formal)",
+    "english": "Your country (polite)",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-019",
+    "japanese": "何歳",
+    "hiragana": "なんさい",
+    "romaji": "nansai",
+    "spanish": "¿Cuántos años?",
+    "english": "How old?",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-020",
+    "japanese": "電話番号",
+    "hiragana": "でんわばんごう",
+    "romaji": "denwa bangou",
+    "spanish": "Número de teléfono",
+    "english": "Phone number",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-021",
+    "japanese": "番号",
+    "hiragana": "ばんごう",
+    "romaji": "bangou",
+    "spanish": "Número",
+    "english": "Number",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-022",
+    "japanese": "〜歳",
+    "hiragana": "〜さい",
+    "romaji": "~sai",
+    "spanish": "~ años de edad",
+    "english": "~ years old",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-023",
+    "japanese": "〜語",
+    "hiragana": "〜ご",
+    "romaji": "~go",
+    "spanish": "Idioma ~ (ej. 日本語 = japonés)",
+    "english": "~ language",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-024",
+    "japanese": "〜人",
+    "hiragana": "〜じん",
+    "romaji": "~jin",
+    "spanish": "Persona de ~ (ej. 日本人 = japonés)",
+    "english": "Person from ~",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-025",
+    "japanese": "〜さん",
+    "hiragana": "〜さん",
+    "romaji": "~san",
+    "spanish": "Sr./Sra. ~ (sufijo de cortesía)",
+    "english": "Mr./Ms. ~",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-026",
+    "japanese": "私",
+    "hiragana": "わたし",
+    "romaji": "watashi",
+    "spanish": "Yo",
+    "english": "I / Me",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-027",
+    "japanese": "あなた",
+    "hiragana": "あなた",
+    "romaji": "anata",
+    "spanish": "Tú / Usted",
+    "english": "You",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-028",
+    "japanese": "はい",
+    "hiragana": "はい",
+    "romaji": "hai",
+    "spanish": "Sí",
+    "english": "Yes",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-029",
+    "japanese": "いいえ",
+    "hiragana": "いいえ",
+    "romaji": "iie",
+    "spanish": "No",
+    "english": "No",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-030",
+    "japanese": "そうです",
+    "hiragana": "そうです",
+    "romaji": "sou desu",
+    "spanish": "Así es / Correcto",
+    "english": "That's right",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-031",
+    "japanese": "教",
+    "hiragana": "きょう",
+    "romaji": "kyou",
+    "spanish": "Clase / Enseñanza",
+    "english": "Class / Teaching",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-032",
+    "japanese": "会社",
+    "hiragana": "かいしゃ",
+    "romaji": "kaisha",
+    "spanish": "Empresa / Compañía",
+    "english": "Company / Corporation",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-033",
+    "japanese": "銀行",
+    "hiragana": "ぎんこう",
+    "romaji": "ginkou",
+    "spanish": "Banco",
+    "english": "Bank",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-034",
+    "japanese": "銀行員",
+    "hiragana": "ぎんこういん",
+    "romaji": "ginkouin",
+    "spanish": "Empleado de banco",
+    "english": "Bank employee",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-035",
+    "japanese": "だれ",
+    "hiragana": "だれ",
+    "romaji": "dare",
+    "spanish": "¿Quién?",
+    "english": "Who?",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-036",
+    "japanese": "どなた",
+    "hiragana": "どなた",
+    "romaji": "donata",
+    "spanish": "¿Quién? (formal)",
+    "english": "Who? (polite)",
+    "type": "noun",
+    "lesson": 1
+  },
+  {
+    "id": "L01-037",
+    "japanese": "何人",
+    "hiragana": "なんにん",
+    "romaji": "nannin",
+    "spanish": "¿Cuántas personas?",
+    "english": "How many people?",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-038",
+    "japanese": "何歳ですか",
+    "hiragana": "なんさいですか",
+    "romaji": "nansai desu ka?",
+    "spanish": "¿Cuántos años tienes?",
+    "english": "How old are you?",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-039",
+    "japanese": "おはようございます",
+    "hiragana": "おはようございます",
+    "romaji": "ohayou gozaimasu",
+    "spanish": "Buenos días",
+    "english": "Good morning",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-040",
+    "japanese": "こんにちは",
+    "hiragana": "こんにちは",
+    "romaji": "konnichiwa",
+    "spanish": "Buenas tardes",
+    "english": "Hello / Good afternoon",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-041",
+    "japanese": "こんばんは",
+    "hiragana": "こんばんは",
+    "romaji": "konbanwa",
+    "spanish": "Buenas noches (saludo)",
+    "english": "Good evening",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-042",
+    "japanese": "おやすみなさい",
+    "hiragana": "おやすみなさい",
+    "romaji": "oyasumi nasai",
+    "spanish": "Buenas noches (despedida)",
+    "english": "Good night",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-043",
+    "japanese": "さようなら",
+    "hiragana": "さようなら",
+    "romaji": "sayounara",
+    "spanish": "Adiós",
+    "english": "Goodbye",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-044",
+    "japanese": "またね",
+    "hiragana": "またね",
+    "romaji": "mata ne",
+    "spanish": "Hasta luego / Nos vemos",
+    "english": "See you later",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-045",
+    "japanese": "じゃあね",
+    "hiragana": "じゃあね",
+    "romaji": "jaa ne",
+    "spanish": "Bueno, nos vemos / Chao",
+    "english": "Well, see you / Bye",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-046",
+    "japanese": "お疲れ様です",
+    "hiragana": "おつかれさまです",
+    "romaji": "otsukaresama desu",
+    "spanish": "Gracias por tu trabajo / Buen trabajo",
+    "english": "Thank you for your hard work / Good job",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-047",
+    "japanese": "いただきます",
+    "hiragana": "いただきます",
+    "romaji": "itadakimasu",
+    "spanish": "Buen provecho (antes de comer)",
+    "english": "Let's eat / Bon appétit (before eating)",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-048",
+    "japanese": "ごちそうさまでした",
+    "hiragana": "ごちそうさまでした",
+    "romaji": "gochisousama deshita",
+    "spanish": "Gracias por la comida (después de comer)",
+    "english": "Thank you for the meal (after eating)",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-049",
+    "japanese": "すみません",
+    "hiragana": "すみません",
+    "romaji": "sumimasen",
+    "spanish": "Disculpa / Perdón",
+    "english": "Excuse me / I'm sorry",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-050",
+    "japanese": "ありがとう",
+    "hiragana": "ありがとう",
+    "romaji": "arigatou",
+    "spanish": "Gracias",
+    "english": "Thank you",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-051",
+    "japanese": "ありがとうございます",
+    "hiragana": "ありがとうございます",
+    "romaji": "arigatou gozaimasu",
+    "spanish": "Muchas gracias (formal)",
+    "english": "Thank you very much (polite)",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-052",
+    "japanese": "どういたしまして",
+    "hiragana": "どういたしまして",
+    "romaji": "dou itashimashite",
+    "spanish": "De nada / No hay de qué",
+    "english": "You're welcome / Don't mention it",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-053",
+    "japanese": "どうぞよろしくお願ねがいします",
+    "hiragana": "どうぞよろしくおねがいします",
+    "romaji": "douzo yoroshiku onegaishimasu",
+    "spanish": "Encantado de conocerte / Mucho gusto",
+    "english": "Nice to meet you / Please take care of me",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-054",
+    "japanese": "おねがいします",
+    "hiragana": "おねがいします",
+    "romaji": "onegaishimasu",
+    "spanish": "Por favor",
+    "english": "Please",
+    "type": "expression",
+    "lesson": 1
+  },
+  {
+    "id": "L01-055",
+    "japanese": "ちがいます",
+    "hiragana": "ちがいます",
+    "romaji": "chigaimasu",
+    "spanish": "No es así / Es diferente",
+    "english": "That's not right / It's different",
+    "type": "expression",
+    "lesson": 1
+  }
+]

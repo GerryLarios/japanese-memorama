@@ -1,0 +1,692 @@
+[
+  {
+    "id": "L04-001",
+    "japanese": "起きます",
+    "hiragana": "おきます",
+    "romaji": "okimasu",
+    "spanish": "Levantarse",
+    "english": "to get up",
+    "type": "verb",
+    "lesson": 4
+  },
+  {
+    "id": "L04-002",
+    "japanese": "寝ます",
+    "hiragana": "ねます",
+    "romaji": "nemasu",
+    "spanish": "Acostarse",
+    "english": "to go to bed",
+    "type": "verb",
+    "lesson": 4
+  },
+  {
+    "id": "L04-003",
+    "japanese": "働きます",
+    "hiragana": "はたらきます",
+    "romaji": "hatarakimasu",
+    "spanish": "Trabajar",
+    "english": "to work",
+    "type": "verb",
+    "lesson": 4
+  },
+  {
+    "id": "L04-004",
+    "japanese": "休みます",
+    "hiragana": "やすみます",
+    "romaji": "yasumimasu",
+    "spanish": "Descansar",
+    "english": "to rest",
+    "type": "verb",
+    "lesson": 4
+  },
+  {
+    "id": "L04-005",
+    "japanese": "勉強します",
+    "hiragana": "べんきょうします",
+    "romaji": "benkyou shimasu",
+    "spanish": "Estudiar",
+    "english": "to study",
+    "type": "verb",
+    "lesson": 4
+  },
+  {
+    "id": "L04-006",
+    "japanese": "終わります",
+    "hiragana": "おわります",
+    "romaji": "owarimasu",
+    "spanish": "Terminar",
+    "english": "to finish",
+    "type": "verb",
+    "lesson": 4
+  },
+  {
+    "id": "L04-007",
+    "japanese": "デパート",
+    "hiragana": "でぱーと",
+    "romaji": "depāto",
+    "spanish": "Grandes almacenes",
+    "english": "department store",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-008",
+    "japanese": "銀行",
+    "hiragana": "ぎんこう",
+    "romaji": "ginkou",
+    "spanish": "Banco",
+    "english": "bank",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-009",
+    "japanese": "郵便局",
+    "hiragana": "ゆうびんきょく",
+    "romaji": "yuubinkyoku",
+    "spanish": "Oficina de correos",
+    "english": "post office",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-010",
+    "japanese": "図書館",
+    "hiragana": "としょかん",
+    "romaji": "toshokan",
+    "spanish": "Biblioteca",
+    "english": "library",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-011",
+    "japanese": "美術館",
+    "hiragana": "びじゅつかん",
+    "romaji": "bijutsukan",
+    "spanish": "Museo de arte",
+    "english": "art museum",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-012",
+    "japanese": "今",
+    "hiragana": "いま",
+    "romaji": "ima",
+    "spanish": "Ahora",
+    "english": "now",
+    "type": "adverb",
+    "lesson": 4
+  },
+  {
+    "id": "L04-013",
+    "japanese": "〜時",
+    "hiragana": "〜じ",
+    "romaji": "〜ji",
+    "spanish": "〜hora",
+    "english": "〜o'clock",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-014",
+    "japanese": "〜分",
+    "hiragana": "〜ふん",
+    "romaji": "〜fun　・〜pun",
+    "spanish": "〜minutos",
+    "english": "〜minutes",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-015",
+    "japanese": "半",
+    "hiragana": "はん",
+    "romaji": "han",
+    "spanish": "Media",
+    "english": "half",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-016",
+    "japanese": "午前",
+    "hiragana": "ごぜん",
+    "romaji": "gozen",
+    "spanish": "Por la mañana",
+    "english": "in the morning",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-017",
+    "japanese": "午後",
+    "hiragana": "ごご",
+    "romaji": "gogo",
+    "spanish": "Por la tarde",
+    "english": "in the afternoon",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-018",
+    "japanese": "朝",
+    "hiragana": "あさ",
+    "romaji": "asa",
+    "spanish": "Mañana",
+    "english": "morning",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-019",
+    "japanese": "昼",
+    "hiragana": "ひる",
+    "romaji": "hiru",
+    "spanish": "Mediodía",
+    "english": "noon",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-020",
+    "japanese": "夕方",
+    "hiragana": "ゆうがた",
+    "romaji": "yuugata",
+    "spanish": "Tarde",
+    "english": "evening",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-021",
+    "japanese": "夜",
+    "hiragana": "よる",
+    "romaji": "yoru",
+    "spanish": "Noche",
+    "english": "night",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-022",
+    "japanese": "晩",
+    "hiragana": "ばん",
+    "romaji": "ban",
+    "spanish": "Noche",
+    "english": "evening",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-023",
+    "japanese": "やすみ",
+    "hiragana": "やすみ",
+    "romaji": "yasumi",
+    "spanish": "Descanso",
+    "english": "rest",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-024",
+    "japanese": "昼休み",
+    "hiragana": "ひるやすみ",
+    "romaji": "hiruyasumi",
+    "spanish": "Receso / Descanso del mediodía",
+    "english": "lunch break",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-025",
+    "japanese": "試験",
+    "hiragana": "しけん",
+    "romaji": "shiken",
+    "spanish": "Examen",
+    "english": "exam",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-026",
+    "japanese": "授業",
+    "hiragana": "じゅぎょう",
+    "romaji": "jugyou",
+    "spanish": "Clase",
+    "english": "class",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-027",
+    "japanese": "テスト",
+    "hiragana": "てすと",
+    "romaji": "tesuto",
+    "spanish": "Prueba",
+    "english": "test",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-028",
+    "japanese": "会議",
+    "hiragana": "かいぎ",
+    "romaji": "kaigi",
+    "spanish": "Reunión",
+    "english": "meeting",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-029",
+    "japanese": "ミーティング",
+    "hiragana": "ミーティング",
+    "romaji": "miitingu",
+    "spanish": "Reunión　(katakana)",
+    "english": "meeting (katakana)",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-030",
+    "japanese": "会議をします",
+    "hiragana": "かいぎをします",
+    "romaji": "kaigi o shimasu",
+    "spanish": "Tener una reunión",
+    "english": "to have a meeting",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-031",
+    "japanese": "映画",
+    "hiragana": "えいが",
+    "romaji": "eiga",
+    "spanish": "Película",
+    "english": "movie",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-032",
+    "japanese": "映画館",
+    "hiragana": "えいがかん",
+    "romaji": "eigakan",
+    "spanish": "Cine",
+    "english": "movie theater",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-033",
+    "japanese": "番号",
+    "hiragana": "ばんごう",
+    "romaji": "bangou",
+    "spanish": "Número",
+    "english": "number",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-034",
+    "japanese": "電話番号",
+    "hiragana": "でんわばんごう",
+    "romaji": "denwa bangou",
+    "spanish": "Número de teléfono",
+    "english": "phone number",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-035",
+    "japanese": "何番",
+    "hiragana": "なんばん",
+    "romaji": "nanban",
+    "spanish": "Qué número",
+    "english": "which number",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-036",
+    "japanese": "月曜日",
+    "hiragana": "げつようび",
+    "romaji": "getsuyoubi",
+    "spanish": "Lunes",
+    "english": "Monday",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-037",
+    "japanese": "火曜日",
+    "hiragana": "かようび",
+    "romaji": "kayoubi",
+    "spanish": "Martes",
+    "english": "Tuesday",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-038",
+    "japanese": "水曜日",
+    "hiragana": "すいようび",
+    "romaji": "suiyoubi",
+    "spanish": "Miércoles",
+    "english": "Wednesday",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-039",
+    "japanese": "木曜日",
+    "hiragana": "もくようび",
+    "romaji": "mokuyoubi",
+    "spanish": "Jueves",
+    "english": "Thursday",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-040",
+    "japanese": "金曜日",
+    "hiragana": "きんようび",
+    "romaji": "kinyoubi",
+    "spanish": "Viernes",
+    "english": "Friday",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-041",
+    "japanese": "土曜日",
+    "hiragana": "どようび",
+    "romaji": "doyoubi",
+    "spanish": "Sábado",
+    "english": "Saturday",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-042",
+    "japanese": "日曜日",
+    "hiragana": "にちようび",
+    "romaji": "nichiyoubi",
+    "spanish": "Domingo",
+    "english": "Sunday",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-043",
+    "japanese": "何曜日",
+    "hiragana": "なんようび",
+    "romaji": "nan youbi",
+    "spanish": "Qué día de la semana",
+    "english": "which day of the week",
+    "type": "noun",
+    "lesson": 4
+  },
+  {
+    "id": "L04-044",
+    "japanese": "今週",
+    "hiragana": "こんしゅう",
+    "romaji": "konshuu",
+    "spanish": "Esta semana",
+    "english": "this week",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-045",
+    "japanese": "来週",
+    "hiragana": "らいしゅう",
+    "romaji": "raishuu",
+    "spanish": "La próxima semana",
+    "english": "next week",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-046",
+    "japanese": "先週",
+    "hiragana": "せんしゅう",
+    "romaji": "senshuu",
+    "spanish": "La semana pasada",
+    "english": "last week",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-047",
+    "japanese": "今月",
+    "hiragana": "こんげつ",
+    "romaji": "kongetsu",
+    "spanish": "Este mes",
+    "english": "this month",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-048",
+    "japanese": "来月",
+    "hiragana": "らいげつ",
+    "romaji": "raigetsu",
+    "spanish": "El próximo mes",
+    "english": "next month",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-049",
+    "japanese": "先月",
+    "hiragana": "せんげつ",
+    "romaji": "sengetsu",
+    "spanish": "El mes pasado",
+    "english": "last month",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-050",
+    "japanese": "今年",
+    "hiragana": "ことし",
+    "romaji": "kotoshi",
+    "spanish": "Este año",
+    "english": "this year",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-051",
+    "japanese": "来年",
+    "hiragana": "らいねん",
+    "romaji": "rainen",
+    "spanish": "El próximo año",
+    "english": "next year",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-052",
+    "japanese": "去年",
+    "hiragana": "きょねん",
+    "romaji": "kyonen",
+    "spanish": "El año pasado",
+    "english": "last year",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-053",
+    "japanese": "何年",
+    "hiragana": "なんねん",
+    "romaji": "nan nen",
+    "spanish": "Qué año",
+    "english": "which year",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-054",
+    "japanese": "今晩",
+    "hiragana": "こんばん",
+    "romaji": "konban",
+    "spanish": "Esta noche",
+    "english": "tonight",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-055",
+    "japanese": "今日",
+    "hiragana": "きょう",
+    "romaji": "kyou",
+    "spanish": "Hoy",
+    "english": "today",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-056",
+    "japanese": "明日",
+    "hiragana": "あした",
+    "romaji": "ashita",
+    "spanish": "Mañana",
+    "english": "tomorrow",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-057",
+    "japanese": "明後日",
+    "hiragana": "あさって",
+    "romaji": "asatte",
+    "spanish": "Pasado mañana",
+    "english": "the day after tomorrow",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-058",
+    "japanese": "一昨日",
+    "hiragana": "おととい",
+    "romaji": "ototoi",
+    "spanish": "Anteayer",
+    "english": "the day before yesterday",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-059",
+    "japanese": "昨日",
+    "hiragana": "きのう",
+    "romaji": "kinou",
+    "spanish": "Ayer",
+    "english": "yesterday",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-060",
+    "japanese": "何日",
+    "hiragana": "なんにち",
+    "romaji": "nan nichi",
+    "spanish": "Qué día del mes",
+    "english": "which day of the month",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-061",
+    "japanese": "何曜日",
+    "hiragana": "なんようび",
+    "romaji": "nan youbi",
+    "spanish": "Qué día de la semana",
+    "english": "which day of the week",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-062",
+    "japanese": "何月",
+    "hiragana": "なんがつ",
+    "romaji": "nan gatsu",
+    "spanish": "Qué mes",
+    "english": "which month",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-063",
+    "japanese": "毎日",
+    "hiragana": "まいにち",
+    "romaji": "mainichi",
+    "spanish": "Todos los días",
+    "english": "every day",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-064",
+    "japanese": "毎週",
+    "hiragana": "まいしゅう",
+    "romaji": "maishuu",
+    "spanish": "Todas las semanas",
+    "english": "every week",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-065",
+    "japanese": "毎月",
+    "hiragana": "まいつき",
+    "romaji": "maitsuki",
+    "spanish": "Todos los meses",
+    "english": "every month",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-066",
+    "japanese": "毎年",
+    "hiragana": "まいとし",
+    "romaji": "maitoshi",
+    "spanish": "Todos los años",
+    "english": "every year",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-067",
+    "japanese": "毎晩",
+    "hiragana": "まいばん",
+    "romaji": "maiban",
+    "spanish": "Todas las noches",
+    "english": "every night",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-068",
+    "japanese": "毎朝",
+    "hiragana": "まいあさ",
+    "romaji": "maiasa",
+    "spanish": "Todas las mañanas",
+    "english": "every morning",
+    "type": "expression",
+    "lesson": 4
+  },
+  {
+    "id": "L04-070",
+    "japanese": "毎週末",
+    "hiragana": "まいしゅうまつ",
+    "romaji": "maishuumatsu",
+    "spanish": "Todos los fines de semana",
+    "english": "every weekend",
+    "type": "expression",
+    "lesson": 4
+  }
+]

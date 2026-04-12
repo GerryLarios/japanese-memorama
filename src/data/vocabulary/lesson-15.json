@@ -1,0 +1,182 @@
+[
+  {
+    "id": "L15-001",
+    "japanese": "〜たいです",
+    "hiragana": "〜たいです",
+    "romaji": "~tai desu",
+    "spanish": "Quiero hacer〜",
+    "english": "want to do ~",
+    "type": "expression",
+    "lesson": 15
+  },
+  {
+    "id": "L15-002",
+    "japanese": "〜たくないです",
+    "hiragana": "〜たくないです",
+    "romaji": "~taku nai desu",
+    "spanish": "No quiero hacer〜",
+    "english": "don't want to do ~",
+    "type": "expression",
+    "lesson": 15
+  },
+  {
+    "id": "L15-003",
+    "japanese": "ほしい",
+    "hiragana": "ほしい",
+    "romaji": "hoshii",
+    "spanish": "Querer (algo), desear (algo)",
+    "english": "want (something)",
+    "type": "i-adjective",
+    "lesson": 15
+  },
+  {
+    "id": "L15-004",
+    "japanese": "〜に行きたいです",
+    "hiragana": "〜にいきたいです",
+    "romaji": "~ni ikitai desu",
+    "spanish": "Quiero ir a〜",
+    "english": "want to go to ~",
+    "type": "expression",
+    "lesson": 15
+  },
+  {
+    "id": "L15-005",
+    "japanese": "結婚します",
+    "hiragana": "けっこんします",
+    "romaji": "kekkon shimasu",
+    "spanish": "Casarse",
+    "english": "to marry, to get married",
+    "type": "verb",
+    "lesson": 15
+  },
+  {
+    "id": "L15-006",
+    "japanese": "住みます",
+    "hiragana": "すみます",
+    "romaji": "sumimasu",
+    "spanish": "Vivir, residir",
+    "english": "to live, to reside",
+    "type": "verb",
+    "lesson": 15
+  },
+  {
+    "id": "L15-007",
+    "japanese": "働きます",
+    "hiragana": "はたらきます",
+    "romaji": "hatarakimasu",
+    "spanish": "Trabajar",
+    "english": "to work",
+    "type": "verb",
+    "lesson": 15
+  },
+  {
+    "id": "L15-008",
+    "japanese": "集めます",
+    "hiragana": "あつめます",
+    "romaji": "atsumemasu",
+    "spanish": "Coleccionar, reunir",
+    "english": "to collect, to gather",
+    "type": "verb",
+    "lesson": 15
+  },
+  {
+    "id": "L15-009",
+    "japanese": "夢",
+    "hiragana": "ゆめ",
+    "romaji": "yume",
+    "spanish": "Sueño, ilusión",
+    "english": "dream",
+    "type": "noun",
+    "lesson": 15
+  },
+  {
+    "id": "L15-010",
+    "japanese": "将来",
+    "hiragana": "しょうらい",
+    "romaji": "shourai",
+    "spanish": "Futuro, en el futuro",
+    "english": "future",
+    "type": "noun",
+    "lesson": 15
+  },
+  {
+    "id": "L15-011",
+    "japanese": "世界",
+    "hiragana": "せかい",
+    "romaji": "sekai",
+    "spanish": "Mundo",
+    "english": "world",
+    "type": "noun",
+    "lesson": 15
+  },
+  {
+    "id": "L15-012",
+    "japanese": "国",
+    "hiragana": "くに",
+    "romaji": "kuni",
+    "spanish": "País, tierra natal",
+    "english": "country, homeland",
+    "type": "noun",
+    "lesson": 15
+  },
+  {
+    "id": "L15-013",
+    "japanese": "外国",
+    "hiragana": "がいこく",
+    "romaji": "gaikoku",
+    "spanish": "País extranjero",
+    "english": "foreign country",
+    "type": "noun",
+    "lesson": 15
+  },
+  {
+    "id": "L15-014",
+    "japanese": "外国語",
+    "hiragana": "がいこくご",
+    "romaji": "gaikokugo",
+    "spanish": "Idioma extranjero",
+    "english": "foreign language",
+    "type": "noun",
+    "lesson": 15
+  },
+  {
+    "id": "L15-015",
+    "japanese": "子供",
+    "hiragana": "こども",
+    "romaji": "kodomo",
+    "spanish": "Niño, hijo",
+    "english": "child, children",
+    "type": "noun",
+    "lesson": 15
+  },
+  {
+    "id": "L15-016",
+    "japanese": "自分",
+    "hiragana": "じぶん",
+    "romaji": "jibun",
+    "spanish": "Uno mismo",
+    "english": "oneself",
+    "type": "noun",
+    "lesson": 15
+  },
+  {
+    "id": "L15-017",
+    "japanese": "もう",
+    "hiragana": "もう",
+    "romaji": "mou",
+    "spanish": "Ya (en frases afirmativas)",
+    "english": "already",
+    "type": "adverb",
+    "lesson": 15
+  },
+  {
+    "id": "L15-018",
+    "japanese": "まだ",
+    "hiragana": "まだ",
+    "romaji": "mada",
+    "spanish": "Todavía, aún",
+    "english": "still, not yet",
+    "type": "adverb",
+    "lesson": 15
+  }
+]

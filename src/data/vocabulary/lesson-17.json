@@ -1,0 +1,212 @@
+[
+  {
+    "id": "L17-001",
+    "japanese": "〜なければなりません",
+    "hiragana": "〜なければなりません",
+    "romaji": "~nakereba narimasen",
+    "spanish": "Debo hacer〜, tengo que hacer〜",
+    "english": "must do ~, have to do ~",
+    "type": "expression",
+    "lesson": 17
+  },
+  {
+    "id": "L17-002",
+    "japanese": "〜なくてもいいです",
+    "hiragana": "〜なくてもいいです",
+    "romaji": "~nakute mo ii desu",
+    "spanish": "No es necesario hacer〜",
+    "english": "don't have to do ~",
+    "type": "expression",
+    "lesson": 17
+  },
+  {
+    "id": "L17-003",
+    "japanese": "〜てもいいですか",
+    "hiragana": "〜てもいいですか",
+    "romaji": "~te mo ii desu ka",
+    "spanish": "¿Puedo hacer〜?",
+    "english": "May I do ~?",
+    "type": "expression",
+    "lesson": 17
+  },
+  {
+    "id": "L17-004",
+    "japanese": "〜てはいけません",
+    "hiragana": "〜てはいけません",
+    "romaji": "~te wa ikemasen",
+    "spanish": "No está permitido hacer〜",
+    "english": "must not do ~",
+    "type": "expression",
+    "lesson": 17
+  },
+  {
+    "id": "L17-005",
+    "japanese": "薬",
+    "hiragana": "くすり",
+    "romaji": "kusuri",
+    "spanish": "Medicina, medicamento",
+    "english": "medicine, drug",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-006",
+    "japanese": "飲みます",
+    "hiragana": "のみます",
+    "romaji": "nomimasu",
+    "spanish": "Beber, tomar (medicamento)",
+    "english": "to drink, to take (medicine)",
+    "type": "verb",
+    "lesson": 17
+  },
+  {
+    "id": "L17-007",
+    "japanese": "病院",
+    "hiragana": "びょういん",
+    "romaji": "byouin",
+    "spanish": "Hospital",
+    "english": "hospital",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-008",
+    "japanese": "医者",
+    "hiragana": "いしゃ",
+    "romaji": "isha",
+    "spanish": "Médico, doctor",
+    "english": "doctor, physician",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-009",
+    "japanese": "熱",
+    "hiragana": "ねつ",
+    "romaji": "netsu",
+    "spanish": "Fiebre",
+    "english": "fever",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-010",
+    "japanese": "頭痛",
+    "hiragana": "ずつう",
+    "romaji": "zutsuu",
+    "spanish": "Dolor de cabeza",
+    "english": "headache",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-011",
+    "japanese": "かぜ",
+    "hiragana": "かぜ",
+    "romaji": "kaze",
+    "spanish": "Resfriado",
+    "english": "cold (illness)",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-012",
+    "japanese": "体",
+    "hiragana": "からだ",
+    "romaji": "karada",
+    "spanish": "Cuerpo",
+    "english": "body",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-013",
+    "japanese": "頭",
+    "hiragana": "あたま",
+    "romaji": "atama",
+    "spanish": "Cabeza",
+    "english": "head",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-014",
+    "japanese": "目",
+    "hiragana": "め",
+    "romaji": "me",
+    "spanish": "Ojo",
+    "english": "eye",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-015",
+    "japanese": "耳",
+    "hiragana": "みみ",
+    "romaji": "mimi",
+    "spanish": "Oído, oreja",
+    "english": "ear",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-016",
+    "japanese": "口",
+    "hiragana": "くち",
+    "romaji": "kuchi",
+    "spanish": "Boca",
+    "english": "mouth",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-017",
+    "japanese": "手",
+    "hiragana": "て",
+    "romaji": "te",
+    "spanish": "Mano",
+    "english": "hand",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-018",
+    "japanese": "足",
+    "hiragana": "あし",
+    "romaji": "ashi",
+    "spanish": "Pie, pierna",
+    "english": "foot, leg",
+    "type": "noun",
+    "lesson": 17
+  },
+  {
+    "id": "L17-019",
+    "japanese": "痛い",
+    "hiragana": "いたい",
+    "romaji": "itai",
+    "spanish": "Doloroso, que duele",
+    "english": "painful, hurting",
+    "type": "i-adjective",
+    "lesson": 17
+  },
+  {
+    "id": "L17-020",
+    "japanese": "具合が悪い",
+    "hiragana": "ぐあいがわるい",
+    "romaji": "guai ga warui",
+    "spanish": "Sentirse mal, estar enfermo",
+    "english": "feeling sick, not well",
+    "type": "expression",
+    "lesson": 17
+  },
+  {
+    "id": "L17-021",
+    "japanese": "大丈夫",
+    "hiragana": "だいじょうぶ",
+    "romaji": "daijoubu",
+    "spanish": "Estar bien, sin problema",
+    "english": "okay, all right, no problem",
+    "type": "na-adjective",
+    "lesson": 17
+  }
+]

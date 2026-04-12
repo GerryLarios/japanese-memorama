@@ -1,0 +1,622 @@
+[
+  {
+    "id": "L05-001",
+    "japanese": "行きます",
+    "hiragana": "いきます",
+    "romaji": "ikimasu",
+    "spanish": "Ir",
+    "english": "to go",
+    "type": "verb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-002",
+    "japanese": "来ます",
+    "hiragana": "きます",
+    "romaji": "kimasu",
+    "spanish": "Venir",
+    "english": "to come",
+    "type": "verb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-003",
+    "japanese": "帰ります",
+    "hiragana": "かえります",
+    "romaji": "kaerimasu",
+    "spanish": "Regresar",
+    "english": "to return",
+    "type": "verb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-004",
+    "japanese": "します",
+    "hiragana": "します",
+    "romaji": "shimasu",
+    "spanish": "Hacer",
+    "english": "to do",
+    "type": "verb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-005",
+    "japanese": "学校",
+    "hiragana": "がっこう",
+    "romaji": "gakkou",
+    "spanish": "Escuela",
+    "english": "school",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-006",
+    "japanese": "スーパー",
+    "hiragana": "スーパー",
+    "romaji": "suupaa",
+    "spanish": "Supermercado",
+    "english": "supermarket",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-007",
+    "japanese": "駅",
+    "hiragana": "えき",
+    "romaji": "eki",
+    "spanish": "Estación",
+    "english": "station",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-008",
+    "japanese": "飛行機",
+    "hiragana": "ひこうき",
+    "romaji": "hikouki",
+    "spanish": "Avión",
+    "english": "airplane",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-009",
+    "japanese": "空港",
+    "hiragana": "くうこう",
+    "romaji": "kuukou",
+    "spanish": "Aeropuerto",
+    "english": "airport",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-010",
+    "japanese": "船",
+    "hiragana": "ふね",
+    "romaji": "fune",
+    "spanish": "Barco",
+    "english": "ship",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-011",
+    "japanese": "電車",
+    "hiragana": "でんしゃ",
+    "romaji": "densha",
+    "spanish": "Tren",
+    "english": "train",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-012",
+    "japanese": "地下鉄",
+    "hiragana": "ちかてつ",
+    "romaji": "chikatetsu",
+    "spanish": "Metro",
+    "english": "subway",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-013",
+    "japanese": "新幹線",
+    "hiragana": "しんかんせん",
+    "romaji": "shinkansen",
+    "spanish": "Tren bala",
+    "english": "bullet train",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-014",
+    "japanese": "バス",
+    "hiragana": "バス",
+    "romaji": "basu",
+    "spanish": "Autobús",
+    "english": "bus",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-015",
+    "japanese": "タクシー",
+    "hiragana": "たくしー",
+    "romaji": "takushii",
+    "spanish": "Taxi",
+    "english": "taxi",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-016",
+    "japanese": "自転車",
+    "hiragana": "じてんしゃ",
+    "romaji": "jitensha",
+    "spanish": "Bicicleta",
+    "english": "bicycle",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-017",
+    "japanese": "バイク",
+    "hiragana": "バイク",
+    "romaji": "baiku",
+    "spanish": "Motocicleta",
+    "english": "motorcycle",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-018",
+    "japanese": "あるいて",
+    "hiragana": "あるいて",
+    "romaji": "aruite",
+    "spanish": "A pie",
+    "english": "on foot",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-019",
+    "japanese": "人",
+    "hiragana": "ひと",
+    "romaji": "hito",
+    "spanish": "Persona",
+    "english": "person",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-020",
+    "japanese": "友達",
+    "hiragana": "ともだち",
+    "romaji": "tomodachi",
+    "spanish": "Amigo",
+    "english": "friend",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-021",
+    "japanese": "彼女",
+    "hiragana": "かのじょ",
+    "romaji": "kanojo",
+    "spanish": "Ella / Novia",
+    "english": "She / Girlfriend",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-022",
+    "japanese": "彼",
+    "hiragana": "かれ",
+    "romaji": "kare",
+    "spanish": "Él / Novio",
+    "english": "He / Boyfriend",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-023",
+    "japanese": "彼氏",
+    "hiragana": "かれし",
+    "romaji": "kareshi",
+    "spanish": "Novio",
+    "english": "boyfriend",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-024",
+    "japanese": "家族",
+    "hiragana": "かぞく",
+    "romaji": "kazoku",
+    "spanish": "Familia",
+    "english": "family",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-025",
+    "japanese": "同僚",
+    "hiragana": "どうりょう",
+    "romaji": "douryou",
+    "spanish": "Compañero de trabajo",
+    "english": "co-worker / colleague",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-026",
+    "japanese": "一人で",
+    "hiragana": "ひとりで",
+    "romaji": "hitoride",
+    "spanish": "Solo",
+    "english": "alone",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-027",
+    "japanese": "ようこそ",
+    "hiragana": "ようこそ",
+    "romaji": "youkoso",
+    "spanish": "Bienvenido",
+    "english": "welcome",
+    "type": "interjection",
+    "lesson": 5
+  },
+  {
+    "id": "L05-028",
+    "japanese": "次",
+    "hiragana": "つぎ",
+    "romaji": "tsugi",
+    "spanish": "Siguiente",
+    "english": "next",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-029",
+    "japanese": "次の日",
+    "hiragana": "つぎのひ",
+    "romaji": "tsugi no hi",
+    "spanish": "El día siguiente",
+    "english": "the next day",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-030",
+    "japanese": "前",
+    "hiragana": "まえ",
+    "romaji": "mae",
+    "spanish": "Antes",
+    "english": "before",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-031",
+    "japanese": "前の日",
+    "hiragana": "まえのひ",
+    "romaji": "mae no hi",
+    "spanish": "El día anterior",
+    "english": "the previous day",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-032",
+    "japanese": "いつ",
+    "hiragana": "いつ",
+    "romaji": "itsu",
+    "spanish": "Cuándo",
+    "english": "when",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-033",
+    "japanese": "誕生日",
+    "hiragana": "たんじょうび",
+    "romaji": "tanjoubi",
+    "spanish": "Cumpleaños",
+    "english": "birthday",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-034",
+    "japanese": "今日",
+    "hiragana": "きょう",
+    "romaji": "kyou",
+    "spanish": "Hoy",
+    "english": "today",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-035",
+    "japanese": "明日",
+    "hiragana": "あした",
+    "romaji": "ashita",
+    "spanish": "Mañana",
+    "english": "tomorrow",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-036",
+    "japanese": "昨日",
+    "hiragana": "きのう",
+    "romaji": "kinou",
+    "spanish": "Ayer",
+    "english": "yesterday",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-037",
+    "japanese": "今週",
+    "hiragana": "こんしゅう",
+    "romaji": "konshuu",
+    "spanish": "Esta semana",
+    "english": "this week",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-038",
+    "japanese": "来週",
+    "hiragana": "らいしゅう",
+    "romaji": "raishuu",
+    "spanish": "La próxima semana",
+    "english": "next week",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-039",
+    "japanese": "先週",
+    "hiragana": "せんしゅう",
+    "romaji": "senshuu",
+    "spanish": "La semana pasada",
+    "english": "last week",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-040",
+    "japanese": "来月",
+    "hiragana": "らいげつ",
+    "romaji": "raigetsu",
+    "spanish": "El próximo mes",
+    "english": "next month",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-041",
+    "japanese": "先月",
+    "hiragana": "せんげつ",
+    "romaji": "sengestu",
+    "spanish": "El mes pasado",
+    "english": "last month",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-042",
+    "japanese": "来年",
+    "hiragana": "らいねん",
+    "romaji": "rainen",
+    "spanish": "El próximo año",
+    "english": "next year",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-043",
+    "japanese": "去年",
+    "hiragana": "きょねん",
+    "romaji": "kyonen",
+    "spanish": "El año pasado",
+    "english": "last year",
+    "type": "noun",
+    "lesson": 5
+  },
+  {
+    "id": "L05-044",
+    "japanese": "今",
+    "hiragana": "いま",
+    "romaji": "ima",
+    "spanish": "Ahora",
+    "english": "now",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-045",
+    "japanese": "後で",
+    "hiragana": "あとで",
+    "romaji": "ato de",
+    "spanish": "Después",
+    "english": "later",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-046",
+    "japanese": "前に",
+    "hiragana": "まえに",
+    "romaji": "mae ni",
+    "spanish": "Antes",
+    "english": "before",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-047",
+    "japanese": "すぐ",
+    "hiragana": "すぐ",
+    "romaji": "sugu",
+    "spanish": "Enseguida",
+    "english": "right away",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-048",
+    "japanese": "もうすぐ",
+    "hiragana": "もうすぐ",
+    "romaji": "mou sugu",
+    "spanish": "Pronto",
+    "english": "soon",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-049",
+    "japanese": "まだ",
+    "hiragana": "まだ",
+    "romaji": "mada",
+    "spanish": "Todavía",
+    "english": "not yet / still",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-050",
+    "japanese": "もう",
+    "hiragana": "もう",
+    "romaji": "mou",
+    "spanish": "Ya",
+    "english": "already",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-051",
+    "japanese": "たくさん",
+    "hiragana": "たくさん",
+    "romaji": "takusan",
+    "spanish": "Mucho",
+    "english": "a lot / many",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-052",
+    "japanese": "少し",
+    "hiragana": "すこし",
+    "romaji": "sukoshi",
+    "spanish": "Un poco",
+    "english": "a little",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-053",
+    "japanese": "全然",
+    "hiragana": "ぜんぜん",
+    "romaji": "zenzen",
+    "spanish": "Para nada",
+    "english": "not at all",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-054",
+    "japanese": "とても",
+    "hiragana": "とても",
+    "romaji": "totemo",
+    "spanish": "Muy",
+    "english": "very",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-055",
+    "japanese": "本当に",
+    "hiragana": "ほんとうに",
+    "romaji": "hontou ni",
+    "spanish": "Realmente",
+    "english": "really",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-056",
+    "japanese": "絶対に",
+    "hiragana": "ぜったいに",
+    "romaji": "zettai ni",
+    "spanish": "Absolutamente",
+    "english": "absolutely",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-057",
+    "japanese": "多分",
+    "hiragana": "たぶん",
+    "romaji": "tabun",
+    "spanish": "Probablemente",
+    "english": "probably",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-058",
+    "japanese": "もしかしたら",
+    "hiragana": "もしかしたら",
+    "romaji": "moshikashitara",
+    "spanish": "Quizás",
+    "english": "maybe / perhaps",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-059",
+    "japanese": "毎日",
+    "hiragana": "まいにち",
+    "romaji": "mainichi",
+    "spanish": "Todos los días",
+    "english": "every day",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-060",
+    "japanese": "毎週",
+    "hiragana": "まいしゅう",
+    "romaji": "maishuu",
+    "spanish": "Todas las semanas",
+    "english": "every week",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-061",
+    "japanese": "毎月",
+    "hiragana": "まいつき",
+    "romaji": "maitsuki",
+    "spanish": "Todos los meses",
+    "english": "every month",
+    "type": "adverb",
+    "lesson": 5
+  },
+  {
+    "id": "L05-062",
+    "japanese": "毎年",
+    "hiragana": "まいとし/まいねん",
+    "romaji": "maitoshi/mainen",
+    "spanish": "Todos los años",
+    "english": "every year",
+    "type": "adverb",
+    "lesson": 5
+  }
+]

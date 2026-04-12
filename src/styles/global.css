@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 min-h-screen;
+  }
+
+  .jp {
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif;
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold
+           transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed
+           select-none cursor-pointer;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold
+           transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed
+           select-none cursor-pointer bg-violet-600 hover:bg-violet-500 text-white shadow-lg shadow-violet-900/40;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold
+           transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed
+           select-none cursor-pointer bg-slate-700 hover:bg-slate-600 text-slate-100;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold
+           transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed
+           select-none cursor-pointer bg-rose-600 hover:bg-rose-500 text-white;
+  }
+  .card {
+    @apply bg-slate-800 rounded-2xl border border-slate-700;
+  }
+  .game-container {
+    @apply max-w-2xl mx-auto px-4 py-6;
+  }
+}

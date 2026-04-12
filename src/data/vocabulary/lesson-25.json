@@ -1,0 +1,172 @@
+[
+  {
+    "id": "L25-001",
+    "japanese": "〜られます",
+    "hiragana": "〜られます",
+    "romaji": "~raremasu",
+    "spanish": "Ser〜 (voz pasiva)",
+    "english": "be ~ (passive voice)",
+    "type": "expression",
+    "lesson": 25
+  },
+  {
+    "id": "L25-002",
+    "japanese": "〜に〜られます",
+    "hiragana": "〜に〜られます",
+    "romaji": "~ni ~raremasu",
+    "spanish": "Ser〜 por〜 (pasiva con agente)",
+    "english": "be ~ by ~ (passive with agent)",
+    "type": "expression",
+    "lesson": 25
+  },
+  {
+    "id": "L25-003",
+    "japanese": "褒めます",
+    "hiragana": "ほめます",
+    "romaji": "homemasu",
+    "spanish": "Elogiar, felicitar",
+    "english": "to praise, to compliment",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-004",
+    "japanese": "叱ります",
+    "hiragana": "しかります",
+    "romaji": "shikarimasu",
+    "spanish": "Regañar, reprender",
+    "english": "to scold",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-005",
+    "japanese": "頼みます",
+    "hiragana": "たのみます",
+    "romaji": "tanomimasu",
+    "spanish": "Pedir, encargar",
+    "english": "to ask, to request",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-006",
+    "japanese": "招待します",
+    "hiragana": "しょうたいします",
+    "romaji": "shoutai shimasu",
+    "spanish": "Invitar",
+    "english": "to invite",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-007",
+    "japanese": "発明します",
+    "hiragana": "はつめいします",
+    "romaji": "hatsumei shimasu",
+    "spanish": "Inventar",
+    "english": "to invent",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-008",
+    "japanese": "建てます",
+    "hiragana": "たてます",
+    "romaji": "tatemasu",
+    "spanish": "Construir (edificio)",
+    "english": "to build, to construct",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-009",
+    "japanese": "盗みます",
+    "hiragana": "ぬすみます",
+    "romaji": "nusumimasu",
+    "spanish": "Robar",
+    "english": "to steal",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-010",
+    "japanese": "踏みます",
+    "hiragana": "ふみます",
+    "romaji": "fumimasu",
+    "spanish": "Pisar",
+    "english": "to step on, to tread",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-011",
+    "japanese": "ぶつかります",
+    "hiragana": "ぶつかります",
+    "romaji": "butsukarimasu",
+    "spanish": "Chocar, golpearse",
+    "english": "to bump into, to collide",
+    "type": "verb",
+    "lesson": 25
+  },
+  {
+    "id": "L25-012",
+    "japanese": "歴史",
+    "hiragana": "れきし",
+    "romaji": "rekishi",
+    "spanish": "Historia",
+    "english": "history",
+    "type": "noun",
+    "lesson": 25
+  },
+  {
+    "id": "L25-013",
+    "japanese": "文学",
+    "hiragana": "ぶんがく",
+    "romaji": "bungaku",
+    "spanish": "Literatura",
+    "english": "literature",
+    "type": "noun",
+    "lesson": 25
+  },
+  {
+    "id": "L25-014",
+    "japanese": "科学",
+    "hiragana": "かがく",
+    "romaji": "kagaku",
+    "spanish": "Ciencia",
+    "english": "science",
+    "type": "noun",
+    "lesson": 25
+  },
+  {
+    "id": "L25-015",
+    "japanese": "芸術",
+    "hiragana": "げいじゅつ",
+    "romaji": "geijutsu",
+    "spanish": "Arte",
+    "english": "art, the arts",
+    "type": "noun",
+    "lesson": 25
+  },
+  {
+    "id": "L25-016",
+    "japanese": "有名人",
+    "hiragana": "ゆうめいじん",
+    "romaji": "yuumeijin",
+    "spanish": "Persona famosa, celebridad",
+    "english": "famous person, celebrity",
+    "type": "noun",
+    "lesson": 25
+  },
+  {
+    "id": "L25-017",
+    "japanese": "作家",
+    "hiragana": "さっか",
+    "romaji": "sakka",
+    "spanish": "Escritor, autor",
+    "english": "writer, author",
+    "type": "noun",
+    "lesson": 25
+  }
+]

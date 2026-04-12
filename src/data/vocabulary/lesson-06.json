@@ -1,0 +1,802 @@
+[
+  {
+    "id": "L06-001",
+    "japanese": "食べます",
+    "hiragana": "たべます",
+    "romaji": "tabemasu",
+    "spanish": "Comer",
+    "english": "to eat",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-002",
+    "japanese": "飲みます",
+    "hiragana": "のみます",
+    "romaji": "nomimasu",
+    "spanish": "Beber",
+    "english": "to drink",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-003",
+    "japanese": "吸います",
+    "hiragana": "すいます",
+    "romaji": "suimasu",
+    "spanish": "Fumar",
+    "english": "to smoke",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-004",
+    "japanese": "見ます",
+    "hiragana": "みます",
+    "romaji": "mimasu",
+    "spanish": "Ver / Mirar",
+    "english": "to see/watch/look",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-005",
+    "japanese": "聞きます",
+    "hiragana": "ききます",
+    "romaji": "kikimasu",
+    "spanish": "Escuchar / Preguntar",
+    "english": "to listen / to ask",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-006",
+    "japanese": "読みます",
+    "hiragana": "よみます",
+    "romaji": "yomimasu",
+    "spanish": "Leer",
+    "english": "to read",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-007",
+    "japanese": "書きます",
+    "hiragana": "かきます",
+    "romaji": "kakimasu",
+    "spanish": "Escribir",
+    "english": "to write",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-008",
+    "japanese": "描きます",
+    "hiragana": "かきます",
+    "romaji": "kakimasu",
+    "spanish": "Pintar",
+    "english": "to paint",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-009",
+    "japanese": "買います",
+    "hiragana": "かいます",
+    "romaji": "kaimasu",
+    "spanish": "Comprar",
+    "english": "to buy",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-010",
+    "japanese": "取ります",
+    "hiragana": "とります",
+    "romaji": "torimasu",
+    "spanish": "Tomar / Agarrar",
+    "english": "to take",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-011",
+    "japanese": "します",
+    "hiragana": "します",
+    "romaji": "shimasu",
+    "spanish": "Hacer",
+    "english": "to do",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-012",
+    "japanese": "会います",
+    "hiragana": "あいます",
+    "romaji": "aimasu",
+    "spanish": "Encontrarse / Reunirse",
+    "english": "to meet",
+    "type": "verb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-013",
+    "japanese": "ご飯",
+    "hiragana": "ごはん",
+    "romaji": "gohan",
+    "spanish": "Arroz / Comida",
+    "english": "rice / meal",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-014",
+    "japanese": "朝ご飯",
+    "hiragana": "あさごはん",
+    "romaji": "asagohan",
+    "spanish": "Desayuno",
+    "english": "breakfast",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-015",
+    "japanese": "朝食",
+    "hiragana": "ちょうしょく",
+    "romaji": "choushoku",
+    "spanish": "Desayuno",
+    "english": "breakfast",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-016",
+    "japanese": "昼ご飯",
+    "hiragana": "ひるごはん",
+    "romaji": "hirugohan",
+    "spanish": "Almuerzo",
+    "english": "lunch",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-017",
+    "japanese": "晩ご飯",
+    "hiragana": "ばんごはん",
+    "romaji": "bangohan",
+    "spanish": "Cena",
+    "english": "dinner",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-018",
+    "japanese": "夕食",
+    "hiragana": "ゆうしょく",
+    "romaji": "yuushoku",
+    "spanish": "Cena",
+    "english": "dinner",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-019",
+    "japanese": "パン",
+    "hiragana": "パン",
+    "romaji": "pan",
+    "spanish": "Pan",
+    "english": "bread",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-020",
+    "japanese": "卵",
+    "hiragana": "たまご",
+    "romaji": "tamago",
+    "spanish": "Huevo",
+    "english": "egg",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-021",
+    "japanese": "肉",
+    "hiragana": "にく",
+    "romaji": "niku",
+    "spanish": "Carne",
+    "english": "meat",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-022",
+    "japanese": "魚",
+    "hiragana": "さかな",
+    "romaji": "sakana",
+    "spanish": "Pescado",
+    "english": "fish",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-023",
+    "japanese": "野菜",
+    "hiragana": "やさい",
+    "romaji": "yasai",
+    "spanish": "Verdura",
+    "english": "vegetable",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-024",
+    "japanese": "果物",
+    "hiragana": "くだもの",
+    "romaji": "kudamono",
+    "spanish": "Fruta",
+    "english": "fruit",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-025",
+    "japanese": "フルーツ",
+    "hiragana": "フルーツ",
+    "romaji": "furutsu",
+    "spanish": "Fruta",
+    "english": "fruit",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-026",
+    "japanese": "水",
+    "hiragana": "みず",
+    "romaji": "mizu",
+    "spanish": "Agua",
+    "english": "water",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-027",
+    "japanese": "お茶",
+    "hiragana": "おちゃ",
+    "romaji": "ocha",
+    "spanish": "Té",
+    "english": "tea",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-028",
+    "japanese": "緑茶",
+    "hiragana": "りょくちゃ",
+    "romaji": "ryokucha",
+    "spanish": "Té verde",
+    "english": "green tea",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-029",
+    "japanese": "紅茶",
+    "hiragana": "こうちゃ",
+    "romaji": "koucha",
+    "spanish": "Té negro",
+    "english": "Black tea",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-030",
+    "japanese": "牛乳",
+    "hiragana": "ぎゅうにゅう",
+    "romaji": "gyuunyuu",
+    "spanish": "Leche",
+    "english": "milk",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-031",
+    "japanese": "ミルク",
+    "hiragana": "ミルク",
+    "romaji": "miruku",
+    "spanish": "Leche",
+    "english": "milk",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-032",
+    "japanese": "ジュース",
+    "hiragana": "ジュース",
+    "romaji": "juusu",
+    "spanish": "Jugo",
+    "english": "juice",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-033",
+    "japanese": "酒",
+    "hiragana": "さけ",
+    "romaji": "sake",
+    "spanish": "Sake",
+    "english": "sake",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-034",
+    "japanese": "日本酒",
+    "hiragana": "にほんしゅ",
+    "romaji": "nihonshu",
+    "spanish": "Sake japonés",
+    "english": "Japanese sake",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-035",
+    "japanese": "ビール",
+    "hiragana": "ビール",
+    "romaji": "biiru",
+    "spanish": "Cerveza",
+    "english": "beer",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-036",
+    "japanese": "たばこ",
+    "hiragana": "たばこ",
+    "romaji": "tabako",
+    "spanish": "Tabaco",
+    "english": "tobacco",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-037",
+    "japanese": "手紙",
+    "hiragana": "てがみ",
+    "romaji": "tegami",
+    "spanish": "Carta",
+    "english": "letter",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-038",
+    "japanese": "レポート",
+    "hiragana": "レポート",
+    "romaji": "repooto",
+    "spanish": "Informe",
+    "english": "report",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-039",
+    "japanese": "写真",
+    "hiragana": "しゃしん",
+    "romaji": "shashin",
+    "spanish": "Foto",
+    "english": "photo",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-040",
+    "japanese": "動画",
+    "hiragana": "どうが",
+    "romaji": "douga",
+    "spanish": "Video",
+    "english": "video",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-041",
+    "japanese": "ビデオ",
+    "hiragana": "ビデオ",
+    "romaji": "bideo",
+    "spanish": "Video",
+    "english": "video",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-042",
+    "japanese": "店",
+    "hiragana": "みせ",
+    "romaji": "mise",
+    "spanish": "Tienda",
+    "english": "store",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-043",
+    "japanese": "庭",
+    "hiragana": "にわ",
+    "romaji": "niwa",
+    "spanish": "Jardín",
+    "english": "garden",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-044",
+    "japanese": "宿題",
+    "hiragana": "しゅくだい",
+    "romaji": "shukudai",
+    "spanish": "Tarea",
+    "english": "homework",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-045",
+    "japanese": "テニス",
+    "hiragana": "テニス",
+    "romaji": "tenisu",
+    "spanish": "Tenis",
+    "english": "tennis",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-046",
+    "japanese": "ゴルフ",
+    "hiragana": "ゴルフ",
+    "romaji": "gorufu",
+    "spanish": "Golf",
+    "english": "golf",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-047",
+    "japanese": "サッカー",
+    "hiragana": "サッカー",
+    "romaji": "sakkaa",
+    "spanish": "Fútbol",
+    "english": "soccer/football",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-048",
+    "japanese": "野球",
+    "hiragana": "やきゅう",
+    "romaji": "yakyuu",
+    "spanish": "Béisbol",
+    "english": "baseball",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-049",
+    "japanese": "バスケットボール",
+    "hiragana": "バスケットボール",
+    "romaji": "basukettobooru",
+    "spanish": "Baloncesto",
+    "english": "basketball",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-050",
+    "japanese": "バレーボール",
+    "hiragana": "バレーボール",
+    "romaji": "bareebooru",
+    "spanish": "Voleibol",
+    "english": "volleyball",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-051",
+    "japanese": "テーブル",
+    "hiragana": "テーブル",
+    "romaji": "teeburu",
+    "spanish": "Mesa",
+    "english": "table",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-052",
+    "japanese": "椅子",
+    "hiragana": "いす",
+    "romaji": "isu",
+    "spanish": "Silla",
+    "english": "chair",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-053",
+    "japanese": "ベッド",
+    "hiragana": "ベッド",
+    "romaji": "beddo",
+    "spanish": "Cama",
+    "english": "bed",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-054",
+    "japanese": "ソファー",
+    "hiragana": "ソファー",
+    "romaji": "sofaa",
+    "spanish": "Sofá",
+    "english": "sofa",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-055",
+    "japanese": "テレビ",
+    "hiragana": "テレビ",
+    "romaji": "terebi",
+    "spanish": "Televisión",
+    "english": "television",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-056",
+    "japanese": "ラジオ",
+    "hiragana": "ラジオ",
+    "romaji": "rajio",
+    "spanish": "Radio",
+    "english": "radio",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-057",
+    "japanese": "コンピューター",
+    "hiragana": "コンピューター",
+    "romaji": "konpyuutaa",
+    "spanish": "Computadora",
+    "english": "computer",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-058",
+    "japanese": "お花見",
+    "hiragana": "おはなみ",
+    "romaji": "ohanami",
+    "spanish": "Observación de flores",
+    "english": "flower viewing",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-059",
+    "japanese": "花火",
+    "hiragana": "はなび",
+    "romaji": "hanabi",
+    "spanish": "Fuegos artificiales",
+    "english": "fireworks",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-060",
+    "japanese": "お祭り",
+    "hiragana": "おまつり",
+    "romaji": "omatsuri",
+    "spanish": "Festival",
+    "english": "festival",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-061",
+    "japanese": "旅行",
+    "hiragana": "りょこう",
+    "romaji": "ryokou",
+    "spanish": "Viaje",
+    "english": "travel",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-062",
+    "japanese": "質問",
+    "hiragana": "しつもん",
+    "romaji": "shitsumon",
+    "spanish": "Pregunta",
+    "english": "question",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-063",
+    "japanese": "答え",
+    "hiragana": "こたえ",
+    "romaji": "kotae",
+    "spanish": "Respuesta",
+    "english": "answer",
+    "type": "noun",
+    "lesson": 6
+  },
+  {
+    "id": "L06-064",
+    "japanese": "一緒に",
+    "hiragana": "いっしょに",
+    "romaji": "issho ni",
+    "spanish": "Juntos",
+    "english": "together",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-065",
+    "japanese": "ちょっと",
+    "hiragana": "ちょっと",
+    "romaji": "chotto",
+    "spanish": "Un poco",
+    "english": "a little bit, a little while",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-066",
+    "japanese": "とても",
+    "hiragana": "とても",
+    "romaji": "totemo",
+    "spanish": "Muy",
+    "english": "very",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-067",
+    "japanese": "あまり",
+    "hiragana": "あまり",
+    "romaji": "amari",
+    "spanish": "No mucho",
+    "english": "not much (used with negative verbs)",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-068",
+    "japanese": "全然",
+    "hiragana": "ぜんぜん",
+    "romaji": "zenzen",
+    "spanish": "Nada en absoluto",
+    "english": "not at all (used with negative verbs)",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-069",
+    "japanese": "よく",
+    "hiragana": "よく",
+    "romaji": "yoku",
+    "spanish": "Frecuentemente / Bien",
+    "english": "often / well",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-070",
+    "japanese": "時々",
+    "hiragana": "ときどき",
+    "romaji": "tokidoki",
+    "spanish": "A veces",
+    "english": "sometimes",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-071",
+    "japanese": "いつも",
+    "hiragana": "いつも",
+    "romaji": "itsumo",
+    "spanish": "Siempre",
+    "english": "always",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-072",
+    "japanese": "たまに",
+    "hiragana": "たまに",
+    "romaji": "tamani",
+    "spanish": "De vez en cuando",
+    "english": "occasionally",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-073",
+    "japanese": "それから",
+    "hiragana": "それから",
+    "romaji": "sorekara",
+    "spanish": "Después de eso",
+    "english": "after that",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-074",
+    "japanese": "そして",
+    "hiragana": "そして",
+    "romaji": "soshite",
+    "spanish": "Y luego",
+    "english": "and then",
+    "type": "adverb",
+    "lesson": 6
+  },
+  {
+    "id": "L06-075",
+    "japanese": "でも",
+    "hiragana": "でも",
+    "romaji": "demo",
+    "spanish": "Pero",
+    "english": "but",
+    "type": "conjunction",
+    "lesson": 6
+  },
+  {
+    "id": "L06-076",
+    "japanese": "ええ",
+    "hiragana": "ええ",
+    "romaji": "ee",
+    "spanish": "Sí",
+    "english": "yes",
+    "type": "interjection",
+    "lesson": 6
+  },
+  {
+    "id": "L06-077",
+    "japanese": "いいですね",
+    "hiragana": "いいですね",
+    "romaji": "ii desu ne",
+    "spanish": "Eso está bien",
+    "english": "That's good",
+    "type": "interjection",
+    "lesson": 6
+  },
+  {
+    "id": "L06-078",
+    "japanese": "分かりません",
+    "hiragana": "わかりません",
+    "romaji": "wakarimasen",
+    "spanish": "No entiendo",
+    "english": "I don't understand",
+    "type": "expression",
+    "lesson": 6
+  },
+  {
+    "id": "L06-079",
+    "japanese": "分かりました",
+    "hiragana": "わかりました",
+    "romaji": "wakarimashita",
+    "spanish": "Entendido",
+    "english": "I understand",
+    "type": "expression",
+    "lesson": 6
+  },
+  {
+    "id": "L06-080",
+    "japanese": "じゃあ、また",
+    "hiragana": "じゃあ、また",
+    "romaji": "jaa, mata",
+    "spanish": "Hasta luego",
+    "english": "see ya",
+    "type": "expression",
+    "lesson": 6
+  }
+]

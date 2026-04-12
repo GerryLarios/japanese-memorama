@@ -1,0 +1,202 @@
+[
+  {
+    "id": "L13-001",
+    "japanese": "できます",
+    "hiragana": "できます",
+    "romaji": "dekimasu",
+    "spanish": "Poder, ser capaz de",
+    "english": "can do, to be able to",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-002",
+    "japanese": "〜ことができます",
+    "hiragana": "〜ことができます",
+    "romaji": "~koto ga dekimasu",
+    "spanish": "Poder hacer〜",
+    "english": "can do ~, be able to ~",
+    "type": "expression",
+    "lesson": 13
+  },
+  {
+    "id": "L13-003",
+    "japanese": "運転します",
+    "hiragana": "うんてんします",
+    "romaji": "unten shimasu",
+    "spanish": "Conducir, manejar",
+    "english": "to drive",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-004",
+    "japanese": "弾きます",
+    "hiragana": "ひきます",
+    "romaji": "hikimasu",
+    "spanish": "Tocar (instrumento de cuerda)",
+    "english": "to play (string instrument)",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-005",
+    "japanese": "作ります",
+    "hiragana": "つくります",
+    "romaji": "tsukurimasu",
+    "spanish": "Hacer, crear, fabricar",
+    "english": "to make, to create",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-006",
+    "japanese": "泳ぎます",
+    "hiragana": "およぎます",
+    "romaji": "oyogimasu",
+    "spanish": "Nadar",
+    "english": "to swim",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-007",
+    "japanese": "引きます",
+    "hiragana": "ひきます",
+    "romaji": "hikimasu",
+    "spanish": "Jalar, tirar",
+    "english": "to pull",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-008",
+    "japanese": "登ります",
+    "hiragana": "のぼります",
+    "romaji": "noborimasu",
+    "spanish": "Subir, escalar",
+    "english": "to climb",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-009",
+    "japanese": "ピアノ",
+    "hiragana": "ピアノ",
+    "romaji": "piano",
+    "spanish": "Piano",
+    "english": "piano",
+    "type": "noun",
+    "lesson": 13
+  },
+  {
+    "id": "L13-010",
+    "japanese": "スキー",
+    "hiragana": "スキー",
+    "romaji": "sukii",
+    "spanish": "Esquí",
+    "english": "skiing",
+    "type": "noun",
+    "lesson": 13
+  },
+  {
+    "id": "L13-011",
+    "japanese": "スケート",
+    "hiragana": "スケート",
+    "romaji": "sukeeto",
+    "spanish": "Patinaje",
+    "english": "skating",
+    "type": "noun",
+    "lesson": 13
+  },
+  {
+    "id": "L13-012",
+    "japanese": "テニス",
+    "hiragana": "テニス",
+    "romaji": "tenisu",
+    "spanish": "Tenis",
+    "english": "tennis",
+    "type": "noun",
+    "lesson": 13
+  },
+  {
+    "id": "L13-013",
+    "japanese": "日本語",
+    "hiragana": "にほんご",
+    "romaji": "nihongo",
+    "spanish": "Japonés (idioma)",
+    "english": "Japanese language",
+    "type": "noun",
+    "lesson": 13
+  },
+  {
+    "id": "L13-014",
+    "japanese": "前に",
+    "hiragana": "まえに",
+    "romaji": "mae ni",
+    "spanish": "Antes de〜",
+    "english": "before ~",
+    "type": "expression",
+    "lesson": 13
+  },
+  {
+    "id": "L13-015",
+    "japanese": "習います",
+    "hiragana": "ならいます",
+    "romaji": "naraimasu",
+    "spanish": "Aprender, recibir lecciones",
+    "english": "to learn, to take lessons",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-016",
+    "japanese": "練習します",
+    "hiragana": "れんしゅうします",
+    "romaji": "renshuu shimasu",
+    "spanish": "Practicar, entrenar",
+    "english": "to practice",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-017",
+    "japanese": "準備します",
+    "hiragana": "じゅんびします",
+    "romaji": "junbi shimasu",
+    "spanish": "Preparar, prepararse",
+    "english": "to prepare",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-018",
+    "japanese": "予約します",
+    "hiragana": "よやくします",
+    "romaji": "yoyaku shimasu",
+    "spanish": "Reservar",
+    "english": "to make a reservation",
+    "type": "verb",
+    "lesson": 13
+  },
+  {
+    "id": "L13-019",
+    "japanese": "計画",
+    "hiragana": "けいかく",
+    "romaji": "keikaku",
+    "spanish": "Plan, proyecto",
+    "english": "plan, project",
+    "type": "noun",
+    "lesson": 13
+  },
+  {
+    "id": "L13-020",
+    "japanese": "地図",
+    "hiragana": "ちず",
+    "romaji": "chizu",
+    "spanish": "Mapa",
+    "english": "map",
+    "type": "noun",
+    "lesson": 13
+  }
+]
