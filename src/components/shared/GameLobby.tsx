@@ -506,7 +506,7 @@ export default function GameLobby({
                 </button>
               </div>
               <div className="overflow-y-auto flex-1 p-4">
-                <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+                <div className="grid grid-cols-4 sm:grid-cols-5 gap-2">
                   {kanaWords.map((w) => (
                     <div
                       key={w.id}
