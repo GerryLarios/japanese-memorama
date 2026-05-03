@@ -208,5 +208,55 @@
     "english": "like the most",
     "type": "expression",
     "lesson": 10
+  },
+  {
+    "id": "L10-022",
+    "japanese": "夏休み",
+    "hiragana": "なつやすみ",
+    "romaji": "natsuyasumi",
+    "spanish": "Vacaciones de verano",
+    "english": "summer vacation",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-023",
+    "japanese": "冬休み",
+    "hiragana": "ふゆやすみ",
+    "romaji": "fuyuyasumi",
+    "spanish": "Vacaciones de invierno",
+    "english": "winter vacation",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-024",
+    "japanese": "春休み",
+    "hiragana": "はるやすみ",
+    "romaji": "haruyasumi",
+    "spanish": "Vacaciones de primavera",
+    "english": "spring vacation",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-025",
+    "japanese": "秋休み",
+    "hiragana": "あきやすみ",
+    "romaji": "akiyasumi",
+    "spanish": "Vacaciones de otoño",
+    "english": "autumn vacation",
+    "type": "noun",
+    "lesson": 10
+  },
+  {
+    "id": "L10-026",
+    "japanese": "一番好きな季節は何ですか？",
+    "hiragana": "いちばんすきなきせつはなんですか？",
+    "romaji": "ichiban suki na kisetsu wa nan desu ka?",
+    "spanish": "¿Cuál es tu estación del año favorita?",
+    "english": "What is your favorite season?",
+    "type": "expression",
+    "lesson": 10
   }
 ]

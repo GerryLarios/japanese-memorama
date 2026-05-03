@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { getKanaWords } from "../../data/kana";
 import type {
   Direction,
   GameConfig,
   KanaScript,
   KanaType,
+  VocabWord,
   WordType,
 } from "../../data/types";
 import { getAllLessons, getWords } from "../../data/vocab";
-import { getKanaWords } from "../../data/kana";
+import CustomVocabImport from "./CustomVocabImport";
 
 interface Props {
   onStart: (config: GameConfig) => void;
@@ -94,11 +96,12 @@ export default function GameLobby({
   const lessons = getAllLessons();
 
   // Parse URL params once (client-only, safe for SSR hydration via lazy init)
-  const [mode, setMode] = useState<"vocab" | "kana">(() => {
+  const [mode, setMode] = useState<"vocab" | "kana" | "custom">(() => {
     if (typeof window === "undefined") return "vocab";
-    return new URLSearchParams(window.location.search).get("type") === "kana"
-      ? "kana"
-      : "vocab";
+    const type = new URLSearchParams(window.location.search).get("type");
+    if (type === "kana") return "kana";
+    if (type === "custom") return "custom";
+    return "vocab";
   });
 
   const [selectedLessons, setSelectedLessons] = useState<number[]>(() => {
@@ -166,6 +169,11 @@ export default function GameLobby({
     return COUNTS.some((c) => c.value === n) ? n : 0;
   });
 
+  const [showHiragana, setShowHiragana] = useState(true);
+  const [showRomaji, setShowRomaji] = useState(true);
+
+  const [customWords, setCustomWords] = useState<VocabWord[]>([]);
+
   const [showVocab, setShowVocab] = useState(false);
   const [showKana, setShowKana] = useState(false);
 
@@ -178,9 +186,12 @@ export default function GameLobby({
       p.set("lesson", selectedLessons.join(","));
       if (wordType !== "all") p.set("wordType", wordType);
       p.set("direction", direction);
-    } else {
+    } else if (mode === "kana") {
       p.set("kanaScript", kanaScripts.join(","));
       p.set("kanaType", kanaTypes.join(","));
+      p.set("direction", direction);
+    } else {
+      // custom — only store mode + direction, words aren't URL-encodable
       p.set("direction", direction);
     }
     if (count !== 0) p.set("count", String(count));
@@ -205,6 +216,18 @@ export default function GameLobby({
         direction,
         count,
         kana: { script: kanaScripts, types: kanaTypes },
+        showHiragana,
+        showRomaji,
+      });
+    } else if (mode === "custom") {
+      onStart({
+        lessons: [],
+        wordTypes: "all",
+        direction,
+        count,
+        customWords,
+        showHiragana,
+        showRomaji,
       });
     } else {
       onStart({
@@ -212,6 +235,8 @@ export default function GameLobby({
         wordTypes: wordType === "all" ? "all" : [wordType],
         direction,
         count,
+        showHiragana,
+        showRomaji,
       });
     }
   };
@@ -228,7 +253,7 @@ export default function GameLobby({
 
       {/* Mode toggle */}
       <div className="card p-1 flex gap-1">
-        {(["vocab", "kana"] as const).map((m) => (
+        {(["vocab", "kana", "custom"] as const).map((m) => (
           <button
             key={m}
             onClick={() => {
@@ -241,7 +266,7 @@ export default function GameLobby({
                 : "text-slate-400 hover:text-slate-200"
             }`}
           >
-            {m === "vocab" ? "📚 Vocabulario" : "あ Kana"}
+            {m === "vocab" ? "📚 Vocabulario" : m === "kana" ? "あ Kana" : "📂 Importar"}
           </button>
         ))}
       </div>
@@ -354,18 +379,35 @@ export default function GameLobby({
         </>
       )}
 
+      {/* ── Custom import options ── */}
+      {mode === "custom" && (
+        <div className="card p-5 space-y-3">
+          <h2 className="font-semibold text-slate-300">📂 Importar vocabulario</h2>
+          <CustomVocabImport onImport={(words) => setCustomWords(words)} />
+          {customWords.length > 0 && (
+            <button
+              onClick={() => setShowVocab(true)}
+              className="w-full py-2.5 rounded-xl text-sm font-semibold border border-slate-600 bg-slate-700 text-slate-300 hover:border-violet-500 hover:text-violet-300 transition-all"
+            >
+              📖 Ver vocabulario importado ({customWords.length} palabras)
+            </button>
+          )}
+        </div>
+      )}
+
       {/* ── Kana preview button ── */}
-      {mode === "kana" && (() => {
-        const kanaWords = getKanaWords(kanaScripts, kanaTypes);
-        return (
-          <button
-            onClick={() => setShowKana(true)}
-            className="w-full py-2.5 rounded-xl text-sm font-semibold border border-slate-600 bg-slate-700 text-slate-300 hover:border-violet-500 hover:text-violet-300 transition-all"
-          >
-            あ Ver kana ({kanaWords.length} caracteres)
-          </button>
-        );
-      })()}
+      {mode === "kana" &&
+        (() => {
+          const kanaWords = getKanaWords(kanaScripts, kanaTypes);
+          return (
+            <button
+              onClick={() => setShowKana(true)}
+              className="w-full py-2.5 rounded-xl text-sm font-semibold border border-slate-600 bg-slate-700 text-slate-300 hover:border-violet-500 hover:text-violet-300 transition-all"
+            >
+              あ Ver kana ({kanaWords.length} caracteres)
+            </button>
+          );
+        })()}
 
       {/* Direction */}
       <div className="card p-5 space-y-3">
@@ -407,17 +449,52 @@ export default function GameLobby({
         </div>
       </div>
 
-      <button onClick={handleStart} className="btn-primary w-full text-lg py-4">
-        ¡Empezar!
+      {/* Display options */}
+      <div className="card p-5 space-y-3">
+        <h2 className="font-semibold text-slate-300">👁 Mostrar en la pregunta</h2>
+        <div className="flex gap-3">
+          <button
+            onClick={() => setShowHiragana((v) => !v)}
+            className={`flex-1 py-2.5 rounded-xl text-sm font-semibold border transition-all ${
+              showHiragana
+                ? "bg-violet-600 border-violet-500 text-white"
+                : "bg-slate-700 border-slate-600 text-slate-400 hover:border-violet-500"
+            }`}
+          >
+            {showHiragana ? "✓" : "✗"} Hiragana
+          </button>
+          <button
+            onClick={() => setShowRomaji((v) => !v)}
+            className={`flex-1 py-2.5 rounded-xl text-sm font-semibold border transition-all ${
+              showRomaji
+                ? "bg-violet-600 border-violet-500 text-white"
+                : "bg-slate-700 border-slate-600 text-slate-400 hover:border-violet-500"
+            }`}
+          >
+            {showRomaji ? "✓" : "✗"} Romaji
+          </button>
+        </div>
+      </div>
+
+      <button
+        onClick={handleStart}
+        disabled={mode === "custom" && customWords.length === 0}
+        className="btn-primary w-full text-lg py-4 disabled:opacity-40 disabled:cursor-not-allowed"
+      >
+        {mode === "custom" && customWords.length === 0
+          ? "Importa un archivo para empezar"
+          : "¡Empezar!"}
       </button>
 
-      {/* Vocabulary modal */}
+      {/* Vocabulary modal — vocab mode or custom mode */}
       {showVocab &&
         (() => {
-          const modalWords = getWords({
-            lessons: selectedLessons,
-            wordTypes: wordType === "all" ? "all" : [wordType],
-          });
+          const modalWords = mode === "custom"
+            ? customWords
+            : getWords({
+                lessons: selectedLessons,
+                wordTypes: wordType === "all" ? "all" : [wordType],
+              });
           return (
             <div
               className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
@@ -478,50 +555,61 @@ export default function GameLobby({
         })()}
 
       {/* Kana modal */}
-      {showKana && (() => {
-        const kanaWords = getKanaWords(kanaScripts, kanaTypes);
-        const scriptLabel = kanaScripts.map((s) => s === "hiragana" ? "Hiragana" : "Katakana").join(" + ");
-        const typeLabel = kanaTypes.map((t) => t === "seion" ? "Seion" : t === "dakuon" ? "Dakuon" : "Youon").join(" + ");
-        return (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-            onClick={() => setShowKana(false)}
-          >
+      {showKana &&
+        (() => {
+          const kanaWords = getKanaWords(kanaScripts, kanaTypes);
+          const scriptLabel = kanaScripts
+            .map((s) => (s === "hiragana" ? "Hiragana" : "Katakana"))
+            .join(" + ");
+          const typeLabel = kanaTypes
+            .map((t) =>
+              t === "seion" ? "Seion" : t === "dakuon" ? "Dakuon" : "Youon",
+            )
+            .join(" + ");
+          return (
             <div
-              className="bg-slate-800 rounded-2xl shadow-2xl w-full max-w-lg max-h-[85vh] flex flex-col"
-              onClick={(e) => e.stopPropagation()}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+              onClick={() => setShowKana(false)}
             >
-              <div className="flex items-center justify-between p-4 border-b border-slate-700">
-                <div>
-                  <h2 className="font-bold text-slate-100 text-lg">
-                    あ {scriptLabel} — {kanaWords.length} caracteres
-                  </h2>
-                  <p className="text-xs text-slate-400 mt-0.5">{typeLabel}</p>
+              <div
+                className="bg-slate-800 rounded-2xl shadow-2xl w-full max-w-lg max-h-[85vh] flex flex-col"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex items-center justify-between p-4 border-b border-slate-700">
+                  <div>
+                    <h2 className="font-bold text-slate-100 text-lg">
+                      あ {scriptLabel} — {kanaWords.length} caracteres
+                    </h2>
+                    <p className="text-xs text-slate-400 mt-0.5">{typeLabel}</p>
+                  </div>
+                  <button
+                    onClick={() => setShowKana(false)}
+                    className="text-slate-400 hover:text-white text-2xl leading-none transition-colors"
+                  >
+                    ✕
+                  </button>
                 </div>
-                <button
-                  onClick={() => setShowKana(false)}
-                  className="text-slate-400 hover:text-white text-2xl leading-none transition-colors"
-                >
-                  ✕
-                </button>
-              </div>
-              <div className="overflow-y-auto flex-1 p-4">
-                <div className="grid grid-cols-4 sm:grid-cols-5 gap-2">
-                  {kanaWords.map((w) => (
-                    <div
-                      key={w.id}
-                      className="bg-slate-700 rounded-xl p-3 text-center border border-slate-600"
-                    >
-                      <div className="text-2xl font-medium text-white mb-1">{w.japanese}</div>
-                      <div className="text-xs text-violet-300">{w.romaji}</div>
-                    </div>
-                  ))}
+                <div className="overflow-y-auto flex-1 p-4">
+                  <div className="grid grid-cols-4 sm:grid-cols-5 gap-2">
+                    {kanaWords.map((w) => (
+                      <div
+                        key={w.id}
+                        className="bg-slate-700 rounded-xl p-3 text-center border border-slate-600"
+                      >
+                        <div className="text-2xl font-medium text-white mb-1">
+                          {w.japanese}
+                        </div>
+                        <div className="text-xs text-violet-300">
+                          {w.romaji}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        );
-      })()}
+          );
+        })()}
     </div>
   );
 }

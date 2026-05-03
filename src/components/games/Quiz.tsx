@@ -173,8 +173,8 @@ export default function Quiz() {
         {q.question === q.word.japanese ? (
           <JapaneseWord
             japanese={q.word.japanese}
-            hiragana={q.word.hiragana}
-            romaji={config.kana ? undefined : q.word.romaji}
+            hiragana={config.showHiragana !== false ? q.word.hiragana : undefined}
+            romaji={config.kana ? undefined : (config.showRomaji !== false ? q.word.romaji : undefined)}
             size="lg"
             playable
           />

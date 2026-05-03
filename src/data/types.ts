@@ -32,6 +32,9 @@ export interface GameConfig {
   direction: Direction;
   count: number; // 10 | 20 | 0 = all
   kana?: { script: KanaScript[]; types: KanaType[] };
+  customWords?: VocabWord[]; // session-only imported vocabulary
+  showHiragana?: boolean; // default true
+  showRomaji?: boolean;   // default true
 }
 
 export type GameMode =
@@ -40,7 +43,9 @@ export type GameMode =
   | "flashcards"
   | "fill-blank"
   | "listening"
-  | "numbers";
+  | "numbers"
+  | "conjugations"
+  | "adjectives";
 
 export interface GameInfo {
   id: GameMode;
@@ -92,5 +97,19 @@ export const GAMES: GameInfo[] = [
     description: "Practica la lectura de números en japonés (1 – 9999)",
     emoji: "🔢",
     color: "bg-teal-500",
+  },
+  {
+    id: "conjugations",
+    title: "Conjugaciones",
+    description: "Practica las formas verbales: ます, ない, て, た, たら, ています",
+    emoji: "🔤",
+    color: "bg-indigo-500",
+  },
+  {
+    id: "adjectives",
+    title: "Adjetivos",
+    description: "Practica las formas de adjetivos い y な: negativo, pasado, て, adverbio",
+    emoji: "🎨",
+    color: "bg-pink-500",
   },
 ];

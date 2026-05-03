@@ -113,8 +113,8 @@ export default function FillBlank() {
         {!isJpAnswer ? (
           <JapaneseWord
             japanese={word.japanese}
-            hiragana={word.hiragana}
-            romaji={config.kana ? undefined : word.romaji}
+            hiragana={config.showHiragana !== false ? word.hiragana : undefined}
+            romaji={config.kana ? undefined : (config.showRomaji !== false ? word.romaji : undefined)}
             size="lg"
             playable
           />

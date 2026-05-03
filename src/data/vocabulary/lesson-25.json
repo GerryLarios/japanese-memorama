@@ -168,5 +168,15 @@
     "english": "writer, author",
     "type": "noun",
     "lesson": 25
+  },
+  {
+    "id": "L25-026",
+    "japanese": "作文",
+    "hiragana": "さくぶん",
+    "romaji": "sakubun",
+    "spanish": "Composición, redacción",
+    "english": "composition, essay",
+    "type": "noun",
+    "lesson": 25
   }
 ]

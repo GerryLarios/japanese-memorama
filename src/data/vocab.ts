@@ -83,6 +83,14 @@ export function getWords(config: Partial<GameConfig> = {}): VocabWord[] {
     );
   }
 
+  // Custom imported vocabulary — skip all lesson/type filters
+  if (config.customWords && config.customWords.length > 0) {
+    const words = config.count && config.count > 0
+      ? shuffle([...config.customWords]).slice(0, config.count)
+      : [...config.customWords];
+    return words;
+  }
+
   let words = [...ALL_WORDS];
 
   // Counters (lesson: 0) are only included when explicitly requested via wordType "counter"
@@ -176,11 +184,12 @@ export function pickWrongAnswers(
     if (isKana) return w.romaji;
     switch (dir) {
       case "jp-es":
-      case "es-jp":
         return w.spanish;
       case "jp-en":
-      case "en-jp":
         return w.english;
+      case "es-jp":
+      case "en-jp":
+        return w.japanese;
       default:
         return w.spanish;
     }
