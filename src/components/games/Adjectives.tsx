@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { speak } from "../../utils/tts";
 import { shuffle } from "../../data/vocab";
 import {
   getAdjsByLevels,
@@ -64,8 +65,32 @@ function Lobby({
 }: {
   onStart: (levels: AdjLevel[], forms: AdjForm[]) => void;
 }) {
-  const [selectedLevels, setSelectedLevels] = useState<AdjLevel[]>(["N5"]);
-  const [selectedForms, setSelectedForms] = useState<AdjForm[]>(ALL_FORMS);
+  function levelsFromParams(): AdjLevel[] {
+    if (typeof window === "undefined") return ["N5"];
+    const raw = new URLSearchParams(window.location.search).get("level");
+    if (!raw) return ["N5"];
+    const valid = ADJ_LEVELS.map((l) => l.value);
+    const parsed = raw.split(",").filter((v) => valid.includes(v as AdjLevel)) as AdjLevel[];
+    return parsed.length > 0 ? parsed : ["N5"];
+  }
+
+  function formsFromParams(): AdjForm[] {
+    if (typeof window === "undefined") return ALL_FORMS;
+    const raw = new URLSearchParams(window.location.search).get("form");
+    if (!raw) return ALL_FORMS;
+    const parsed = raw.split(",").filter((v) => ALL_FORMS.includes(v as AdjForm)) as AdjForm[];
+    return parsed.length > 0 ? parsed : ALL_FORMS;
+  }
+
+  const [selectedLevels, setSelectedLevels] = useState<AdjLevel[]>(levelsFromParams);
+  const [selectedForms, setSelectedForms] = useState<AdjForm[]>(formsFromParams);
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    params.set("level", selectedLevels.join(","));
+    params.set("form", selectedForms.join(","));
+    window.history.replaceState(null, "", `?${params.toString()}`);
+  }, [selectedLevels, selectedForms]);
 
   function toggleLevel(l: AdjLevel) {
     setSelectedLevels((prev) =>
@@ -395,7 +420,16 @@ export default function Adjectives() {
         <div className="text-3xl font-bold text-white">
           {current.adj.dictionary}
         </div>
-        <div className="text-lg text-pink-300">{current.adj.hiragana}</div>
+        <div className="flex items-center justify-center gap-2">
+          <div className="text-lg text-pink-300">{current.adj.hiragana}</div>
+          <button
+            onClick={() => speak(current.adj.hiragana)}
+            className="w-7 h-7 rounded-full bg-slate-700 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-all active:scale-90 text-sm"
+            title="Escuchar pronunciación"
+          >
+            🔊
+          </button>
+        </div>
         <div className="text-slate-400 text-sm">{current.adj.spanish}</div>
         <div className="text-slate-600 text-xs">
           Adjetivo {current.adj.type === "i" ? "い" : "な"}

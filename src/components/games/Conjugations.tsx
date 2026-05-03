@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { speak } from "../../utils/tts";
 import { shuffle } from "../../data/vocab";
 import {
   getVerbsByLevels,
@@ -33,18 +34,25 @@ function buildQuestions(
   for (const verb of verbs) {
     for (const form of forms) {
       const answer = verb[form];
-      // Pick 3 wrong answers from other verbs (same form)
-      const otherAnswers = shuffle(
-        verbs
-          .filter((v) => v.id !== verb.id && v[form] !== answer)
-          .map((v) => v[form]),
-      ).slice(0, 3);
+      // Wrong answers: other forms of the SAME verb
+      const otherForms = ALL_FORMS.filter((f) => f !== form && verb[f] !== answer);
+      const wrongFromSameVerb = shuffle(otherForms.map((f) => verb[f])).slice(0, 3);
+      // Fallback: if fewer than 3 other forms, fill from other verbs (same form)
+      const needed = 3 - wrongFromSameVerb.length;
+      const fallback =
+        needed > 0
+          ? shuffle(
+              verbs
+                .filter((v) => v.id !== verb.id && v[form] !== answer)
+                .map((v) => v[form]),
+            ).slice(0, needed)
+          : [];
 
       questions.push({
         verb,
         targetForm: form,
         answer,
-        options: shuffle([answer, ...otherAnswers]),
+        options: shuffle([answer, ...wrongFromSameVerb, ...fallback]),
       });
     }
   }
@@ -59,8 +67,32 @@ function Lobby({
 }: {
   onStart: (levels: VerbLevel[], forms: VerbForm[]) => void;
 }) {
-  const [selectedLevels, setSelectedLevels] = useState<VerbLevel[]>(["N5"]);
-  const [selectedForms, setSelectedForms] = useState<VerbForm[]>(ALL_FORMS);
+  function levelsFromParams(): VerbLevel[] {
+    if (typeof window === "undefined") return ["N5"];
+    const raw = new URLSearchParams(window.location.search).get("level");
+    if (!raw) return ["N5"];
+    const valid = VERB_LEVELS.map((l) => l.value);
+    const parsed = raw.split(",").filter((v) => valid.includes(v as VerbLevel)) as VerbLevel[];
+    return parsed.length > 0 ? parsed : ["N5"];
+  }
+
+  function formsFromParams(): VerbForm[] {
+    if (typeof window === "undefined") return ALL_FORMS;
+    const raw = new URLSearchParams(window.location.search).get("form");
+    if (!raw) return ALL_FORMS;
+    const parsed = raw.split(",").filter((v) => ALL_FORMS.includes(v as VerbForm)) as VerbForm[];
+    return parsed.length > 0 ? parsed : ALL_FORMS;
+  }
+
+  const [selectedLevels, setSelectedLevels] = useState<VerbLevel[]>(levelsFromParams);
+  const [selectedForms, setSelectedForms] = useState<VerbForm[]>(formsFromParams);
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    params.set("level", selectedLevels.join(","));
+    params.set("form", selectedForms.join(","));
+    window.history.replaceState(null, "", `?${params.toString()}`);
+  }, [selectedLevels, selectedForms]);
 
   function toggleLevel(l: VerbLevel) {
     setSelectedLevels((prev) =>
@@ -379,7 +411,16 @@ export default function Conjugations() {
           ?
         </p>
         <div className="text-3xl font-bold text-white">{current.verb.dictionary}</div>
-        <div className="text-lg text-indigo-300">{current.verb.hiragana}</div>
+        <div className="flex items-center justify-center gap-2">
+          <div className="text-lg text-indigo-300">{current.verb.hiragana}</div>
+          <button
+            onClick={() => speak(current.verb.hiragana)}
+            className="w-7 h-7 rounded-full bg-slate-700 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-all active:scale-90 text-sm"
+            title="Escuchar pronunciación"
+          >
+            🔊
+          </button>
+        </div>
         <div className="text-slate-400 text-sm">{current.verb.spanish}</div>
         <div className="text-slate-600 text-xs">
           Grupo {current.verb.group === 1 ? "I (Godan)" : current.verb.group === 2 ? "II (Ichidan)" : "III (Irregular)"}
