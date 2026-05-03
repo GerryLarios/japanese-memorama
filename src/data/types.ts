@@ -7,7 +7,8 @@ export type WordType =
   | "counter"
   | "adverb"
   | "particle"
-  | "conjunction";
+  | "conjunction"
+  | "sentence";
 
 export type Direction = "jp-es" | "jp-en" | "es-jp" | "en-jp" | "random";
 

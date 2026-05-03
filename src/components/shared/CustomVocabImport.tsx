@@ -7,7 +7,7 @@ interface Props {
 
 const VALID_TYPES: WordType[] = [
   "noun", "verb", "i-adjective", "na-adjective",
-  "expression", "counter", "adverb", "particle", "conjunction",
+  "expression", "counter", "adverb", "particle", "conjunction", "sentence",
 ];
 
 function generateId(): string {
