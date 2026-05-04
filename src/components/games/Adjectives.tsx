@@ -1,16 +1,15 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { speak } from "../../utils/tts";
-import { shuffle } from "../../data/vocab";
+import { useCallback, useEffect, useState } from "react";
 import {
-  getAdjsByLevels,
   ADJ_FORM_LABELS,
+  ADJ_FORM_ROMAJI,
   ADJ_LEVELS,
-  type ConjugationAdj,
+  getAdjsByLevels,
   type AdjForm,
   type AdjLevel,
+  type ConjugationAdj,
 } from "../../data/adjectives/index";
-
-const SECONDS = 10;
+import { shuffle } from "../../data/vocab";
+import { speak } from "../../utils/tts";
 
 const ALL_FORMS: AdjForm[] = [
   "negative",
@@ -22,11 +21,17 @@ const ALL_FORMS: AdjForm[] = [
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
+interface AdjOption {
+  japanese: string;
+  romaji: string;
+}
+
 interface AdjQuestion {
   adj: ConjugationAdj;
   targetForm: AdjForm;
   answer: string;
-  options: string[];
+  answerRomaji: string;
+  options: AdjOption[];
 }
 
 // ── Question builder ──────────────────────────────────────────────────────────
@@ -40,17 +45,27 @@ function buildQuestions(
   for (const adj of adjs) {
     for (const form of forms) {
       const answer = adj[form];
-      const otherAnswers = shuffle(
+      const answerRomaji = adj[
+        `${form}Romaji` as keyof ConjugationAdj
+      ] as string;
+      const otherOptions: AdjOption[] = shuffle(
         adjs
           .filter((a) => a.id !== adj.id && a[form] !== answer)
-          .map((a) => a[form]),
+          .map((a) => ({
+            japanese: a[form],
+            romaji: a[`${form}Romaji` as keyof ConjugationAdj] as string,
+          })),
       ).slice(0, 3);
 
       questions.push({
         adj,
         targetForm: form,
         answer,
-        options: shuffle([answer, ...otherAnswers]),
+        answerRomaji,
+        options: shuffle([
+          { japanese: answer, romaji: answerRomaji },
+          ...otherOptions,
+        ]),
       });
     }
   }
@@ -63,14 +78,21 @@ function buildQuestions(
 function Lobby({
   onStart,
 }: {
-  onStart: (levels: AdjLevel[], forms: AdjForm[]) => void;
+  onStart: (
+    levels: AdjLevel[],
+    forms: AdjForm[],
+    showHiragana: boolean,
+    showRomaji: boolean,
+  ) => void;
 }) {
   function levelsFromParams(): AdjLevel[] {
     if (typeof window === "undefined") return ["N5"];
     const raw = new URLSearchParams(window.location.search).get("level");
     if (!raw) return ["N5"];
     const valid = ADJ_LEVELS.map((l) => l.value);
-    const parsed = raw.split(",").filter((v) => valid.includes(v as AdjLevel)) as AdjLevel[];
+    const parsed = raw
+      .split(",")
+      .filter((v) => valid.includes(v as AdjLevel)) as AdjLevel[];
     return parsed.length > 0 ? parsed : ["N5"];
   }
 
@@ -78,12 +100,18 @@ function Lobby({
     if (typeof window === "undefined") return ALL_FORMS;
     const raw = new URLSearchParams(window.location.search).get("form");
     if (!raw) return ALL_FORMS;
-    const parsed = raw.split(",").filter((v) => ALL_FORMS.includes(v as AdjForm)) as AdjForm[];
+    const parsed = raw
+      .split(",")
+      .filter((v) => ALL_FORMS.includes(v as AdjForm)) as AdjForm[];
     return parsed.length > 0 ? parsed : ALL_FORMS;
   }
 
-  const [selectedLevels, setSelectedLevels] = useState<AdjLevel[]>(levelsFromParams);
-  const [selectedForms, setSelectedForms] = useState<AdjForm[]>(formsFromParams);
+  const [selectedLevels, setSelectedLevels] =
+    useState<AdjLevel[]>(levelsFromParams);
+  const [selectedForms, setSelectedForms] =
+    useState<AdjForm[]>(formsFromParams);
+  const [showHiragana, setShowHiragana] = useState(true);
+  const [showRomaji, setShowRomaji] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -195,13 +223,46 @@ function Lobby({
         ) : (
           <span>
             {adjCount} adjetivos × {selectedForms.length} forma(s) ={" "}
-            <strong className="text-slate-200">{questionCount} preguntas</strong>
+            <strong className="text-slate-200">
+              {questionCount} preguntas
+            </strong>
           </span>
         )}
       </div>
 
+      {/* Display toggles */}
+      <div className="card p-5 space-y-3">
+        <h2 className="font-semibold text-slate-300">
+          👁 Mostrar en la pregunta
+        </h2>
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            onClick={() => setShowHiragana((v) => !v)}
+            className={`py-3 rounded-xl border-2 text-sm font-semibold transition-all ${
+              showHiragana
+                ? "bg-violet-600 border-violet-500 text-white"
+                : "bg-slate-700 border-slate-600 text-slate-400 hover:border-violet-500"
+            }`}
+          >
+            {showHiragana ? "✓ " : ""}Hiragana
+          </button>
+          <button
+            onClick={() => setShowRomaji((v) => !v)}
+            className={`py-3 rounded-xl border-2 text-sm font-semibold transition-all ${
+              showRomaji
+                ? "bg-violet-600 border-violet-500 text-white"
+                : "bg-slate-700 border-slate-600 text-slate-400 hover:border-violet-500"
+            }`}
+          >
+            {showRomaji ? "✓ " : ""}Romaji
+          </button>
+        </div>
+      </div>
+
       <button
-        onClick={() => onStart(selectedLevels, selectedForms)}
+        onClick={() =>
+          onStart(selectedLevels, selectedForms, showHiragana, showRomaji)
+        }
         disabled={adjCount === 0}
         className="btn-primary w-full text-lg py-4 disabled:opacity-40 disabled:cursor-not-allowed"
       >
@@ -216,22 +277,92 @@ function Lobby({
         <div className="mt-2 bg-slate-800 rounded-lg p-3 space-y-2 text-slate-400">
           <div>
             <p className="text-slate-300 font-semibold mb-1">Adjetivos い</p>
-            <p><strong className="text-slate-300">negativo</strong> — 大きい → 大きくない</p>
-            <p><strong className="text-slate-300">pasado</strong> — 大きい → 大きかった</p>
-            <p><strong className="text-slate-300">neg. pasado</strong> — 大きい → 大きくなかった</p>
-            <p><strong className="text-slate-300">て形</strong> — 大きい → 大きくて</p>
-            <p><strong className="text-slate-300">adverbio</strong> — 大きい → 大きく</p>
+            <p>
+              <strong className="text-slate-300">negativo</strong> — 大きい →
+              大きくない
+            </p>
+            <p>
+              <strong className="text-slate-300">pasado</strong> — 大きい →
+              大きかった
+            </p>
+            <p>
+              <strong className="text-slate-300">neg. pasado</strong> — 大きい →
+              大きくなかった
+            </p>
+            <p>
+              <strong className="text-slate-300">て形</strong> — 大きい →
+              大きくて
+            </p>
+            <p>
+              <strong className="text-slate-300">adverbio</strong> — 大きい →
+              大きく
+            </p>
           </div>
           <div>
             <p className="text-slate-300 font-semibold mb-1">Adjetivos な</p>
-            <p><strong className="text-slate-300">negativo</strong> — きれい → きれいじゃない</p>
-            <p><strong className="text-slate-300">pasado</strong> — きれい → きれいだった</p>
-            <p><strong className="text-slate-300">neg. pasado</strong> — きれい → きれいじゃなかった</p>
-            <p><strong className="text-slate-300">て形</strong> — きれい → きれいで</p>
-            <p><strong className="text-slate-300">adverbio</strong> — きれい → きれいに</p>
+            <p>
+              <strong className="text-slate-300">negativo</strong> — きれい →
+              きれいじゃない
+            </p>
+            <p>
+              <strong className="text-slate-300">pasado</strong> — きれい →
+              きれいだった
+            </p>
+            <p>
+              <strong className="text-slate-300">neg. pasado</strong> — きれい →
+              きれいじゃなかった
+            </p>
+            <p>
+              <strong className="text-slate-300">て形</strong> — きれい →
+              きれいで
+            </p>
+            <p>
+              <strong className="text-slate-300">adverbio</strong> — きれい →
+              きれいに
+            </p>
           </div>
         </div>
       </details>
+
+      {/* Adjective list */}
+      {adjCount > 0 && (
+        <details className="text-xs text-slate-500">
+          <summary className="cursor-pointer hover:text-slate-400 transition-colors">
+            📋 Ver adjetivos ({adjCount})
+          </summary>
+          <div className="mt-2 bg-slate-800 rounded-lg overflow-hidden">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="text-slate-500 border-b border-slate-700">
+                  <th className="text-left px-3 py-2">Adjetivo</th>
+                  <th className="text-left px-3 py-2">Hiragana</th>
+                  <th className="text-left px-3 py-2">Romaji</th>
+                  <th className="text-left px-3 py-2">Español</th>
+                  <th className="text-left px-3 py-2">Tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                {getAdjsByLevels(selectedLevels).map((a) => (
+                  <tr
+                    key={a.id}
+                    className="border-b border-slate-700/50 hover:bg-slate-700/30"
+                  >
+                    <td className="px-3 py-1.5 text-white font-medium">
+                      {a.dictionary}
+                    </td>
+                    <td className="px-3 py-1.5 text-pink-300">{a.hiragana}</td>
+                    <td className="px-3 py-1.5 text-slate-400">{a.romaji}</td>
+                    <td className="px-3 py-1.5 text-slate-400">{a.spanish}</td>
+                    <td className="px-3 py-1.5 text-slate-500">
+                      {a.type === "i" ? "い" : "な"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </details>
+      )}
     </div>
   );
 }
@@ -250,8 +381,7 @@ function ResultScreen({
   onHome: () => void;
 }) {
   const pct = Math.round((score / total) * 100);
-  const emoji =
-    pct === 100 ? "🏆" : pct >= 70 ? "⭐" : pct >= 40 ? "👍" : "📚";
+  const emoji = pct === 100 ? "🏆" : pct >= 70 ? "⭐" : pct >= 40 ? "👍" : "📚";
 
   return (
     <div className="game-container space-y-6 text-center">
@@ -291,82 +421,52 @@ export default function Adjectives() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
-  const [timeLeft, setTimeLeft] = useState(SECONDS);
   const [savedLevels, setSavedLevels] = useState<AdjLevel[]>(["N5"]);
   const [savedForms, setSavedForms] = useState<AdjForm[]>(ALL_FORMS);
-
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [showHiragana, setShowHiragana] = useState(true);
+  const [showRomaji, setShowRomaji] = useState(false);
 
   const current = questions[currentIdx];
 
-  const stopTimer = useCallback(() => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-      timerRef.current = null;
-    }
-  }, []);
-
   const goNext = useCallback(() => {
-    stopTimer();
     setTimeout(() => {
       if (currentIdx + 1 >= questions.length) {
         setScreen("results");
       } else {
         setCurrentIdx((i) => i + 1);
         setSelected(null);
-        setTimeLeft(SECONDS);
       }
-    }, 900);
-  }, [currentIdx, questions.length, stopTimer]);
+    }, 3000);
+  }, [currentIdx, questions.length]);
 
-  useEffect(() => {
-    if (screen !== "game" || selected !== null) return;
-    setTimeLeft(SECONDS);
-    timerRef.current = setInterval(() => {
-      setTimeLeft((t) => {
-        if (t <= 1) {
-          stopTimer();
-          setSelected("__timeout__");
-          setTimeout(() => {
-            if (currentIdx + 1 >= questions.length) {
-              setScreen("results");
-            } else {
-              setCurrentIdx((i) => i + 1);
-              setSelected(null);
-              setTimeLeft(SECONDS);
-            }
-          }, 900);
-          return 0;
-        }
-        return t - 1;
-      });
-    }, 1000);
-    return stopTimer;
-  }, [screen, currentIdx, selected, questions.length, stopTimer]);
-
-  function handleStart(levels: AdjLevel[], forms: AdjForm[]) {
+  function handleStart(
+    levels: AdjLevel[],
+    forms: AdjForm[],
+    hiragana: boolean,
+    romaji: boolean,
+  ) {
     setSavedLevels(levels);
     setSavedForms(forms);
+    setShowHiragana(hiragana);
+    setShowRomaji(romaji);
     const adjs = getAdjsByLevels(levels);
     const qs = buildQuestions(adjs, forms);
     setQuestions(qs);
     setCurrentIdx(0);
     setScore(0);
     setSelected(null);
-    setTimeLeft(SECONDS);
     setScreen("game");
   }
 
   function handleAnswer(opt: string) {
     if (selected !== null) return;
-    stopTimer();
     setSelected(opt);
     if (opt === current.answer) setScore((s) => s + 1);
     goNext();
   }
 
   function handleRestart() {
-    handleStart(savedLevels, savedForms);
+    handleStart(savedLevels, savedForms, showHiragana, showRomaji);
   }
 
   if (screen === "lobby") {
@@ -386,10 +486,6 @@ export default function Adjectives() {
 
   if (!current) return null;
 
-  const timerPct = (timeLeft / SECONDS) * 100;
-  const timerColor =
-    timeLeft > 6 ? "bg-pink-500" : timeLeft > 3 ? "bg-amber-500" : "bg-red-500";
-
   return (
     <div className="game-container space-y-4">
       {/* Progress */}
@@ -400,51 +496,51 @@ export default function Adjectives() {
         <span className="font-semibold text-white">{score} ✓</span>
       </div>
 
-      {/* Timer bar */}
-      <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-        <div
-          className={`h-full rounded-full transition-all duration-1000 ${timerColor}`}
-          style={{ width: `${timerPct}%` }}
-        />
-      </div>
-
       {/* Question card */}
       <div className="card p-6 text-center space-y-3">
         <p className="text-xs text-slate-500 uppercase tracking-widest">
           ¿Cuál es la forma{" "}
           <strong className="text-pink-400">
             {ADJ_FORM_LABELS[current.targetForm]}
-          </strong>
+          </strong>{" "}
+          <span className="text-slate-500 normal-case">
+            ({ADJ_FORM_ROMAJI[current.targetForm]})
+          </span>
           ?
         </p>
         <div className="text-3xl font-bold text-white">
           {current.adj.dictionary}
         </div>
-        <div className="flex items-center justify-center gap-2">
-          <div className="text-lg text-pink-300">{current.adj.hiragana}</div>
+        {showHiragana && (
+          <div className="flex items-center justify-center gap-2">
+            <div className="text-lg text-pink-300">{current.adj.hiragana}</div>
+            <button
+              onClick={() => speak(current.adj.hiragana)}
+              className="w-7 h-7 rounded-full bg-slate-700 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-all active:scale-90 text-sm"
+              title="Escuchar pronunciación"
+            >
+              🔊
+            </button>
+          </div>
+        )}
+        {!showHiragana && (
           <button
             onClick={() => speak(current.adj.hiragana)}
-            className="w-7 h-7 rounded-full bg-slate-700 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-all active:scale-90 text-sm"
+            className="mx-auto w-7 h-7 rounded-full bg-slate-700 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-all active:scale-90 text-sm"
             title="Escuchar pronunciación"
           >
             🔊
           </button>
-        </div>
+        )}
+        {showRomaji && (
+          <div className="text-slate-400 text-sm italic">
+            {current.adj.romaji}
+          </div>
+        )}
         <div className="text-slate-400 text-sm">{current.adj.spanish}</div>
         <div className="text-slate-600 text-xs">
           Adjetivo {current.adj.type === "i" ? "い" : "な"}
         </div>
-      </div>
-
-      {/* Timer label */}
-      <div className="text-center">
-        <span
-          className={`text-2xl font-bold tabular-nums ${
-            timeLeft <= 3 ? "text-red-400" : "text-slate-400"
-          }`}
-        >
-          {timeLeft}
-        </span>
       </div>
 
       {/* Options */}
@@ -453,9 +549,9 @@ export default function Adjectives() {
           let style =
             "bg-slate-700 border-slate-600 text-white hover:border-pink-500";
           if (selected !== null) {
-            if (opt === current.answer) {
+            if (opt.japanese === current.answer) {
               style = "bg-emerald-700 border-emerald-500 text-white";
-            } else if (opt === selected) {
+            } else if (opt.japanese === selected) {
               style = "bg-red-800 border-red-600 text-white";
             } else {
               style = "bg-slate-800 border-slate-700 text-slate-500";
@@ -463,16 +559,43 @@ export default function Adjectives() {
           }
           return (
             <button
-              key={opt}
-              onClick={() => handleAnswer(opt)}
+              key={opt.japanese}
+              onClick={() => handleAnswer(opt.japanese)}
               disabled={selected !== null}
-              className={`py-4 px-3 rounded-xl border-2 text-base font-medium transition-all ${style}`}
+              className={`py-4 px-3 rounded-xl border-2 text-base font-medium transition-all flex flex-col items-center gap-0.5 ${style}`}
             >
-              {opt}
+              <span>{opt.japanese}</span>
+              {showRomaji && (
+                <span className="text-xs font-normal opacity-70">
+                  {opt.romaji}
+                </span>
+              )}
             </button>
           );
         })}
       </div>
+
+      {/* Answer reveal card */}
+      {selected !== null && (
+        <div className="card p-4 text-center space-y-1">
+          <p className="text-xs text-slate-500 uppercase tracking-widest">
+            Forma {ADJ_FORM_LABELS[current.targetForm]}
+          </p>
+          <p className="text-2xl font-bold text-emerald-400">
+            {current.answer}
+          </p>
+          <p className="text-slate-400 text-sm italic">
+            {current.answerRomaji}
+          </p>
+          <button
+            onClick={() => speak(current.answer)}
+            className="mt-1 p-2 rounded-full bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white transition-colors"
+            title="Escuchar pronunciación"
+          >
+            🔊
+          </button>
+        </div>
+      )}
     </div>
   );
 }

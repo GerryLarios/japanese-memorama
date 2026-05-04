@@ -51,6 +51,15 @@ export const VERB_FORM_LABELS: Record<VerbForm, string> = {
   teiru: "ています",
 };
 
+export const VERB_FORM_ROMAJI: Record<VerbForm, string> = {
+  masu: "masu",
+  nai: "nai",
+  te: "te",
+  ta: "ta",
+  tara: "tara",
+  teiru: "te iru",
+};
+
 const VERBS_BY_LEVEL: Record<VerbLevel, ConjugationVerb[]> = {
   N5: verbsN5 as ConjugationVerb[],
   N4: verbsN4 as ConjugationVerb[],

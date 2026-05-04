@@ -1,0 +1,32 @@
+[
+  {
+    "id": "L01-S01",
+    "type": "sentence",
+    "japanese": "わたしは 学生 です",
+    "hiragana": "わたしは がくせい です",
+    "romaji": "Watashi wa gakusei desu.",
+    "spanish": "Yo soy estudiante.",
+    "english": "I am a student.",
+    "lesson": 1
+  },
+  {
+    "id": "L01-S02",
+    "type": "sentence",
+    "japanese": "マリアさんは 医者 では ありません",
+    "hiragana": "マリアさんは いしゃ では ありません",
+    "romaji": "Maria-san wa isha dewa arimasen.",
+    "spanish": "La señorita María no es médica.",
+    "english": "Ms. Maria is not a doctor.",
+    "lesson": 1
+  },
+  {
+    "id": "L01-S03",
+    "type": "sentence",
+    "japanese": "あの かたは 先生 ですか",
+    "hiragana": "あの かたは せんせい ですか",
+    "romaji": "Ano kata wa sensei desu ka.",
+    "spanish": "¿Aquella persona es profesora?",
+    "english": "Is that person a teacher?",
+    "lesson": 1
+  }
+]

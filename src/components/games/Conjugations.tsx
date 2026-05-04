@@ -1,26 +1,31 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { speak } from "../../utils/tts";
 import { shuffle } from "../../data/vocab";
 import {
   getVerbsByLevels,
   VERB_FORM_LABELS,
+  VERB_FORM_ROMAJI,
   VERB_LEVELS,
   type ConjugationVerb,
   type VerbForm,
   type VerbLevel,
 } from "../../data/verbs/index";
 
-const SECONDS = 10;
-
 const ALL_FORMS: VerbForm[] = ["masu", "nai", "te", "ta", "tara", "teiru"];
 
 // ── Types ─────────────────────────────────────────────────────────────────────
+
+interface ConjOption {
+  japanese: string;
+  romaji: string;
+}
 
 interface ConjugationQuestion {
   verb: ConjugationVerb;
   targetForm: VerbForm;
   answer: string;
-  options: string[];
+  answerRomaji: string;
+  options: ConjOption[];
 }
 
 // ── Question builder ──────────────────────────────────────────────────────────
@@ -34,17 +39,28 @@ function buildQuestions(
   for (const verb of verbs) {
     for (const form of forms) {
       const answer = verb[form];
+      const answerRomaji = verb[`${form}Romaji` as keyof ConjugationVerb] as string;
+
       // Wrong answers: other forms of the SAME verb
       const otherForms = ALL_FORMS.filter((f) => f !== form && verb[f] !== answer);
-      const wrongFromSameVerb = shuffle(otherForms.map((f) => verb[f])).slice(0, 3);
+      const wrongFromSameVerb: ConjOption[] = shuffle(
+        otherForms.map((f) => ({
+          japanese: verb[f],
+          romaji: verb[`${f}Romaji` as keyof ConjugationVerb] as string,
+        }))
+      ).slice(0, 3);
+
       // Fallback: if fewer than 3 other forms, fill from other verbs (same form)
       const needed = 3 - wrongFromSameVerb.length;
-      const fallback =
+      const fallback: ConjOption[] =
         needed > 0
           ? shuffle(
               verbs
                 .filter((v) => v.id !== verb.id && v[form] !== answer)
-                .map((v) => v[form]),
+                .map((v) => ({
+                  japanese: v[form],
+                  romaji: v[`${form}Romaji` as keyof ConjugationVerb] as string,
+                })),
             ).slice(0, needed)
           : [];
 
@@ -52,7 +68,8 @@ function buildQuestions(
         verb,
         targetForm: form,
         answer,
-        options: shuffle([answer, ...wrongFromSameVerb, ...fallback]),
+        answerRomaji,
+        options: shuffle([{ japanese: answer, romaji: answerRomaji }, ...wrongFromSameVerb, ...fallback]),
       });
     }
   }
@@ -65,7 +82,7 @@ function buildQuestions(
 function Lobby({
   onStart,
 }: {
-  onStart: (levels: VerbLevel[], forms: VerbForm[]) => void;
+  onStart: (levels: VerbLevel[], forms: VerbForm[], showHiragana: boolean, showRomaji: boolean) => void;
 }) {
   function levelsFromParams(): VerbLevel[] {
     if (typeof window === "undefined") return ["N5"];
@@ -86,6 +103,8 @@ function Lobby({
 
   const [selectedLevels, setSelectedLevels] = useState<VerbLevel[]>(levelsFromParams);
   const [selectedForms, setSelectedForms] = useState<VerbForm[]>(formsFromParams);
+  const [showHiragana, setShowHiragana] = useState(true);
+  const [showRomaji, setShowRomaji] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -202,8 +221,35 @@ function Lobby({
         )}
       </div>
 
+      {/* Display toggles */}
+      <div className="card p-5 space-y-3">
+        <h2 className="font-semibold text-slate-300">👁 Mostrar en la pregunta</h2>
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            onClick={() => setShowHiragana((v) => !v)}
+            className={`py-3 rounded-xl border-2 text-sm font-semibold transition-all ${
+              showHiragana
+                ? "bg-violet-600 border-violet-500 text-white"
+                : "bg-slate-700 border-slate-600 text-slate-400 hover:border-violet-500"
+            }`}
+          >
+            {showHiragana ? "✓ " : ""}Hiragana
+          </button>
+          <button
+            onClick={() => setShowRomaji((v) => !v)}
+            className={`py-3 rounded-xl border-2 text-sm font-semibold transition-all ${
+              showRomaji
+                ? "bg-violet-600 border-violet-500 text-white"
+                : "bg-slate-700 border-slate-600 text-slate-400 hover:border-violet-500"
+            }`}
+          >
+            {showRomaji ? "✓ " : ""}Romaji
+          </button>
+        </div>
+      </div>
+
       <button
-        onClick={() => onStart(selectedLevels, selectedForms)}
+        onClick={() => onStart(selectedLevels, selectedForms, showHiragana, showRomaji)}
         disabled={verbCount === 0}
         className="btn-primary w-full text-lg py-4 disabled:opacity-40 disabled:cursor-not-allowed"
       >
@@ -224,6 +270,41 @@ function Lobby({
           <p><strong className="text-slate-300">ています</strong> — forma progresiva cortés</p>
         </div>
       </details>
+
+      {/* Verb list */}
+      {verbCount > 0 && (
+        <details className="text-xs text-slate-500">
+          <summary className="cursor-pointer hover:text-slate-400 transition-colors">
+            📋 Ver verbos ({verbCount})
+          </summary>
+          <div className="mt-2 bg-slate-800 rounded-lg overflow-hidden">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="text-slate-500 border-b border-slate-700">
+                  <th className="text-left px-3 py-2">Verbo</th>
+                  <th className="text-left px-3 py-2">Hiragana</th>
+                  <th className="text-left px-3 py-2">Romaji</th>
+                  <th className="text-left px-3 py-2">Español</th>
+                  <th className="text-left px-3 py-2">Grupo</th>
+                </tr>
+              </thead>
+              <tbody>
+                {getVerbsByLevels(selectedLevels).map((v) => (
+                  <tr key={v.id} className="border-b border-slate-700/50 hover:bg-slate-700/30">
+                    <td className="px-3 py-1.5 text-white font-medium">{v.dictionary}</td>
+                    <td className="px-3 py-1.5 text-indigo-300">{v.hiragana}</td>
+                    <td className="px-3 py-1.5 text-slate-400">{v.romaji}</td>
+                    <td className="px-3 py-1.5 text-slate-400">{v.spanish}</td>
+                    <td className="px-3 py-1.5 text-slate-500">
+                      {v.group === 1 ? "I" : v.group === 2 ? "II" : "III"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </details>
+      )}
     </div>
   );
 }
@@ -283,83 +364,47 @@ export default function Conjugations() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
-  const [timeLeft, setTimeLeft] = useState(SECONDS);
   const [savedLevels, setSavedLevels] = useState<VerbLevel[]>(["N5"]);
   const [savedForms, setSavedForms] = useState<VerbForm[]>(ALL_FORMS);
-
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [showHiragana, setShowHiragana] = useState(true);
+  const [showRomaji, setShowRomaji] = useState(false);
 
   const current = questions[currentIdx];
 
-  const stopTimer = useCallback(() => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-      timerRef.current = null;
-    }
-  }, []);
-
   const goNext = useCallback(() => {
-    stopTimer();
     setTimeout(() => {
       if (currentIdx + 1 >= questions.length) {
         setScreen("results");
       } else {
         setCurrentIdx((i) => i + 1);
         setSelected(null);
-        setTimeLeft(SECONDS);
       }
-    }, 900);
-  }, [currentIdx, questions.length, stopTimer]);
+    }, 2500);
+  }, [currentIdx, questions.length]);
 
-  // Timer
-  useEffect(() => {
-    if (screen !== "game" || selected !== null) return;
-    setTimeLeft(SECONDS);
-    timerRef.current = setInterval(() => {
-      setTimeLeft((t) => {
-        if (t <= 1) {
-          stopTimer();
-          setSelected("__timeout__");
-          setTimeout(() => {
-            if (currentIdx + 1 >= questions.length) {
-              setScreen("results");
-            } else {
-              setCurrentIdx((i) => i + 1);
-              setSelected(null);
-              setTimeLeft(SECONDS);
-            }
-          }, 900);
-          return 0;
-        }
-        return t - 1;
-      });
-    }, 1000);
-    return stopTimer;
-  }, [screen, currentIdx, selected, questions.length, stopTimer]);
-
-  function handleStart(levels: VerbLevel[], forms: VerbForm[]) {
+  function handleStart(levels: VerbLevel[], forms: VerbForm[], hiragana: boolean, romaji: boolean) {
     setSavedLevels(levels);
     setSavedForms(forms);
+    setShowHiragana(hiragana);
+    setShowRomaji(romaji);
     const verbs = getVerbsByLevels(levels);
     const qs = buildQuestions(verbs, forms);
     setQuestions(qs);
     setCurrentIdx(0);
     setScore(0);
     setSelected(null);
-    setTimeLeft(SECONDS);
     setScreen("game");
   }
 
   function handleAnswer(opt: string) {
     if (selected !== null) return;
-    stopTimer();
     setSelected(opt);
     if (opt === current.answer) setScore((s) => s + 1);
     goNext();
   }
 
   function handleRestart() {
-    handleStart(savedLevels, savedForms);
+    handleStart(savedLevels, savedForms, showHiragana, showRomaji);
   }
 
   if (screen === "lobby") {
@@ -379,10 +424,6 @@ export default function Conjugations() {
 
   if (!current) return null;
 
-  const timerPct = (timeLeft / SECONDS) * 100;
-  const timerColor =
-    timeLeft > 6 ? "bg-indigo-500" : timeLeft > 3 ? "bg-amber-500" : "bg-red-500";
-
   return (
     <div className="game-container space-y-4">
       {/* Progress */}
@@ -393,14 +434,6 @@ export default function Conjugations() {
         <span className="font-semibold text-white">{score} ✓</span>
       </div>
 
-      {/* Timer bar */}
-      <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-        <div
-          className={`h-full rounded-full transition-all duration-1000 ${timerColor}`}
-          style={{ width: `${timerPct}%` }}
-        />
-      </div>
-
       {/* Question card */}
       <div className="card p-6 text-center space-y-3">
         <p className="text-xs text-slate-500 uppercase tracking-widest">
@@ -408,34 +441,39 @@ export default function Conjugations() {
           <strong className="text-indigo-400">
             {VERB_FORM_LABELS[current.targetForm]}
           </strong>
+          {" "}
+          <span className="text-slate-500 normal-case">({VERB_FORM_ROMAJI[current.targetForm]})</span>
           ?
         </p>
         <div className="text-3xl font-bold text-white">{current.verb.dictionary}</div>
-        <div className="flex items-center justify-center gap-2">
-          <div className="text-lg text-indigo-300">{current.verb.hiragana}</div>
+        {showHiragana && (
+          <div className="flex items-center justify-center gap-2">
+            <div className="text-lg text-indigo-300">{current.verb.hiragana}</div>
+            <button
+              onClick={() => speak(current.verb.hiragana)}
+              className="w-7 h-7 rounded-full bg-slate-700 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-all active:scale-90 text-sm"
+              title="Escuchar pronunciación"
+            >
+              🔊
+            </button>
+          </div>
+        )}
+        {!showHiragana && (
           <button
             onClick={() => speak(current.verb.hiragana)}
-            className="w-7 h-7 rounded-full bg-slate-700 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-all active:scale-90 text-sm"
+            className="mx-auto w-7 h-7 rounded-full bg-slate-700 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-all active:scale-90 text-sm"
             title="Escuchar pronunciación"
           >
             🔊
           </button>
-        </div>
+        )}
+        {showRomaji && (
+          <div className="text-slate-400 text-sm italic">{current.verb.romaji}</div>
+        )}
         <div className="text-slate-400 text-sm">{current.verb.spanish}</div>
         <div className="text-slate-600 text-xs">
           Grupo {current.verb.group === 1 ? "I (Godan)" : current.verb.group === 2 ? "II (Ichidan)" : "III (Irregular)"}
         </div>
-      </div>
-
-      {/* Timer label */}
-      <div className="text-center">
-        <span
-          className={`text-2xl font-bold tabular-nums ${
-            timeLeft <= 3 ? "text-red-400" : "text-slate-400"
-          }`}
-        >
-          {timeLeft}
-        </span>
       </div>
 
       {/* Options */}
@@ -444,9 +482,9 @@ export default function Conjugations() {
           let style =
             "bg-slate-700 border-slate-600 text-white hover:border-indigo-500";
           if (selected !== null) {
-            if (opt === current.answer) {
+            if (opt.japanese === current.answer) {
               style = "bg-emerald-700 border-emerald-500 text-white";
-            } else if (opt === selected) {
+            } else if (opt.japanese === selected) {
               style = "bg-red-800 border-red-600 text-white";
             } else {
               style = "bg-slate-800 border-slate-700 text-slate-500";
@@ -454,16 +492,37 @@ export default function Conjugations() {
           }
           return (
             <button
-              key={opt}
-              onClick={() => handleAnswer(opt)}
+              key={opt.japanese}
+              onClick={() => handleAnswer(opt.japanese)}
               disabled={selected !== null}
-              className={`py-4 px-3 rounded-xl border-2 text-base font-medium transition-all ${style}`}
+              className={`py-4 px-3 rounded-xl border-2 text-base font-medium transition-all flex flex-col items-center gap-0.5 ${style}`}
             >
-              {opt}
+              <span>{opt.japanese}</span>
+              {showRomaji && (
+                <span className="text-xs font-normal opacity-70">{opt.romaji}</span>
+              )}
             </button>
           );
         })}
       </div>
+
+      {/* Answer reveal card */}
+      {selected !== null && (
+        <div className="card p-4 text-center space-y-1">
+          <p className="text-xs text-slate-500 uppercase tracking-widest">
+            Forma {VERB_FORM_LABELS[current.targetForm]}
+          </p>
+          <p className="text-2xl font-bold text-emerald-400">{current.answer}</p>
+          <p className="text-slate-400 text-sm italic">{current.answerRomaji}</p>
+          <button
+            onClick={() => speak(current.answer)}
+            className="mt-1 p-2 rounded-full bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white transition-colors"
+            title="Escuchar pronunciación"
+          >
+            🔊
+          </button>
+        </div>
+      )}
     </div>
   );
 }

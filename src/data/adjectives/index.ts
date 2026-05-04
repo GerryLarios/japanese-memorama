@@ -47,6 +47,14 @@ export const ADJ_FORM_LABELS: Record<AdjForm, string> = {
   adverb: "adverbio",
 };
 
+export const ADJ_FORM_ROMAJI: Record<AdjForm, string> = {
+  negative: "nai",
+  past: "past",
+  negativePast: "nai past",
+  te: "te",
+  adverb: "adverb",
+};
+
 const ADJS_BY_LEVEL: Record<AdjLevel, ConjugationAdj[]> = {
   N5: adjN5 as ConjugationAdj[],
   N4: adjN4 as ConjugationAdj[],

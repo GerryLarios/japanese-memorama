@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import {
   getNumberWords,
   NUMBER_RANGES,
@@ -12,21 +12,24 @@ import {
 import { shuffle } from "../../data/vocab";
 import { speak } from "../../utils/tts";
 
-const SECONDS = 10;
-
 // ── Shared types ──────────────────────────────────────────────────────────────
+
+interface NumOption {
+  japanese: string;
+  romaji: string;
+}
 
 interface NumberQuestion {
   kind: "number";
   word: NumberWord;
-  options: string[];
+  options: NumOption[];
   answer: string;
 }
 
 interface CounterQuestion {
   kind: "counter";
   entry: CounterEntry;
-  options: string[];
+  options: NumOption[];
   answer: string;
 }
 
@@ -38,11 +41,11 @@ function buildNumberQuestions(words: NumberWord[]): Question[] {
   return words.map((w) => {
     const others = shuffle(words.filter((x) => x.value !== w.value))
       .slice(0, 3)
-      .map((x) => x.hiragana);
+      .map((x) => ({ japanese: x.hiragana, romaji: x.romaji }));
     return {
       kind: "number",
       word: w,
-      options: shuffle([w.hiragana, ...others]),
+      options: shuffle([{ japanese: w.hiragana, romaji: w.romaji }, ...others]),
       answer: w.hiragana,
     };
   });
@@ -52,11 +55,11 @@ function buildCounterQuestions(entries: CounterEntry[]): Question[] {
   return entries.map((e) => {
     const others = shuffle(entries.filter((x) => x.id !== e.id))
       .slice(0, 3)
-      .map((x) => x.hiragana);
+      .map((x) => ({ japanese: x.hiragana, romaji: x.romaji }));
     return {
       kind: "counter",
       entry: e,
-      options: shuffle([e.hiragana, ...others]),
+      options: shuffle([{ japanese: e.hiragana, romaji: e.romaji }, ...others]),
       answer: e.hiragana,
     };
   });
@@ -114,6 +117,8 @@ interface CountersConfig {
   counters: string[]; // selected counter kanji, [] = all
   irregularOnly: boolean;
   count: number;
+  showHiragana: boolean;
+  showRomaji: boolean;
 }
 
 type Config = NumbersConfig | CountersConfig;
@@ -156,6 +161,8 @@ function Lobby({ onStart }: { onStart: (cfg: Config) => void }) {
   // Counters state
   const [selectedCounters, setSelectedCounters] = useState<string[]>([]);
   const [irregularOnly, setIrregularOnly] = useState(false);
+  const [showHiragana, setShowHiragana] = useState(true);
+  const [showRomaji, setShowRomaji] = useState(false);
 
   const [count, setCount] = useState(0);
 
@@ -170,7 +177,7 @@ function Lobby({ onStart }: { onStart: (cfg: Config) => void }) {
       const r = NUMBER_RANGES[rangeIdx];
       onStart({ mode: "numbers", min: r.min, max: r.max, count });
     } else {
-      onStart({ mode: "counters", counters: selectedCounters, irregularOnly, count });
+      onStart({ mode: "counters", counters: selectedCounters, irregularOnly, count, showHiragana, showRomaji });
     }
   };
 
@@ -253,6 +260,45 @@ function Lobby({ onStart }: { onStart: (cfg: Config) => void }) {
               </ChipBtn>
             </div>
           </div>
+
+          {/* Counter list */}
+          {(() => {
+            const filtered = (selectedCounters.length
+              ? ALL_COUNTERS.filter((e) => selectedCounters.includes(e.counter))
+              : [...ALL_COUNTERS]
+            ).filter((e) => !irregularOnly || e.irregular);
+            return filtered.length > 0 ? (
+              <details className="text-xs text-slate-500">
+                <summary className="cursor-pointer hover:text-slate-400 transition-colors">
+                  📋 Ver contadores ({filtered.length})
+                </summary>
+                <div className="mt-2 bg-slate-800 rounded-lg overflow-hidden">
+                  <table className="w-full text-xs">
+                    <thead>
+                      <tr className="text-slate-500 border-b border-slate-700">
+                        <th className="text-left px-3 py-2">Japonés</th>
+                        <th className="text-left px-3 py-2">Hiragana</th>
+                        <th className="text-left px-3 py-2">Romaji</th>
+                        <th className="text-left px-3 py-2">Categoría</th>
+                        <th className="text-left px-3 py-2">⚡</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {filtered.map((e) => (
+                        <tr key={e.id} className="border-b border-slate-700/50 hover:bg-slate-700/30">
+                          <td className="px-3 py-1.5 text-white font-medium">{e.japanese}</td>
+                          <td className="px-3 py-1.5 text-teal-300">{e.hiragana}</td>
+                          <td className="px-3 py-1.5 text-slate-400">{e.romaji}</td>
+                          <td className="px-3 py-1.5 text-slate-400">{e.categoryEmoji} {e.category}</td>
+                          <td className="px-3 py-1.5 text-amber-400">{e.irregular ? "⚡" : ""}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+            ) : null;
+          })()}
         </>
       )}
 
@@ -276,6 +322,35 @@ function Lobby({ onStart }: { onStart: (cfg: Config) => void }) {
         </div>
       </div>
 
+      {/* Display toggles — only relevant for counters mode */}
+      {gameMode === "counters" && (
+        <div className="card p-5 space-y-3">
+          <h2 className="font-semibold text-slate-300">👁 Mostrar en la pregunta</h2>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              onClick={() => setShowHiragana((v) => !v)}
+              className={`py-3 rounded-xl border-2 text-sm font-semibold transition-all ${
+                showHiragana
+                  ? "bg-violet-600 border-violet-500 text-white"
+                  : "bg-slate-700 border-slate-600 text-slate-400 hover:border-violet-500"
+              }`}
+            >
+              {showHiragana ? "✓ " : ""}Hiragana
+            </button>
+            <button
+              onClick={() => setShowRomaji((v) => !v)}
+              className={`py-3 rounded-xl border-2 text-sm font-semibold transition-all ${
+                showRomaji
+                  ? "bg-violet-600 border-violet-500 text-white"
+                  : "bg-slate-700 border-slate-600 text-slate-400 hover:border-violet-500"
+              }`}
+            >
+              {showRomaji ? "✓ " : ""}Romaji
+            </button>
+          </div>
+        </div>
+      )}
+
       <button onClick={handleStart} className="btn-primary w-full text-lg py-4">
         ¡Empezar!
       </button>
@@ -291,32 +366,19 @@ export default function Numbers() {
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [chosen, setChosen] = useState<string | null>(null);
-  const [timeLeft, setTimeLeft] = useState(SECONDS);
   const [done, setDone] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const advanceRef = useRef<() => void>(() => {});
 
-  const stopTimer = () => {
-    if (timerRef.current) clearInterval(timerRef.current);
-  };
-
-  const startTimer = useCallback(() => {
-    stopTimer();
-    setTimeLeft(SECONDS);
-    timerRef.current = setInterval(() => {
-      setTimeLeft((t) => (t <= 1 ? 0 : t - 1));
-    }, 1000);
-  }, []);
-
-  // When timer hits 0: freeze the UI, then auto-advance
-  useEffect(() => {
-    if (timeLeft === 0 && config && !done) {
-      stopTimer();
-      setChosen((prev) => (prev ? prev : "__timeout__"));
-      const id = setTimeout(() => advanceRef.current(), 1200);
-      return () => clearTimeout(id);
-    }
-  }, [timeLeft, config, done]);
+  const advance = useCallback(() => {
+    setIndex((i) => {
+      const next = i + 1;
+      if (next >= questions.length) {
+        setDone(true);
+        return i;
+      }
+      setChosen(null);
+      return next;
+    });
+  }, [questions.length]);
 
   const start = useCallback(
     (cfg: Config) => {
@@ -340,32 +402,12 @@ export default function Numbers() {
       setScore(0);
       setChosen(null);
       setDone(false);
-      startTimer();
     },
-    [startTimer],
+    [],
   );
-
-  const advance = useCallback(() => {
-    stopTimer();
-    setIndex((i) => {
-      const next = i + 1;
-      if (next >= questions.length) {
-        setDone(true);
-        return i;
-      }
-      setChosen(null);
-      startTimer();
-      return next;
-    });
-  }, [questions.length, startTimer]);
-
-  advanceRef.current = advance;
-
-  useEffect(() => () => stopTimer(), []);
 
   const pick = (opt: string) => {
     if (chosen) return;
-    stopTimer();
     const correct = opt === questions[index].answer;
     setChosen(opt);
     if (correct) setScore((s) => s + 1);
@@ -385,9 +427,6 @@ export default function Numbers() {
     );
 
   const q = questions[index];
-  const pct = (timeLeft / SECONDS) * 100;
-  const timerColor =
-    pct > 50 ? "bg-emerald-400" : pct > 25 ? "bg-amber-400" : "bg-rose-500";
 
   return (
     <div className="game-container space-y-4">
@@ -398,25 +437,11 @@ export default function Numbers() {
         </span>
         <span className="font-bold text-white">{score} pts</span>
         <button
-          onClick={() => {
-            stopTimer();
-            setConfig(null);
-          }}
+          onClick={() => setConfig(null)}
           className="hover:text-rose-400 transition-colors"
         >
           ✕ Salir
         </button>
-      </div>
-
-      {/* Timer bar */}
-      <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-        <div
-          className={`h-2 rounded-full transition-all duration-1000 ${timerColor}`}
-          style={{ width: `${pct}%` }}
-        />
-      </div>
-      <div className="text-center text-2xl font-bold tabular-nums">
-        {timeLeft}s
       </div>
 
       {/* Question card */}
@@ -437,6 +462,12 @@ export default function Numbers() {
             <p className="text-5xl sm:text-6xl font-bold tracking-wide jp">
               {q.entry.japanese}
             </p>
+            {config.mode === "counters" && config.showHiragana && (
+              <p className="text-lg text-teal-300 jp">{q.entry.hiragana}</p>
+            )}
+            {config.mode === "counters" && config.showRomaji && (
+              <p className="text-slate-400 text-sm italic">{q.entry.romaji}</p>
+            )}
             <p className="text-slate-500 text-xs mt-1">{q.entry.category}</p>
             <button
               onClick={() => speak(q.entry.japanese)}
@@ -453,20 +484,24 @@ export default function Numbers() {
       <div className="grid grid-cols-2 gap-3">
         {q.options.map((opt, i) => {
           let cls =
-            "w-full p-4 rounded-2xl border text-base font-semibold transition-all text-center jp";
+            "w-full p-4 rounded-2xl border text-base font-semibold transition-all text-center jp flex flex-col items-center gap-0.5";
           if (!chosen) {
             cls +=
               " bg-slate-700 border-slate-600 hover:border-violet-500 hover:bg-slate-600 cursor-pointer";
-          } else if (opt === q.answer) {
+          } else if (opt.japanese === q.answer) {
             cls += " bg-emerald-600 border-emerald-500 text-white";
-          } else if (opt === chosen) {
+          } else if (opt.japanese === chosen) {
             cls += " bg-rose-600 border-rose-500 text-white";
           } else {
             cls += " bg-slate-800 border-slate-700 text-slate-500";
           }
+          const showRomaji = config.mode === "counters" && (config as CountersConfig).showRomaji;
           return (
-            <button key={i} className={cls} onClick={() => pick(opt)}>
-              {opt}
+            <button key={i} className={cls} onClick={() => pick(opt.japanese)}>
+              <span>{opt.japanese}</span>
+              {showRomaji && (
+                <span className="text-xs font-normal opacity-70">{opt.romaji}</span>
+              )}
             </button>
           );
         })}

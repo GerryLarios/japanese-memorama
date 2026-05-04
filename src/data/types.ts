@@ -46,7 +46,8 @@ export type GameMode =
   | "listening"
   | "numbers"
   | "conjugations"
-  | "adjectives";
+  | "adjectives"
+  | "lesson-practice";
 
 export interface GameInfo {
   id: GameMode;
@@ -112,5 +113,12 @@ export const GAMES: GameInfo[] = [
     description: "Practica las formas de adjetivos い y な: negativo, pasado, て, adverbio",
     emoji: "🎨",
     color: "bg-pink-500",
+  },
+  {
+    id: "lesson-practice",
+    title: "Practicar Lecciones",
+    description: "Construye oraciones con el vocabulario de cada lección",
+    emoji: "📝",
+    color: "bg-orange-500",
   },
 ];
