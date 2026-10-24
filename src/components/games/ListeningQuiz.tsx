@@ -1,10 +1,12 @@
-import { useCallback, useState } from "react";
+import { useEffect, useState } from "react";
 import type { GameConfig, VocabWord } from "../../data/types";
 import { getWords, pickWrongAnswers, shuffle } from "../../data/vocab";
 import { speak } from "../../utils/tts";
+import { useTimeout } from "../../utils/useTimers";
 import GameLobby from "../shared/GameLobby";
 import JapaneseWord from "../shared/JapaneseWord";
 import ResultScreen from "../shared/ResultScreen";
+import { useGameSession } from "../shared/useGameSession";
 
 interface Round {
   word: VocabWord;
@@ -12,68 +14,64 @@ interface Round {
   answer: string;
 }
 
-function buildRounds(
-  words: VocabWord[],
-  allWords: VocabWord[],
-  dir: "es" | "en",
-): Round[] {
-  return words.map((w) => {
+function buildRounds(cfg: GameConfig): Round[] {
+  const allWords = getWords({});
+  const dir = cfg.direction === "jp-en" || cfg.direction === "en-jp" ? "en" : "es";
+  return getWords(cfg).map((w) => {
     const answer = dir === "es" ? w.spanish : w.english;
-    const wrongs = pickWrongAnswers(
-      w,
-      allWords,
-      dir === "es" ? "jp-es" : "jp-en",
-    );
+    const wrongs = pickWrongAnswers(w, allWords, dir === "es" ? "jp-es" : "jp-en");
     return { word: w, options: shuffle([answer, ...wrongs]), answer };
   });
 }
 
 export default function ListeningQuiz() {
-  const [config, setConfig] = useState<GameConfig | null>(null);
-  const [rounds, setRounds] = useState<Round[]>([]);
-  const [index, setIndex] = useState(0);
-  const [chosen, setChosen] = useState<string | null>(null);
-  const [score, setScore] = useState(0);
-  const [done, setDone] = useState(false);
-  const [speaking, setSpeaking] = useState(false);
+  const {
+    config,
+    rounds,
+    index,
+    score,
+    done,
+    current,
+    missed,
+    start,
+    restart,
+    exit,
+    award,
+    miss,
+    advance,
+  } = useGameSession(buildRounds);
 
-  const start = useCallback((cfg: GameConfig) => {
-    const allWords = getWords({});
-    const words = getWords(cfg);
-    const dir =
-      cfg.direction === "jp-en" || cfg.direction === "en-jp" ? "en" : "es";
-    const rs = buildRounds(words, allWords, dir);
-    setConfig(cfg);
-    setRounds(rs);
-    setIndex(0);
-    setChosen(null);
-    setScore(0);
-    setDone(false);
-    setTimeout(() => {
-      speak(rs[0].word.japanese);
-    }, 300);
-  }, []);
+  const [chosen, setChosen] = useState<string | null>(null);
+  const [speaking, setSpeaking] = useState(false);
+  const after = useTimeout();
+  const afterFx = useTimeout();
+
+  const leave = () => {
+    after.clear();
+    afterFx.clear();
+    exit();
+  };
+
+  // Speak the word whenever a new round appears (including the first).
+  useEffect(() => {
+    if (current) after(() => speak(current.word.japanese), 300);
+  }, [current, after]);
 
   const playWord = () => {
-    if (!rounds[index]) return;
+    if (!current) return;
     setSpeaking(true);
-    speak(rounds[index].word.japanese);
-    setTimeout(() => setSpeaking(false), 1500);
+    speak(current.word.japanese);
+    afterFx(() => setSpeaking(false), 1500);
   };
 
   const pick = (opt: string) => {
-    if (chosen) return;
+    if (chosen || !current) return;
     setChosen(opt);
-    if (opt === rounds[index].answer) setScore((s) => s + 1);
-    setTimeout(() => {
-      const next = index + 1;
-      if (next >= rounds.length) {
-        setDone(true);
-        return;
-      }
-      setIndex(next);
+    if (opt === current.answer) award();
+    else miss(current.word.id);
+    after(() => {
       setChosen(null);
-      setTimeout(() => speak(rounds[next].word.japanese), 300);
+      advance();
     }, 1200);
   };
 
@@ -92,14 +90,15 @@ export default function ListeningQuiz() {
         score={score}
         total={rounds.length}
         words={rounds.map((r) => r.word)}
-        onRestart={() => start(config)}
-        onHome={() => setConfig(null)}
+        game="listening"
+        missed={missed}
+        onRestart={restart}
+        onHome={leave}
       />
     );
   }
 
-  const round = rounds[index];
-  if (!round) return null;
+  if (!current) return null;
 
   return (
     <div className="game-container space-y-6">
@@ -107,9 +106,11 @@ export default function ListeningQuiz() {
         <span>
           {index + 1} / {rounds.length}
         </span>
-        <span className="text-sky-400 font-bold">{score} pts</span>
+        <span className="text-sky-400 font-bold" aria-live="polite">
+          {score} pts
+        </span>
         <button
-          onClick={() => setConfig(null)}
+          onClick={leave}
           className="text-slate-500 hover:text-slate-300"
         >
           ✕ Salir
@@ -127,6 +128,7 @@ export default function ListeningQuiz() {
       <div className="flex flex-col items-center gap-3">
         <button
           onClick={playWord}
+          aria-label="Escuchar la palabra de nuevo"
           className={`w-32 h-32 rounded-full flex items-center justify-center text-6xl
             transition-all shadow-xl active:scale-95
             ${speaking ? "bg-sky-400 shadow-sky-400/40 scale-105" : "bg-sky-600 hover:bg-sky-500 shadow-sky-900/40"}`}
@@ -136,9 +138,9 @@ export default function ListeningQuiz() {
         <p className="text-slate-400 text-sm">Toca para escuchar de nuevo</p>
         {chosen && (
           <JapaneseWord
-            japanese={round.word.japanese}
-            hiragana={round.word.hiragana}
-            romaji={round.word.romaji}
+            japanese={current.word.japanese}
+            hiragana={current.word.hiragana}
+            romaji={current.word.romaji}
             size="md"
             className="text-sky-300"
             playable
@@ -148,8 +150,8 @@ export default function ListeningQuiz() {
 
       {/* Options */}
       <div className="grid grid-cols-2 gap-3">
-        {round.options.map((opt, i) => {
-          const isAnswer = opt === round.answer;
+        {current.options.map((opt, i) => {
+          const isAnswer = opt === current.answer;
           const isChosen = opt === chosen;
           let cls =
             "card p-4 text-center font-semibold text-sm sm:text-base cursor-pointer border transition-all jp";

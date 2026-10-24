@@ -1,4 +1,6 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { useTimeout } from "../../utils/useTimers";
+import { recordGame } from "../../utils/stats";
 import {
   getNumberWords,
   NUMBER_RANGES,
@@ -78,8 +80,7 @@ function ResultScreen({
   onRestart: () => void;
   onHome: () => void;
 }) {
-  const pct = Math.round((score / total) * 100);
-  const emoji = pct === 100 ? "🏆" : pct >= 70 ? "⭐" : pct >= 40 ? "👍" : "📚";
+  const pct = Math.round((score / total) * 100);  const emoji = pct === 100 ? "🏆" : pct >= 70 ? "⭐" : pct >= 40 ? "👍" : "📚";
   return (
     <div className="game-container flex flex-col items-center justify-center gap-6 text-center">
       <div className="text-7xl">{emoji}</div>
@@ -361,6 +362,7 @@ function Lobby({ onStart }: { onStart: (cfg: Config) => void }) {
 // ── Main game ─────────────────────────────────────────────────────────────────
 
 export default function Numbers() {
+  const after = useTimeout();
   const [config, setConfig] = useState<Config | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [index, setIndex] = useState(0);
@@ -368,6 +370,9 @@ export default function Numbers() {
   const [chosen, setChosen] = useState<string | null>(null);
   const [done, setDone] = useState(false);
 
+  useEffect(() => {
+    if (done) recordGame("numbers", score, questions.length);
+  }, [done, score, questions.length]);
   const advance = useCallback(() => {
     setIndex((i) => {
       const next = i + 1;
@@ -411,7 +416,7 @@ export default function Numbers() {
     const correct = opt === questions[index].answer;
     setChosen(opt);
     if (correct) setScore((s) => s + 1);
-    setTimeout(advance, 1200);
+    after(advance, 1200);
   };
 
   if (!config) return <Lobby onStart={start} />;

@@ -6,6 +6,8 @@ import {
   type Sentence,
 } from "../../data/sentences/index";
 import { speak } from "../../utils/tts";
+import { useInterval, useTimeout } from "../../utils/useTimers";
+import { recordGame } from "../../utils/stats";
 
 const SECONDS = 10;
 
@@ -372,14 +374,8 @@ function MissingScreen({
   const [selected, setSelected] = useState<string | null>(null);
   const [timeLeft, setTimeLeft] = useState(SECONDS);
   const [showHint, setShowHint] = useState(showTranslation);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const stopTimer = useCallback(() => {
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-      timerRef.current = null;
-    }
-  }, []);
+  const { start: startTimer, stop: stopTimer } = useInterval();
+  const after = useTimeout();
 
   const handleAnswer = useCallback(
     (opt: string) => {
@@ -387,12 +383,12 @@ function MissingScreen({
       stopTimer();
       setSelected(opt);
       const correct = opt === question.answer;
-      setTimeout(() => {
+      after(() => {
         if (correct) onCorrect();
         else onWrong();
       }, 2500);
     },
-    [selected, question.answer, stopTimer, onCorrect, onWrong]
+    [selected, question.answer, stopTimer, after, onCorrect, onWrong],
   );
 
   useEffect(() => {
@@ -403,7 +399,7 @@ function MissingScreen({
 
   useEffect(() => {
     if (selected !== null) return;
-    timerRef.current = setInterval(() => {
+    startTimer(() => {
       setTimeLeft((t) => {
         if (t <= 1) {
           stopTimer();
@@ -414,7 +410,7 @@ function MissingScreen({
       });
     }, 1000);
     return stopTimer;
-  }, [question, selected, stopTimer, handleAnswer]);
+  }, [question, selected, startTimer, stopTimer, handleAnswer]);
 
   const fullJp = question.sentence.japanese.split(" ");
 
@@ -552,6 +548,7 @@ function Results({
 // ── Main component ────────────────────────────────────────────────────────────
 
 export default function LessonPractice() {
+  const afterCorrect = useTimeout();
   const [screen, setScreen] = useState<"lobby" | "game" | "results">("lobby");
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -577,7 +574,7 @@ export default function LessonPractice() {
   const handleCorrect = useCallback(() => {
     setScore((s) => s + 1);
     if (currentIdx + 1 >= questions.length) {
-      setTimeout(() => setScreen("results"), 2600);
+      afterCorrect(() => setScreen("results"), 2600);
     } else {
       setCurrentIdx((i) => i + 1);
     }
@@ -593,6 +590,11 @@ export default function LessonPractice() {
 
   const restart = () => setScreen("lobby");
   const home = () => { window.location.href = "/"; };
+
+  useEffect(() => {
+    if (screen === "results")
+      recordGame("lesson-practice", score, questions.length);
+  }, [screen, score, questions.length]);
 
   if (screen === "lobby") return <Lobby onStart={start} />;
   if (screen === "results")

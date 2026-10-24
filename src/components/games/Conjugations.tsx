@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { speak } from "../../utils/tts";
+import { useTimeout } from "../../utils/useTimers";
+import { recordGame } from "../../utils/stats";
 import { shuffle } from "../../data/vocab";
 import {
   getVerbsByLevels,
@@ -359,6 +361,7 @@ function ResultScreen({
 // ── Main game ─────────────────────────────────────────────────────────────────
 
 export default function Conjugations() {
+  const after = useTimeout();
   const [screen, setScreen] = useState<"lobby" | "game" | "results">("lobby");
   const [questions, setQuestions] = useState<ConjugationQuestion[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -372,7 +375,7 @@ export default function Conjugations() {
   const current = questions[currentIdx];
 
   const goNext = useCallback(() => {
-    setTimeout(() => {
+    after(() => {
       if (currentIdx + 1 >= questions.length) {
         setScreen("results");
       } else {
@@ -380,7 +383,12 @@ export default function Conjugations() {
         setSelected(null);
       }
     }, 2500);
-  }, [currentIdx, questions.length]);
+  }, [after, currentIdx, questions.length]);
+
+  useEffect(() => {
+    if (screen === "results")
+      recordGame("conjugations", score, questions.length);
+  }, [screen, score, questions.length]);
 
   function handleStart(levels: VerbLevel[], forms: VerbForm[], hiragana: boolean, romaji: boolean) {
     setSavedLevels(levels);

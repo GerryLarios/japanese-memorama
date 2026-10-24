@@ -45,8 +45,10 @@ for (const file of files) {
   const dupJp      = checkField('japanese');
   const dupRomaji  = checkField('romaji');
 
+  // Same romaji with different kanji is normal (書きます / 描きます), so only
+  // duplicate ids and duplicate Japanese words fail the check.
   const hasDups = dupIds.length || dupJp.length || dupRomaji.length;
-  totalDuplicates += dupIds.length + dupJp.length + dupRomaji.length;
+  totalDuplicates += dupIds.length + dupJp.length;
 
   console.log(`\n📄 ${file}  (${data.length} entries)`);
 
@@ -68,7 +70,7 @@ for (const file of files) {
 
   printDups('IDs',    dupIds,    'id');
   printDups('Japanese', dupJp,   'japanese');
-  printDups('Romaji', dupRomaji, 'romaji');
+  printDups('Romaji (same reading, different word — ok)', dupRomaji, 'romaji');
 }
 
 console.log(`\n────────────────────────────────`);

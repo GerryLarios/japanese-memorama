@@ -73,6 +73,12 @@ export function getAllLessons(): number[] {
     .sort((a, b) => a - b);
 }
 
+export function getWordsByIds(ids: string[]): VocabWord[] {
+  return ids
+    .map((id) => ALL_WORDS.find((w) => w.id === id))
+    .filter((w): w is VocabWord => w !== undefined);
+}
+
 export function getWords(config: Partial<GameConfig> = {}): VocabWord[] {
   // Kana practice mode
   if (config.kana) {

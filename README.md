@@ -42,6 +42,9 @@ Open [http://localhost:4321](http://localhost:4321) in your browser.
 | `npm run dev`     | Start dev server at `localhost:4321`         |
 | `npm run build`   | Build for production to `./dist/`            |
 | `npm run preview` | Preview the production build locally         |
+| `npm run check`   | Type-check components and pages              |
+| `npm run validate`| Detect duplicate vocabulary entries          |
+| `npm test`        | Run unit tests                               |
 
 ## 🗂 Project Structure
 

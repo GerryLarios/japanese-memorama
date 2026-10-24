@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import type { GameConfig, VocabWord } from "../../data/types";
+import { useTimeout } from "../../utils/useTimers";
 import { getWords, shuffle } from "../../data/vocab";
 import GameLobby from "../shared/GameLobby";
 import JapaneseWord from "../shared/JapaneseWord";
@@ -64,6 +65,7 @@ function buildCards(words: VocabWord[], config: GameConfig): Card[] {
 }
 
 export default function Memorama() {
+  const after = useTimeout();
   const [config, setConfig] = useState<GameConfig | null>(null);
   const [cards, setCards] = useState<Card[]>([]);
   const [playedWords, setPlayedWords] = useState<VocabWord[]>([]);
@@ -122,7 +124,7 @@ export default function Memorama() {
       if (newMatches === cards.length / 2) setDone(true);
       setLocked(false);
     } else {
-      setTimeout(() => {
+      after(() => {
         setCards((prev) =>
           prev.map((c) =>
             newSelected.includes(c.id) ? { ...c, flipped: false } : c,
@@ -151,6 +153,7 @@ export default function Memorama() {
         total={cards.length / 2}
         label="Pares encontrados"
         words={playedWords}
+        game="memorama"
         onRestart={() => start(config)}
         onHome={() => setConfig(null)}
       >
@@ -175,7 +178,7 @@ export default function Memorama() {
   return (
     <div className="game-container">
       <div className="flex justify-between items-center mb-4 text-sm text-slate-400">
-        <span>
+        <span aria-live="polite">
           Pares: {matches}/{cards.length / 2}
         </span>
         <span>Movimientos: {moves}</span>
@@ -192,6 +195,13 @@ export default function Memorama() {
           <button
             key={card.id}
             onClick={() => flip(card.id)}
+            aria-label={
+              card.matched
+                ? `Pareja ${card.pairNumber}: ${card.content}`
+                : card.flipped
+                  ? card.content
+                  : "Carta oculta"
+            }
             className={`relative aspect-square rounded-xl text-center flex items-center justify-center text-sm font-medium p-3
               transition-all duration-300 border select-none
               ${

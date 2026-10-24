@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
+import { useTimeout } from "../../utils/useTimers";
+import { recordGame } from "../../utils/stats";
 import {
   ADJ_FORM_LABELS,
   ADJ_FORM_ROMAJI,
@@ -416,6 +418,7 @@ function ResultScreen({
 // ── Main game ─────────────────────────────────────────────────────────────────
 
 export default function Adjectives() {
+  const after = useTimeout();
   const [screen, setScreen] = useState<"lobby" | "game" | "results">("lobby");
   const [questions, setQuestions] = useState<AdjQuestion[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -429,7 +432,7 @@ export default function Adjectives() {
   const current = questions[currentIdx];
 
   const goNext = useCallback(() => {
-    setTimeout(() => {
+    after(() => {
       if (currentIdx + 1 >= questions.length) {
         setScreen("results");
       } else {
@@ -437,7 +440,12 @@ export default function Adjectives() {
         setSelected(null);
       }
     }, 3000);
-  }, [currentIdx, questions.length]);
+  }, [after, currentIdx, questions.length]);
+
+  useEffect(() => {
+    if (screen === "results")
+      recordGame("adjectives", score, questions.length);
+  }, [screen, score, questions.length]);
 
   function handleStart(
     levels: AdjLevel[],

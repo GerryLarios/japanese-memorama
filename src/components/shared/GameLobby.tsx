@@ -8,7 +8,9 @@ import type {
   VocabWord,
   WordType,
 } from "../../data/types";
-import { getAllLessons, getWords } from "../../data/vocab";
+import { GAMES } from "../../data/types";
+import { getAllLessons, getWords, getWordsByIds } from "../../data/vocab";
+import { loadStats, topMissed, type Stats } from "../../utils/stats";
 import CustomVocabImport from "./CustomVocabImport";
 
 interface Props {
@@ -177,6 +179,10 @@ export default function GameLobby({
   const [showVocab, setShowVocab] = useState(false);
   const [showKana, setShowKana] = useState(false);
 
+  // Client-only: reading localStorage during SSR would not match the server HTML.
+  const [stats, setStats] = useState<Stats | null>(null);
+  useEffect(() => setStats(loadStats()), []);
+
   // Sync state → URL whenever any selection changes
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -250,6 +256,52 @@ export default function GameLobby({
         <div className="text-5xl mb-2">{gameEmoji}</div>
         <h1 className="text-2xl font-bold">{gameTitle}</h1>
       </div>
+
+      {/* Recent progress + review pool */}
+      {stats && stats.results.length > 0 && (() => {
+        const missedWords = getWordsByIds(topMissed(stats, 20));
+        return (
+          <div className="card p-5 space-y-3">
+            <h2 className="font-semibold text-slate-300">📈 Progreso</h2>
+            <ul className="space-y-1 text-sm text-slate-400">
+              {[...stats.results]
+                .reverse()
+                .slice(0, 5)
+                .map((r, i) => {
+                  const g = GAMES.find((x) => x.id === r.game);
+                  return (
+                    <li key={i} className="flex justify-between gap-3">
+                      <span className="truncate">
+                        {g ? `${g.emoji} ${g.title}` : r.game}
+                      </span>
+                      <span className="tabular-nums shrink-0">
+                        {r.score}/{r.total}
+                      </span>
+                    </li>
+                  );
+                })}
+            </ul>
+            {missedWords.length > 0 && (
+              <button
+                onClick={() =>
+                  onStart({
+                    lessons: [],
+                    wordTypes: "all",
+                    direction,
+                    count: 0,
+                    customWords: missedWords,
+                    showHiragana,
+                    showRomaji,
+                  })
+                }
+                className="w-full py-2.5 rounded-xl text-sm font-semibold border border-slate-600 bg-slate-700 text-slate-300 hover:border-violet-500 hover:text-violet-300 transition-all"
+              >
+                🔁 Repasar falladas ({missedWords.length})
+              </button>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Mode toggle */}
       <div className="card p-1 flex gap-1">

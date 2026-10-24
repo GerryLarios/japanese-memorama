@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { GameConfig, VocabWord } from "../../data/types";
 import {
   getQuestion,
@@ -6,9 +6,11 @@ import {
   pickWrongAnswers,
   shuffle,
 } from "../../data/vocab";
+import { useInterval, useTimeout } from "../../utils/useTimers";
 import GameLobby from "../shared/GameLobby";
 import JapaneseWord from "../shared/JapaneseWord";
 import ResultScreen from "../shared/ResultScreen";
+import { useGameSession } from "../shared/useGameSession";
 
 const SECONDS = 15;
 
@@ -19,99 +21,85 @@ interface Question {
   answer: string;
 }
 
-function buildQuestions(
-  words: VocabWord[],
-  config: GameConfig,
-  allWords: VocabWord[],
-): Question[] {
-  return words.map((w) => {
-    const { question, answer } = getQuestion(w, config.direction);
-    const wrongs = pickWrongAnswers(w, allWords, config.direction);
-    const options = shuffle([answer, ...wrongs]);
-    return { word: w, question, options, answer };
+function buildQuestions(cfg: GameConfig): Question[] {
+  const allWords = getWords(cfg.kana ? cfg : {}); // same pool for wrong answers
+  return getWords(cfg).map((w) => {
+    const { question, answer } = getQuestion(w, cfg.direction);
+    const wrongs = pickWrongAnswers(w, allWords, cfg.direction);
+    return { word: w, question, options: shuffle([answer, ...wrongs]), answer };
   });
 }
 
 export default function Quiz() {
-  const [config, setConfig] = useState<GameConfig | null>(null);
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const [index, setIndex] = useState(0);
-  const [score, setScore] = useState(0);
+  const {
+    config,
+    rounds,
+    index,
+    score,
+    done,
+    current,
+    missed,
+    start,
+    restart,
+    exit,
+    award,
+    miss,
+    advance,
+  } = useGameSession(buildQuestions);
+
   const [chosen, setChosen] = useState<string | null>(null);
   const [timeLeft, setTimeLeft] = useState(SECONDS);
-  const [done, setDone] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const { start: startTimer, stop: stopTimer } = useInterval();
+  const after = useTimeout();
 
-  const stopTimer = () => {
-    if (timerRef.current) clearInterval(timerRef.current);
-  };
-
-  const startTimer = useCallback(() => {
-    stopTimer();
+  const startRound = useCallback(() => {
+    setChosen(null);
     setTimeLeft(SECONDS);
-    timerRef.current = setInterval(() => {
-      setTimeLeft((t) => {
-        if (t <= 1) {
-          stopTimer();
-          return 0;
-        }
-        return t - 1;
-      });
-    }, 1000);
-  }, []);
+    startTimer(() => setTimeLeft((t) => Math.max(0, t - 1)), 1000);
+  }, [startTimer]);
 
-  useEffect(() => {
-    if (timeLeft === 0 && !chosen) {
-      setChosen("__timeout__");
-      stopTimer();
-      setTimeout(() => advance(), 1500);
-    }
-  }, [timeLeft, chosen]);
+  const next = useCallback(() => {
+    advance();
+    if (index + 1 >= rounds.length) stopTimer();
+    else startRound();
+  }, [advance, index, rounds.length, startRound, stopTimer]);
 
-  const advance = useCallback(() => {
-    setIndex((i) => {
-      const next = i + 1;
-      if (next >= questions.length) {
-        setDone(true);
-        return i;
-      }
-      setChosen(null);
-      startTimer();
-      return next;
-    });
-  }, [questions.length, startTimer]);
-
-  const start = useCallback(
+  const begin = useCallback(
     (cfg: GameConfig) => {
-      const allWords = getWords(cfg.kana ? cfg : {}); // use same pool for wrong answers
-      const words = getWords(cfg);
-      const qs = buildQuestions(words, cfg, allWords);
-      setConfig(cfg);
-      setQuestions(qs);
-      setIndex(0);
-      setScore(0);
-      setChosen(null);
-      setDone(false);
-      startTimer();
+      start(cfg);
+      startRound();
     },
-    [startTimer],
+    [start, startRound],
   );
 
-  useEffect(() => () => stopTimer(), []);
-
-  const pick = (option: string) => {
-    if (chosen) return;
-    setChosen(option);
+  const leave = useCallback(() => {
     stopTimer();
-    const q = questions[index];
-    if (option === q.answer) setScore((s) => s + 1);
-    setTimeout(() => advance(), 1200);
+    after.clear();
+    exit();
+  }, [stopTimer, after, exit]);
+
+  const pick = (opt: string) => {
+    if (chosen || !current) return;
+    setChosen(opt);
+    stopTimer();
+    if (opt === current.answer) award();
+    else miss(current.word.id);
+    after(next, 1200);
   };
+
+  // Time out → show the answer, then advance.
+  useEffect(() => {
+    if (timeLeft === 0 && chosen === null && current) {
+      setChosen("__timeout__");
+      miss(current.word.id);
+      after(next, 1500);
+    }
+  }, [timeLeft, chosen, current, miss, after, next]);
 
   if (!config)
     return (
       <GameLobby
-        onStart={start}
+        onStart={begin}
         gameTitle="Quiz Kahoot"
         gameEmoji="🎯"
         color="bg-rose-600"
@@ -122,18 +110,22 @@ export default function Quiz() {
     return (
       <ResultScreen
         score={score}
-        total={questions.length}
-        words={questions.map((q) => q.word)}
-        onRestart={() => start(config)}
-        onHome={() => {
-          setConfig(null);
-          stopTimer();
+        total={rounds.length}
+        words={rounds.map((q) => q.word)}
+        game="quiz"
+        missed={missed}
+        onRestart={() => {
+          after.clear();
+          restart();
+          startRound();
         }}
+        onHome={leave}
       />
     );
   }
 
-  const q = questions[index];
+  if (!current) return null;
+
   const pct = (timeLeft / SECONDS) * 100;
   const timerColor =
     pct > 50 ? "bg-emerald-500" : pct > 25 ? "bg-amber-500" : "bg-rose-500";
@@ -143,14 +135,13 @@ export default function Quiz() {
       {/* Header */}
       <div className="flex justify-between items-center text-sm text-slate-400">
         <span>
-          {index + 1} / {questions.length}
+          {index + 1} / {rounds.length}
         </span>
-        <span className="font-bold text-white">{score} pts</span>
+        <span className="font-bold text-white" aria-live="polite">
+          {score} pts
+        </span>
         <button
-          onClick={() => {
-            setConfig(null);
-            stopTimer();
-          }}
+          onClick={leave}
           className="text-slate-500 hover:text-slate-300"
         >
           ✕ Salir
@@ -170,25 +161,35 @@ export default function Quiz() {
 
       {/* Question */}
       <div className="card p-6 text-center min-h-28 flex items-center justify-center">
-        {q.question === q.word.japanese ? (
+        {current.question === current.word.japanese ? (
           <JapaneseWord
-            japanese={q.word.japanese}
-            hiragana={config.showHiragana !== false ? q.word.hiragana : undefined}
-            romaji={config.kana ? undefined : (config.showRomaji !== false ? q.word.romaji : undefined)}
+            japanese={current.word.japanese}
+            hiragana={
+              config.showHiragana !== false
+                ? current.word.hiragana
+                : undefined
+            }
+            romaji={
+              config.kana
+                ? undefined
+                : config.showRomaji !== false
+                  ? current.word.romaji
+                  : undefined
+            }
             size="lg"
             playable
           />
         ) : (
           <p className="jp text-3xl sm:text-4xl font-bold leading-snug">
-            {q.question}
+            {current.question}
           </p>
         )}
       </div>
 
       {/* Options */}
       <div className="grid grid-cols-2 gap-3">
-        {q.options.map((opt, i) => {
-          const isAnswer = opt === q.answer;
+        {current.options.map((opt, i) => {
+          const isAnswer = opt === current.answer;
           const isChosen = opt === chosen;
           let cls =
             "card p-4 text-center font-semibold text-sm sm:text-base cursor-pointer border transition-all";

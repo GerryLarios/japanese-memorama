@@ -2,31 +2,33 @@ import { useCallback, useRef, useState } from "react";
 import type { GameConfig, VocabWord } from "../../data/types";
 import { getQuestion, getWords, shuffle } from "../../data/vocab";
 import { speak } from "../../utils/tts";
+import { useTimeout } from "../../utils/useTimers";
 import GameLobby from "../shared/GameLobby";
 import JapaneseWord from "../shared/JapaneseWord";
 import ResultScreen from "../shared/ResultScreen";
+import { useGameSession } from "../shared/useGameSession";
+
+function buildWords(cfg: GameConfig): VocabWord[] {
+  return shuffle(getWords(cfg));
+}
 
 export default function FillBlank() {
-  const [config, setConfig] = useState<GameConfig | null>(null);
-  const [words, setWords] = useState<VocabWord[]>([]);
-  const [index, setIndex] = useState(0);
+  const session = useGameSession(buildWords);
+  const { config, rounds, index, score, done, current: word } = session;
+
   const [input, setInput] = useState("");
   const [result, setResult] = useState<"correct" | "wrong" | null>(null);
-  const [score, setScore] = useState(0);
-  const [done, setDone] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const after = useTimeout();
 
-  const start = useCallback((cfg: GameConfig) => {
-    setConfig(cfg);
-    setWords(shuffle(getWords(cfg)));
-    setIndex(0);
-    setInput("");
-    setResult(null);
-    setScore(0);
-    setDone(false);
-  }, []);
-
-  const word = words[index];
+  const start = useCallback(
+    (cfg: GameConfig) => {
+      session.start(cfg);
+      setInput("");
+      setResult(null);
+    },
+    [session],
+  );
 
   const normalize = (s: string) =>
     s
@@ -45,19 +47,15 @@ export default function FillBlank() {
       normalize(input) === normalize(word.japanese);
 
     setResult(correct ? "correct" : "wrong");
-    if (correct) setScore((s) => s + 1);
+    if (correct) session.award();
+    else session.miss(word.id);
   };
 
   const next = () => {
-    const nextIndex = index + 1;
-    if (nextIndex >= words.length) {
-      setDone(true);
-      return;
-    }
-    setIndex(nextIndex);
     setInput("");
     setResult(null);
-    setTimeout(() => inputRef.current?.focus(), 50);
+    session.advance();
+    after(() => inputRef.current?.focus(), 50);
   };
 
   if (!config)
@@ -73,10 +71,12 @@ export default function FillBlank() {
     return (
       <ResultScreen
         score={score}
-        total={words.length}
-        words={words}
+        total={rounds.length}
+        words={rounds}
+        game="fill-blank"
+        missed={session.missed}
         onRestart={() => start(config)}
-        onHome={() => setConfig(null)}
+        onHome={session.exit}
       />
     );
   }
@@ -90,11 +90,11 @@ export default function FillBlank() {
     <div className="game-container space-y-5">
       <div className="flex justify-between items-center text-sm text-slate-400">
         <span>
-          {index + 1} / {words.length}
+          {index + 1} / {rounds.length}
         </span>
         <span className="text-emerald-400">✓ {score}</span>
         <button
-          onClick={() => setConfig(null)}
+          onClick={session.exit}
           className="text-slate-500 hover:text-slate-300"
         >
           ✕ Salir
@@ -104,7 +104,7 @@ export default function FillBlank() {
       <div className="w-full bg-slate-700 rounded-full h-1.5">
         <div
           className="bg-emerald-500 h-1.5 rounded-full transition-all"
-          style={{ width: `${(index / words.length) * 100}%` }}
+          style={{ width: `${(index / rounds.length) * 100}%` }}
         />
       </div>
 
@@ -114,7 +114,13 @@ export default function FillBlank() {
           <JapaneseWord
             japanese={word.japanese}
             hiragana={config.showHiragana !== false ? word.hiragana : undefined}
-            romaji={config.kana ? undefined : (config.showRomaji !== false ? word.romaji : undefined)}
+            romaji={
+              config.kana
+                ? undefined
+                : config.showRomaji !== false
+                  ? word.romaji
+                  : undefined
+            }
             size="lg"
             playable
           />
@@ -160,6 +166,8 @@ export default function FillBlank() {
 
         {result && (
           <div
+            role="status"
+            aria-live="polite"
             className={`card p-4 text-center ${result === "correct" ? "border-emerald-500" : "border-rose-500"}`}
           >
             {result === "correct" ? (
@@ -208,7 +216,7 @@ export default function FillBlank() {
         </button>
       ) : (
         <button onClick={next} className="btn-primary w-full py-4">
-          {index + 1 < words.length ? "Siguiente →" : "Ver resultados"}
+          {index + 1 < rounds.length ? "Siguiente →" : "Ver resultados"}
         </button>
       )}
     </div>

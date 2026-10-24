@@ -50,6 +50,7 @@ export default function Flashcards() {
         total={cards.length}
         label="Palabras que sabías"
         words={cards}
+        game="flashcards"
         onRestart={() => start(config)}
         onHome={() => setConfig(null)}
       />
@@ -67,7 +68,9 @@ export default function Flashcards() {
         <span>
           {index + 1} / {cards.length}
         </span>
-        <span className="text-emerald-400">✓ {known} sabía</span>
+        <span className="text-emerald-400" aria-live="polite">
+          ✓ {known} sabía
+        </span>
         <button
           onClick={() => setConfig(null)}
           className="text-slate-500 hover:text-slate-300"
@@ -87,6 +90,8 @@ export default function Flashcards() {
       {/* Card */}
       <button
         onClick={() => setFlipped((f) => !f)}
+        aria-expanded={flipped}
+        aria-label={flipped ? "Ocultar respuesta" : "Revelar respuesta"}
         className="card w-full min-h-56 flex flex-col items-center justify-center gap-4 p-8 cursor-pointer
                    hover:border-amber-500 transition-all active:scale-98"
       >

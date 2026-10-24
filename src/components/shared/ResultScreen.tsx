@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import type { VocabWord } from "../../data/types";
+import { recordGame } from "../../utils/stats";
 import JapaneseWord from "./JapaneseWord";
 
 interface Props {
@@ -9,6 +11,8 @@ interface Props {
   children?: React.ReactNode;
   label?: string;
   words?: VocabWord[];
+  game?: string;
+  missed?: string[];
 }
 
 export default function ResultScreen({
@@ -19,7 +23,15 @@ export default function ResultScreen({
   children,
   label = "Correctas",
   words,
+  game,
+  missed,
 }: Props) {
+  // Save once when the result appears; stats are optional, never block the UI.
+  useEffect(() => {
+    if (game) recordGame(game, score, total, missed);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const pct = total > 0 ? Math.round((score / total) * 100) : 0;
   const emoji = pct >= 80 ? "🎉" : pct >= 50 ? "😊" : "💪";
   const msg =
